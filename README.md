@@ -1,88 +1,62 @@
-<p align="center">
-  <img src="./assets/profile-header.svg" width="100%" alt="Hong Seong Ju — Backend, Platform, and AI Systems" />
-</p>
+# Hong Seong Ju
 
-<p align="center">
-  <a href="https://seongju.vercel.app/en/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-seongju.vercel.app-F59E0B?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-  <a href="mailto:seongjuice999@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-seongjuice999%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://solved.ac/profile/akftjdwn"><img alt="solved.ac" src="https://img.shields.io/badge/solved.ac-akftjdwn-17CE3A?style=for-the-badge" /></a>
-</p>
+Backend, platform, and AI systems developer at Soongsil University. I focus on systems whose
+security boundaries, failure modes, and production behavior can be explained with code and
+verification evidence.
 
-<div align="center">
-  <h2>Backend · Platform · AI Systems</h2>
-  <p>Soongsil University · Computer Science & Engineering</p>
-  <p>I build systems whose constraints, decisions, and verified results are explainable.</p>
-</div>
+[Portfolio](https://seongju.vercel.app/en/) ·
+[Email](mailto:seongjuice999@gmail.com) ·
+[solved.ac](https://solved.ac/profile/akftjdwn)
 
-<hr />
-
-## 🧑‍💻 Tech Stack
-
-<p>
-  <img alt="Java" src="https://img.shields.io/badge/Java-0F172A?style=flat-square&logo=openjdk&logoColor=white" />
-  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
-  <img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
-</p>
-
-<p>
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-  <img alt="PostGIS" src="https://img.shields.io/badge/PostGIS-336791?style=flat-square&logo=postgresql&logoColor=white" />
-  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-  <img alt="Kafka" src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
-</p>
-
-<p>
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-  <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
-  <img alt="Argo CD" src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=flat-square&logo=argo&logoColor=white" />
-  <img alt="Terraform" src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" />
-  <img alt="AWS" src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
-</p>
-
-<hr />
-
-## 🚀 Featured Projects
+## Selected systems
 
 ### Soongsil Campus AI Platform
 
-A four-service system connecting u-SAINT, LMS, library, and public campus data to a web application,
-a natural-language agent, and standard MCP tools. I designed boundaries for authentication,
-per-user state, approval-gated write operations, and external-system failures, and operate the
-system with GitOps on an ARM64 Kubernetes cluster.
+A four-service campus assistant that connects public university data, authenticated u-SAINT and
+LMS information, library operations, a web application, and standard MCP clients. The system keeps
+browser credentials, agent orchestration, campus-domain tools, and model-serving boundaries in
+separate deployable services.
 
-| Service | Responsibility | Links |
+| Service | Responsibility | Link |
 | --- | --- | --- |
-| ssuAI | User-facing web application and same-origin BFF | [Live](https://ssuai.vercel.app) · [Repository](https://github.com/ghdtjdwn/ssuAI) |
-| ssuMCP | Campus data and MCP tools | [Repository](https://github.com/ghdtjdwn/ssuMCP) |
-| ssuAgent | LangGraph routing, SSE, and HITL | [Repository](https://github.com/ghdtjdwn/ssuAgent) |
-| ssu-ai-service | Isolated embedding-request gateway | [Repository](https://github.com/ghdtjdwn/ssu-ai-service) |
+| ssuAI | Next.js application, same-origin BFF, and streaming chat UX | [Live](https://ssuai.vercel.app) · [Repository](https://github.com/ghdtjdwn/ssuAI) |
+| ssuMCP | Spring Boot campus domain server, 52 MCP tools, REST APIs, authentication, and approval-gated writes | [Repository](https://github.com/ghdtjdwn/ssuMCP) |
+| ssuAgent | FastAPI and LangGraph routing, PostgreSQL checkpoints, SSE, and human-in-the-loop execution | [Repository](https://github.com/ghdtjdwn/ssuAgent) |
+| ssu-ai-service | Independent authenticated Gemini embedding gateway | [Repository](https://github.com/ghdtjdwn/ssu-ai-service) |
 
-[Read the case study with architecture and operational evidence](https://seongju.vercel.app/en/projects/ssu-platform/)
+The backend uses PostgreSQL as the consistency boundary, Redis for shared coordination and rate
+limits, Kafka for durable event fan-out, and Prometheus, Tempo, Loki, and Grafana for operations.
+Images are test-gated before GitOps delivery to an ARM64 Kubernetes cluster.
 
-<hr />
+[Architecture and operational evidence](https://seongju.vercel.app/en/projects/ssu-platform/)
 
-## 📜 Certifications
+### Geuneul
 
-- 컴퓨터활용능력 2급 (Computer Specialist in Spreadsheet & Database Level-2)
+A public summer-survival map for finding shade and heat-relief facilities. PostGIS provides radius,
+kNN, and map-bounds search; rerunnable ingestion combines public datasets with persisted geocoding;
+Redis protects rate-limited external calls. The product is delivered as a responsive web app, PWA,
+and Android package with a Spring Boot backend on AWS ECS Fargate and a Next.js frontend on Vercel.
+
+[Live](https://geuneul.vercel.app) · [Repository](https://github.com/ghdtjdwn/geuneul)
+
+## Engineering focus
+
+- External-system integration with explicit authentication, ownership, retry, and reconciliation
+  boundaries.
+- PostgreSQL and PostGIS data modeling, idempotent ingestion, background work, caching, and
+  concurrency control.
+- Production delivery through Docker, Kubernetes, AWS, Terraform, GitHub Actions, ArgoCD, and
+  observable runbooks.
+- AI features that preserve source provenance, user confirmation, bounded cost, and deterministic
+  failure behavior.
+
+## Core stack
+
+Java 21, Kotlin, Spring Boot, Python, FastAPI, LangGraph, Next.js, PostgreSQL, PostGIS, Redis, Kafka,
+Docker, Kubernetes, ArgoCD, Terraform, AWS, Prometheus, Tempo, Loki, and Grafana.
+
+## Certifications and problem solving
+
 - 정보처리기능사 (Craftsman Information Processing)
-
-<hr />
-
-## 🏆 Algorithm
-
-<p align="center">
-  <a href="https://solved.ac/profile/akftjdwn">
-    <img height="165" alt="akftjdwn solved.ac profile" src="https://mazassumnida.wtf/api/v2/generate_badge?boj=akftjdwn" />
-  </a>
-</p>
-
-<hr />
-
-<p align="center">
-  <a href="https://seongju.vercel.app/en/">Portfolio</a> ·
-  <a href="mailto:seongjuice999@gmail.com">seongjuice999@gmail.com</a>
-</p>
+- 컴퓨터활용능력 2급 (Computer Specialist in Spreadsheet & Database Level 2)
+- [Baekjoon problem-solving profile](https://solved.ac/profile/akftjdwn)
