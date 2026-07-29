@@ -16,7 +16,6 @@
 | [그늘 — 여름 생존 지도](https://github.com/ghdtjdwn/geuneul) | 개인 프로젝트 전체 | 15만여 공공 POI, PostGIS 공간 검색, 재실행 가능한 ETL, AWS ECS Fargate·Terraform |
 | [UNITHON 음성 키오스크 Macro](https://github.com/UNITHON24/Macro) | 음성 클라이언트·UI 자동화·안전한 주문 인계 | Windows UIA 우선 탐색, OCR fallback, 영속 주문 큐, 결제 입력 전 정지 |
 | [Cham Domi](https://seongju.vercel.app/projects/cham-domi/) | 프론트엔드 전체·roommate 백엔드 | Next.js 화면 흐름, Spring Boot/JPA, Stable Roommates와 FE/BE parity test |
-| [두근두근 자료구조](https://seongju.vercel.app/projects/ddsc-learning-game/) | 개인 기획·시나리오·엔진·grader 연동 | 작성된 정답을 기준으로 판정하는 LLM grader와 결정론적 게임 상태 분리 |
 
 팀 프로젝트는 제가 맡은 범위만 적었고, 비공개 저장소는 공개 사례의 검증 가능한 설명으로 연결했습니다.
 
