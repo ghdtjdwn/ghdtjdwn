@@ -10,16 +10,16 @@
 
 ## 대표 프로젝트
 
-| 프로젝트 | 직접 맡은 범위 | 핵심 구현과 근거 |
+| 프로젝트 | 직접 맡은 범위 | 원본 · 상세 사례 |
 | --- | --- | --- |
-| [ssu 캠퍼스 AI 플랫폼](https://seongju.vercel.app/projects/ssu-platform/) | 4개 서비스 설계·구현·운영 | Spring Boot MCP/REST, LangGraph, Next.js, PostgreSQL·Redis·Kafka, ARM64 k3s GitOps |
-| [그늘 — 여름 생존 지도](https://github.com/ghdtjdwn/geuneul) | 개인 프로젝트 전체 | 15만여 공공 POI, PostGIS 공간 검색, 재실행 가능한 ETL, AWS ECS Fargate·Terraform |
-| [UNITHON 음성 키오스크 Macro](https://github.com/UNITHON24/Macro) | 음성 클라이언트·UI 자동화·안전한 주문 인계 | Windows UIA 우선 탐색, OCR fallback, 영속 주문 큐, 결제 입력 전 정지 |
-| [Cham Domi](https://seongju.vercel.app/projects/cham-domi/) | 프론트엔드 전체·roommate 백엔드 | Next.js 화면 흐름, Spring Boot/JPA, Stable Roommates와 FE/BE parity test |
+| ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
+| 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
+| UNITHON 음성 키오스크 Macro | 음성 클라이언트·UI 자동화·안전한 주문 인계 | [저장소](https://github.com/UNITHON24/Macro) · [상세 사례](https://seongju.vercel.app/projects/unithon-macro/) |
+| Cham Domi | 프론트엔드 전체·roommate 백엔드 | 비공개 팀 저장소 · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
 
-팀 프로젝트는 제가 맡은 범위만 적었고, 비공개 저장소는 공개 사례의 검증 가능한 설명으로 연결했습니다.
+공개 저장소를 구현 원본으로 먼저 연결하고, 여러 저장소를 묶거나 비공개 팀 저장소인 프로젝트만 공개 사례로 보완했습니다. 팀 프로젝트는 제가 맡은 범위만 적었습니다.
 
-## Flagship: ssu 캠퍼스 AI 플랫폼
+## 대표 시스템: ssu 캠퍼스 AI 플랫폼
 
 숭실대학교의 공개 정보와 개인 학사·LMS·도서관 데이터를 웹, 자연어 에이전트와 표준 MCP 도구로
 연결한 운영형 플랫폼입니다. 브라우저 인증, 대화 오케스트레이션, 캠퍼스 도메인 도구와 모델 서빙을
@@ -27,10 +27,10 @@
 
 | 서비스 | 책임 | 확인 |
 | --- | --- | --- |
-| ssuAI | Next.js 웹, same-origin BFF, 반응형 대시보드와 SSE/HITL UX | [Live](https://ssuai.vercel.app) · [Repository](https://github.com/ghdtjdwn/ssuAI) |
-| ssuMCP | Spring Boot 캠퍼스 도메인, 52개 MCP 도구, REST, 인증과 승인 기반 쓰기 | [Repository](https://github.com/ghdtjdwn/ssuMCP) |
-| ssuAgent | FastAPI/LangGraph 라우팅, PostgreSQL checkpoint, SSE와 human-in-the-loop | [Repository](https://github.com/ghdtjdwn/ssuAgent) |
-| ssu-ai-service | 인증·입력·동시성 경계를 둔 독립 임베딩 게이트웨이 | [Repository](https://github.com/ghdtjdwn/ssu-ai-service) |
+| ssuAI | Next.js 웹, same-origin BFF, 반응형 대시보드와 SSE/HITL UX | [서비스](https://ssuai.vercel.app) · [저장소](https://github.com/ghdtjdwn/ssuAI) |
+| ssuMCP | Spring Boot 캠퍼스 도메인, 52개 MCP 도구, REST, 인증과 승인 기반 쓰기 | [저장소](https://github.com/ghdtjdwn/ssuMCP) |
+| ssuAgent | FastAPI/LangGraph 라우팅, PostgreSQL checkpoint, SSE와 human-in-the-loop | [저장소](https://github.com/ghdtjdwn/ssuAgent) |
+| ssu-ai-service | 인증·입력·동시성 경계를 둔 독립 임베딩 게이트웨이 | [저장소](https://github.com/ghdtjdwn/ssu-ai-service) |
 
 PostgreSQL을 영속 정합성의 기준으로 두고 Redis로 공유 조정과 rate limit을, Kafka로 이벤트 fan-out을
 처리합니다. 테스트를 통과한 이미지를 ArgoCD로 ARM64 Kubernetes에 전달하며 Prometheus, Tempo, Loki와
