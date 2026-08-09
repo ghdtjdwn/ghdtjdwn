@@ -17,7 +17,7 @@
 전달했습니다.
 
 [서비스](https://chamdomi.vercel.app) ·
-[organization] (https://github.com/chamdormie) ·
+[조직](https://github.com/chamdormie) ·
 
 
 ## 대표 프로젝트
