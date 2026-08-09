@@ -8,14 +8,28 @@
 [Email](mailto:seongjuice999@gmail.com) ·
 [solved.ac](https://solved.ac/profile/akftjdwn)
 
+## 최근 수상
+
+**Cham Domi — 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상**
+
+기숙사 탐색부터 설명 가능한 룸메이트 추천, Stable Roommates 자동 배정과 실시간 채팅까지 연결한
+3인 팀 서비스입니다. 프론트엔드 전반, roommate 백엔드와 운영 인프라를 맡아 공개 서비스까지
+전달했습니다.
+
+[서비스](https://chamdomi.vercel.app) ·
+[기술 사례](https://seongju.vercel.app/projects/cham-domi/) ·
+[공모전 안내](https://cse.ssu.ac.kr/bbs/board.php?bo_table=notice&wr_id=4932)
+
+공식 안내에 따라 심사 결과는 LMS와 팀장 개별 메일로 통지됐습니다.
+
 ## 대표 프로젝트
 
 | 프로젝트 | 직접 맡은 범위 | 원본 · 상세 사례 |
 | --- | --- | --- |
 | ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
+| Cham Domi | 프론트엔드·roommate 백엔드·운영 인프라 | [서비스](https://chamdomi.vercel.app) · 비공개 팀 저장소 · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
 | 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
 | UNITHON 음성 키오스크 Macro | 음성 클라이언트·UI 자동화·안전한 주문 인계 | [저장소](https://github.com/UNITHON24/Macro) · [상세 사례](https://seongju.vercel.app/projects/unithon-macro/) |
-| Cham Domi | 프론트엔드 전체·roommate 백엔드 | 비공개 팀 저장소 · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
 
 공개 저장소를 구현 원본으로 먼저 연결하고, 여러 저장소를 묶거나 비공개 팀 저장소인 프로젝트만 공개 사례로 보완했습니다. 팀 프로젝트는 제가 맡은 범위만 적었습니다.
 
