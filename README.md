@@ -17,10 +17,8 @@
 전달했습니다.
 
 [서비스](https://chamdomi.vercel.app) ·
-[기술 사례](https://seongju.vercel.app/projects/cham-domi/) ·
-[공모전 안내](https://cse.ssu.ac.kr/bbs/board.php?bo_table=notice&wr_id=4932)
+[organization] (https://github.com/chamdormie) ·
 
-공식 안내에 따라 심사 결과는 LMS와 팀장 개별 메일로 통지됐습니다.
 
 ## 대표 프로젝트
 
