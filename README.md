@@ -1,7 +1,12 @@
+<p align="center">
+  <img src="./assets/profile-header.svg" width="100%" alt="Hong Seong Ju — Backend, Platform, and AI Systems" />
+</p>
+
 # 홍성주 | Backend · Platform · AI Systems
 
-숭실대학교 컴퓨터학부에서 백엔드와 플랫폼을 공부하고 있습니다. 기능 구현에 그치지 않고
-인증 경계, 데이터 정합성, 장애 복구, 배포와 관측까지 설명할 수 있는 시스템을 만듭니다.
+숭실대학교 컴퓨터학부에서 사용자 흐름을 끝까지 책임지는 백엔드·플랫폼 엔지니어를 지향합니다.
+기능 구현에 그치지 않고 인증 경계, 데이터 정합성, 장애 복구, 배포와 관측까지 설명할 수 있는
+시스템을 만듭니다.
 
 [포트폴리오](https://seongju.vercel.app) ·
 [English portfolio](https://seongju.vercel.app/en/) ·
@@ -10,6 +15,16 @@
 
 ## 최근 수상
 
+### marketvalley — UNITHON 2026 Manifest 특별상
+
+예비창업가가 시장 반응을 확인하기 전 반복하던 채널별 기획·제작·광고 등록·데이터 취합을 없애는
+자동 시장검증 서비스입니다. `CampaignSpec`과 AI 생성 계약, Supabase 데이터·RLS, API와 장기 실행
+lifecycle을 맡아 실제 Meta 광고 집행과 Insights 리포트까지 연결했습니다.
+
+[서비스](https://marketvaley.vercel.app) ·
+[저장소](https://github.com/unithon26/marketvalley) ·
+[아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
+
 **Cham Domi — 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상**
 
 기숙사 탐색부터 설명 가능한 룸메이트 추천, Stable Roommates 자동 배정과 실시간 채팅까지 연결한
@@ -17,19 +32,38 @@
 전달했습니다.
 
 [서비스](https://chamdomi.vercel.app) ·
-[조직](https://github.com/chamdormie) ·
-
+[조직](https://github.com/chamdormie)
 
 ## 대표 프로젝트
 
 | 프로젝트 | 직접 맡은 범위 | 원본 · 상세 사례 |
 | --- | --- | --- |
+| marketvalley | `CampaignSpec`·AI 생성·RLS·장기 실행 상태 머신 | [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) · [아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md) |
 | ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
 | Cham Domi | 프론트엔드·roommate 백엔드·운영 인프라 | [서비스](https://chamdomi.vercel.app) · 비공개 팀 저장소 · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
 | 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
 | UNITHON 음성 키오스크 Macro | 음성 클라이언트·UI 자동화·안전한 주문 인계 | [저장소](https://github.com/UNITHON24/Macro) · [상세 사례](https://seongju.vercel.app/projects/unithon-macro/) |
 
 공개 저장소를 구현 원본으로 먼저 연결하고, 여러 저장소를 묶거나 비공개 팀 저장소인 프로젝트만 공개 사례로 보완했습니다. 팀 프로젝트는 제가 맡은 범위만 적었습니다.
+
+## 최근 만든 시스템: marketvalley
+
+하나의 입력에서 검증 가설, 공개 랜딩, Instagram 카드 5장, 광고 문구와 Meta 광고를 만들고 실제
+방문·예약·Insights를 하나의 리포트로 돌려줍니다. 브라우저가 닫히거나 외부 API가 일시 실패해도
+Postgres lease 기반 상태 머신이 작업을 이어가며, 계정·예산·종료 시각이 정확히 일치할 때만 광고를
+활성화합니다.
+
+```text
+SUBMITTED → GENERATING → PREPARING → AWAITING_ACTIVATION
+          → COLLECTING → FINALIZING → COMPLETED
+```
+
+Next.js 16, TypeScript, Supabase Auth·Postgres·RLS, Anthropic Structured Outputs, Meta Marketing API,
+Vercel과 Oracle rootless Docker로 구성했습니다. 생성 결과를 성공처럼 꾸미지 않고 실제 외부 상태와
+계측값만 저장·표시하는 경계를 테스트와 운영 문서로 고정했습니다.
+
+[제품 흐름](https://github.com/unithon26/marketvalley#readme) ·
+[검증 기록](https://github.com/unithon26/marketvalley/blob/main/docs/validation.md)
 
 ## 대표 시스템: ssu 캠퍼스 AI 플랫폼
 
