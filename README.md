@@ -18,8 +18,13 @@
 ### marketvalley — UNITHON 2026 Manifest 특별상
 
 예비창업가가 시장 반응을 확인하기 전 반복하던 채널별 기획·제작·광고 등록·데이터 취합을 없애는
-자동 시장검증 서비스입니다. `CampaignSpec`과 AI 생성 계약, Supabase 데이터·RLS, API와 장기 실행
-lifecycle을 맡아 실제 Meta 광고 집행과 Insights 리포트까지 연결했습니다.
+자동 시장검증 서비스입니다.
+
+담당 역할: **Backend · AI**
+
+- Zod `CampaignSpec`과 Anthropic Structured Outputs 생성 계약 설계
+- Supabase 데이터 모델·RLS, 소유자 API와 공개 랜딩 데이터 경계 구현
+- Postgres lease 기반 lifecycle과 Meta 광고·Insights 연동
 
 [서비스](https://marketvaley.vercel.app) ·
 [저장소](https://github.com/unithon26/marketvalley) ·
