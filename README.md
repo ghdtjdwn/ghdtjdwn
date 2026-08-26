@@ -15,60 +15,23 @@
 
 ## 최근 수상
 
-### marketvalley — UNITHON 2026 매니패스트 특별상
-
-UNITHON 2026 공식 수상작입니다. 예비창업가가 시장 반응을 확인하기 전 반복하던 채널별
-기획·제작·광고 등록·데이터 취합을 없애는 자동 시장검증 서비스입니다.
-
-담당 역할: **Backend · AI**
-
-- Zod `CampaignSpec`과 Anthropic Structured Outputs 생성 계약 설계
-- Supabase 데이터 모델·RLS, 소유자 API와 공개 랜딩 데이터 경계 구현
-- Postgres lease 기반 lifecycle과 Meta 광고·Insights 연동
-
-[서비스](https://marketvaley.vercel.app) ·
-[저장소](https://github.com/unithon26/marketvalley) ·
-[아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
-
-**Cham Domi — 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상**
-
-기숙사 탐색부터 설명 가능한 룸메이트 추천, Stable Roommates 자동 배정과 실시간 채팅까지 연결한
-3인 팀 서비스입니다. 프론트엔드 전반, roommate 백엔드와 운영 인프라를 맡아 공개 서비스까지
-전달했습니다.
-
-[서비스](https://chamdomi.vercel.app) ·
-[조직](https://github.com/chamdormie)
+| 수상 | 맡은 범위 | 핵심 성과 · 근거 |
+| --- | --- | --- |
+| UNITHON 2026 공식 수상 — 매니패스트 특별상 · marketvalley | Backend·AI: `CampaignSpec`, Anthropic 생성 계약, Supabase RLS·API, Postgres lifecycle, Meta·Insights | 매니패스트 특별상 공식 수상 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
+| 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상 — Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | 은상 수상과 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
+| 숭실대학교 알고리즘 솔브드 코드 대회 우수상 — 2025 | 대회 문제 분석·알고리즘 설계·구현 | 우수상 수상 · [solved.ac](https://solved.ac/profile/akftjdwn) |
 
 ## 대표 프로젝트
 
-| 프로젝트 | 직접 맡은 범위 | 원본 · 상세 사례 |
+| 프로젝트 | 맡은 범위 | 핵심 성과 · 근거 |
 | --- | --- | --- |
-| marketvalley | `CampaignSpec`·AI 생성·RLS·장기 실행 상태 머신 | [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) · [아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md) |
-| ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
-| Cham Domi | 프론트엔드·roommate 백엔드·운영 인프라 | [서비스](https://chamdomi.vercel.app) · 비공개 팀 저장소 · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
-| 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
-| UNITHON 음성 키오스크 Macro | 음성 클라이언트·UI 자동화·안전한 주문 인계 | [저장소](https://github.com/UNITHON24/Macro) · [상세 사례](https://seongju.vercel.app/projects/unithon-macro/) |
+| marketvalley | `CampaignSpec`·AI 생성·RLS·API·장기 실행 상태 머신 | UNITHON 2026 매니패스트 특별상 공식 수상, 실제 Meta 광고·Insights 연결 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
+| ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | 52개 MCP 도구와 ARM64 Kubernetes 운영·관측 · [저장소](https://github.com/ghdtjdwn/ssuMCP) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
+| Cham Domi | 프론트엔드·roommate 백엔드·운영 인프라 | 소프트웨어공모전 은상, 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
+| 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | 15만 건 이상 공공 POI ETL·PostGIS 공간 검색·AWS 운영 · [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
+| UNITHON 음성 키오스크 Macro | 음성 클라이언트·semantic UI 자동화·안전한 주문 인계 | 좌표 의존을 줄인 자동화와 Ubuntu·Windows 안전 코어 테스트 69개 · [저장소](https://github.com/UNITHON24/Macro) · [상세 사례](https://seongju.vercel.app/projects/unithon-macro/) |
 
 공개 저장소를 구현 원본으로 먼저 연결하고, 여러 저장소를 묶거나 비공개 팀 저장소인 프로젝트만 공개 사례로 보완했습니다. 팀 프로젝트는 제가 맡은 범위만 적었습니다.
-
-## 최근 만든 시스템: marketvalley
-
-하나의 입력에서 검증 가설, 공개 랜딩, Instagram 카드 5장, 광고 문구와 Meta 광고를 만들고 실제
-방문·예약·Insights를 하나의 리포트로 돌려줍니다. 브라우저가 닫히거나 외부 API가 일시 실패해도
-Postgres lease 기반 상태 머신이 작업을 이어가며, 계정·예산·종료 시각이 정확히 일치할 때만 광고를
-활성화합니다.
-
-```text
-SUBMITTED → GENERATING → PREPARING → AWAITING_ACTIVATION
-          → COLLECTING → FINALIZING → COMPLETED
-```
-
-Next.js 16, TypeScript, Supabase Auth·Postgres·RLS, Anthropic Structured Outputs, Meta Marketing API,
-Vercel과 Oracle rootless Docker로 구성했습니다. 생성 결과를 성공처럼 꾸미지 않고 실제 외부 상태와
-계측값만 저장·표시하는 경계를 테스트와 운영 문서로 고정했습니다.
-
-[제품 흐름](https://github.com/unithon26/marketvalley#readme) ·
-[검증 기록](https://github.com/unithon26/marketvalley/blob/main/docs/validation.md)
 
 ## 대표 시스템: ssu 캠퍼스 AI 플랫폼
 
@@ -88,13 +51,6 @@ PostgreSQL을 영속 정합성의 기준으로 두고 Redis로 공유 조정과 
 Grafana로 운영 상태를 확인합니다.
 
 [아키텍처·운영 근거가 포함된 사례 읽기](https://seongju.vercel.app/projects/ssu-platform/)
-
-## 만드는 방식
-
-- 외부 시스템은 connector와 명시적 timeout·fallback·reconciliation 경계 뒤에 둡니다.
-- 상태 변경은 소유권을 검증하고 `prepare → confirm`으로 나눠 사용자 승인 전에는 실행하지 않습니다.
-- 성능 수치는 실행계획과 제한된 부하 조건을 함께 기록하고, 검증 범위를 결과보다 넓게 주장하지 않습니다.
-- 작업 로그, ADR, troubleshooting, 테스트와 배포 증거를 남겨 선택과 실패를 다시 설명할 수 있게 합니다.
 
 ## 주로 사용하는 기술
 
