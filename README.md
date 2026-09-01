@@ -17,7 +17,7 @@
 
 | 수상 | 맡은 범위 | 핵심 성과 · 근거 |
 | --- | --- | --- |
-| UNITHON 2026 공식 수상 — 매니패스트 특별상 · marketvalley | Backend·AI: `CampaignSpec`, Anthropic 생성 계약, Supabase RLS·API, Postgres lifecycle, Meta·Insights | 매니패스트 특별상 공식 수상 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
+| UNITHON 2026 공식 수상 — 매니패스트 특별상 · marketvalley | Backend·AI: 검증 가설부터 랜딩·카드뉴스·광고 문구까지 잇는 데이터 구조, Anthropic 생성, 사용자별 데이터 격리·API, 장기 실행 상태 관리, Meta 광고·Insights | 매니패스트 특별상 공식 수상 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
 | 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상 — Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | 은상 수상과 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
 | 숭실대학교 알고리즘 솔브드 코드 대회 우수상 — 2025 | 대회 문제 분석·알고리즘 설계·구현 | 우수상 수상 · [solved.ac](https://solved.ac/profile/akftjdwn) |
 
@@ -25,7 +25,7 @@
 
 | 프로젝트 | 맡은 범위 | 핵심 성과 · 근거 |
 | --- | --- | --- |
-| marketvalley | `CampaignSpec`·AI 생성·RLS·API·장기 실행 상태 머신 | UNITHON 2026 매니패스트 특별상 공식 수상, 실제 Meta 광고·Insights 연결 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
+| marketvalley | 랜딩·카드뉴스·광고 문구를 잇는 데이터 구조, AI 생성, 사용자별 데이터 격리·API, 장기 실행 상태 관리 | UNITHON 2026 매니패스트 특별상 공식 수상, 실제 Meta 광고·Insights 연결 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
 | ssu 캠퍼스 AI 플랫폼 | 4개 서비스 설계·구현·운영 | 52개 MCP 도구와 ARM64 Kubernetes 운영·관측 · [저장소](https://github.com/ghdtjdwn/ssuMCP) · [상세 사례](https://seongju.vercel.app/projects/ssu-platform/) |
 | Cham Domi | 프론트엔드·roommate 백엔드·운영 인프라 | 소프트웨어공모전 은상, 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [공개 사례](https://seongju.vercel.app/projects/cham-domi/) |
 | 그늘 — 여름 생존 지도 | 개인 프로젝트 전체 | 15만 건 이상 공공 POI ETL·PostGIS 공간 검색·AWS 운영 · [저장소](https://github.com/ghdtjdwn/geuneul) · [상세 사례](https://seongju.vercel.app/projects/geuneul/) |
