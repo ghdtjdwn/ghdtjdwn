@@ -8,8 +8,8 @@
 기능 구현에 그치지 않고 인증 경계, 데이터 정합성, 장애 복구, 배포와 관측까지 설명할 수 있는
 시스템을 만듭니다.
 
-[포트폴리오](https://seongju.vercel.app) ·
-[English portfolio](https://seongju.vercel.app/en/) ·
+[기술 블로그](https://seongju.vercel.app) ·
+[Technical blog in English](https://seongju.vercel.app/en/) ·
 [Email](mailto:seongjuice999@gmail.com) ·
 [solved.ac](https://solved.ac/profile/akftjdwn)
 
