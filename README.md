@@ -14,13 +14,6 @@ parts of one end-to-end service.
 [Blog (Korean)](https://seongju.vercel.app) ·
 [Email](mailto:seongjuice999@gmail.com)
 
-## Experience
-
-| Role | Period | Focus |
-| --- | --- | --- |
-| Founding Engineer · [TrabyOS](https://trabyos-website.vercel.app/) | Sep 2026 – Present | Building a voice-first AI trading workspace across backend services, agent orchestration, and trading workflows. |
-| AI Agent Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) | Sep 2026 – Present | Designing and building production AI agent systems for fashion and e-commerce businesses. |
-
 ## Recent Awards
 
 | Award | Scope | Outcome · Evidence |
