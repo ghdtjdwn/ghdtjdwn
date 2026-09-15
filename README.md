@@ -10,8 +10,6 @@ I study Computer Science at Soongsil University and build and operate backend, d
 I treat authentication boundaries, data consistency, failure recovery, deployment, and observability as
 parts of one end-to-end service.
 
-[Technical Blog](https://seongju.vercel.app/en/) ·
-[Blog (Korean)](https://seongju.vercel.app) ·
 [Email](mailto:seongjuice999@gmail.com)
 
 ## Recent Awards
@@ -21,6 +19,12 @@ parts of one end-to-end service.
 | UNITHON 2026 — Manifest Special Award · marketvalley | Backend & AI: data flows connecting validation hypotheses to landing pages, social media cards, and ad copy; Anthropic-powered generation; per-user data isolation and APIs; long-running job state management; Meta Ads and Insights | Official Manifest Special Award · [Service](https://marketvaley.vercel.app) · [Repository](https://github.com/unithon26/marketvalley) |
 | 2026 Soongsil University School of Computer Science Software Contest — Silver Award · Cham Domi | End-to-end frontend, roommate backend, and production infrastructure | Silver Award and public service delivery · [Service](https://chamdomi.vercel.app) · [Organization](https://github.com/chamdormie) |
 | Soongsil University Solved Code Algorithm Competition — Excellence Award · 2025 | Problem analysis, algorithm design, and implementation | Excellence Award · [solved.ac](https://solved.ac/profile/akftjdwn) |
+
+## Open Source Contribution
+
+| Project | Contribution | Result |
+| --- | --- | --- |
+| [Caveman](https://github.com/JuliusBrussee/caveman) | Fixed `--force` refresh so an existing installation receives updated editor rule files as documented | Adopted into [maintainer triage PR #1015](https://github.com/JuliusBrussee/caveman/pull/1015) and merged into `main` with authorship preserved · [Original PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) |
 
 ## SSU Campus AI Platform
 
@@ -39,8 +43,6 @@ independent service boundaries.
 PostgreSQL is the source of truth for durable consistency, Redis handles shared coordination and rate
 limiting, and Kafka provides event fan-out. Tested images are delivered to ARM64 Kubernetes through
 Argo CD, with Prometheus, Tempo, Loki, and Grafana providing operational visibility.
-
-[Architecture and operations notes](https://seongju.vercel.app/en/projects/ssu-platform/)
 
 ## Technologies and Notes
 
