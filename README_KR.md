@@ -9,8 +9,6 @@
 숭실대학교 컴퓨터학부에서 공부하며 백엔드, 데이터와 AI 시스템을 만들고 운영합니다.
 인증 경계, 데이터 정합성, 장애 복구, 배포와 관측을 하나의 서비스 흐름으로 다룹니다.
 
-[기술 블로그](https://seongju.vercel.app) ·
-[English](https://seongju.vercel.app/en/) ·
 [Email](mailto:seongjuice999@gmail.com)
 
 ## 경력
@@ -28,6 +26,12 @@
 | 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상 — Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | 은상 수상과 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
 | 숭실대학교 알고리즘 솔브드 코드 대회 우수상 — 2025 | 대회 문제 분석·알고리즘 설계·구현 | 우수상 수상 · [solved.ac](https://solved.ac/profile/akftjdwn) |
 
+## 오픈소스 기여
+
+| 프로젝트 | 기여 | 결과 |
+| --- | --- | --- |
+| [Caveman](https://github.com/JuliusBrussee/caveman) | 기존 설치에서도 `--force`가 문서대로 에디터 규칙 파일을 최신 내용으로 갱신하도록 수정 | [유지보수자 통합 PR #1015](https://github.com/JuliusBrussee/caveman/pull/1015)를 통해 `main`에 병합되고 작성자 이력 보존 · [원 PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) |
+
 ## ssu 캠퍼스 AI 플랫폼
 
 숭실대학교의 공개 정보와 개인 학사·LMS·도서관 데이터를 웹, 자연어 에이전트와 표준 MCP 도구로
@@ -44,8 +48,6 @@
 PostgreSQL을 영속 정합성의 기준으로 두고 Redis로 공유 조정과 rate limit을, Kafka로 이벤트 fan-out을
 처리합니다. 테스트를 통과한 이미지를 ArgoCD로 ARM64 Kubernetes에 전달하며 Prometheus, Tempo, Loki와
 Grafana로 운영 상태를 확인합니다.
-
-[아키텍처와 운영 기록](https://seongju.vercel.app/projects/ssu-platform/)
 
 ## 기술과 기록
 
