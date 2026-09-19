@@ -28,13 +28,13 @@
 | [Caveman](https://github.com/JuliusBrussee/caveman) · 코딩 에이전트 토큰 절감 스킬 | 한 번 초기화된 저장소에서는 `--force`로도 에디터 규칙 파일이 갱신되지 않아 `.cursor`·`.windsurf`·`.clinerules`에 규칙 변경이 전달되지 않던 문제. 한 글자 수정과 실패 우선 테스트 | [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) → [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 cherry-pick되어 작성자 이력 보존 후 병합 |
 | [psycopg](https://github.com/psycopg/psycopg) · Python PostgreSQL 어댑터 | `AsyncConnectionPool.getconn()`이 연결 검사 도중 태스크 취소를 잃어 워커 종료가 멈추는 문제(Procrastinate에서 발생). 재현하고 결정적 회귀 테스트(풀 확장 후 검사 취소)를 작성해 유지보수자 수정을 검증 | 유지보수자가 [#1345](https://github.com/psycopg/psycopg/issues/1345)에서 검증을 요청·수용, [PR #1407](https://github.com/psycopg/psycopg/pull/1407)로 수정 확정 · [회귀 테스트](https://github.com/MarthalaJagruthiReddy/psycopg/pull/1) |
 
-## 최근 수상
+## 수상
 
-| 수상 | 맡은 범위 | 핵심 성과 · 근거 |
-| --- | --- | --- |
-| UNITHON 2026 공식 수상 — 매니패스트 특별상 · marketvalley | Backend·AI: 검증 가설부터 랜딩·카드뉴스·광고 문구까지 잇는 데이터 구조, Anthropic 생성, 사용자별 데이터 격리·API, 장기 실행 상태 관리, Meta 광고·Insights | 매니패스트 특별상 공식 수상 · [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
-| 2026학년도 숭실대학교 컴퓨터학부 소프트웨어공모전 은상 — Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | 은상 수상과 공개 서비스 전달 · [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
-| 숭실대학교 알고리즘 솔브드 코드 대회 우수상 — 2025 | 대회 문제 분석·알고리즘 설계·구현 | 우수상 수상 · [solved.ac](https://solved.ac/profile/akftjdwn) |
+| 수상 | 프로젝트 | 맡은 부분 | 링크 |
+| --- | --- | --- | --- |
+| **UNITHON 2026** · 매니패스트 특별상 | marketvalley | Backend·AI — Anthropic 기반 콘텐츠 생성 파이프라인(검증 가설 → 랜딩·카드뉴스·광고 문구), 사용자별 데이터 격리, 장기 실행 작업 상태 관리, Meta 광고 연동 | [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
+| **숭실대 컴퓨터학부 소프트웨어공모전 2026** · 은상 | Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
+| **숭실대 알고리즘 솔브드 코드 대회 2025** · 우수상 | — | 알고리즘 설계와 구현 | [solved.ac](https://solved.ac/profile/akftjdwn) |
 
 ## ssu 캠퍼스 AI 플랫폼
 
