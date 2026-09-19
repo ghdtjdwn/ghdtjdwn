@@ -30,11 +30,9 @@
 
 ## 수상
 
-| 수상 | 프로젝트 | 맡은 부분 | 링크 |
-| --- | --- | --- | --- |
-| **UNITHON 2026** · 매니패스트 특별상 | marketvalley | Backend·AI — Anthropic 기반 콘텐츠 생성 파이프라인(검증 가설 → 랜딩·카드뉴스·광고 문구), 사용자별 데이터 격리, 장기 실행 작업 상태 관리, Meta 광고 연동 | [서비스](https://marketvaley.vercel.app) · [저장소](https://github.com/unithon26/marketvalley) |
-| **숭실대 컴퓨터학부 소프트웨어공모전 2026** · 은상 | Cham Domi | 프론트엔드 전반, roommate 백엔드, 운영 인프라 | [서비스](https://chamdomi.vercel.app) · [조직](https://github.com/chamdormie) |
-| **숭실대 알고리즘 솔브드 코드 대회 2025** · 우수상 | — | 알고리즘 설계와 구현 | [solved.ac](https://solved.ac/profile/akftjdwn) |
+- **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley) — 마케팅 검증 도구의 백엔드·AI: Anthropic 콘텐츠 생성 파이프라인, 사용자별 데이터 격리, 장기 실행 작업, Meta 광고 연동 · [서비스](https://marketvaley.vercel.app)
+- **은상** · 숭실대 컴퓨터학부 소프트웨어공모전 2026 · [Cham Domi](https://github.com/chamdormie) — 프론트엔드, roommate 백엔드, 운영 인프라 · [서비스](https://chamdomi.vercel.app)
+- **우수상** · 숭실대 알고리즘 솔브드 코드 대회 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
 
 ## ssu 캠퍼스 AI 플랫폼
 

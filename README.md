@@ -31,11 +31,9 @@ Merged upstream. Each row links the problem, the fix, and the maintainer review.
 
 ## Awards
 
-| Award | Project | My part | Links |
-| --- | --- | --- | --- |
-| **UNITHON 2026** · Manifest Special Award | marketvalley | Backend & AI — Anthropic-powered content pipeline (hypothesis → landing page, social cards, ad copy), per-user data isolation, long-running job state, Meta Ads integration | [Service](https://marketvaley.vercel.app) · [Repository](https://github.com/unithon26/marketvalley) |
-| **Soongsil CS Software Contest 2026** · Silver Award | Cham Domi | Frontend, roommate backend, production infrastructure | [Service](https://chamdomi.vercel.app) · [Organization](https://github.com/chamdormie) |
-| **Soongsil Solved Code Algorithm Competition 2025** · Excellence Award | — | Algorithm design and implementation | [solved.ac](https://solved.ac/profile/akftjdwn) |
+- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley) — backend and AI for a marketing-validation tool: Anthropic content pipeline, per-user data isolation, long-running jobs, Meta Ads · [Live](https://marketvaley.vercel.app)
+- **Silver Award** · Soongsil CS Software Contest 2026 · [Cham Domi](https://github.com/chamdormie) — frontend, roommate backend, production infrastructure · [Live](https://chamdomi.vercel.app)
+- **Excellence Award** · Soongsil Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
 
 ## SSU Campus AI Platform
 
