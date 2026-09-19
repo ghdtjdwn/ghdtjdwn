@@ -7,7 +7,7 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Now
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . A voice-first AI trading workspace: Spring Boot core, Python coordinator, deterministic instrument resolution, and explicit approval before any order.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . Sole developer of a voice-first AI trading workspace: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
 - **AI Agent Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 – . Production AI agents for fashion e-commerce operations.
 
 ## Projects
@@ -20,6 +20,10 @@ I build services end to end: the data model and API, agent orchestration, deploy
   Dormitory discovery with explainable roommate matching and chat, built by a team of three. My part: the frontend, the roommate matching backend (Irving's Stable Roommates checked against a brute-force oracle), chat with MySQL as the authority, and the k3s/Helm production infrastructure. [Live](https://chamdomi.vercel.app)
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
   Automated market validation: one idea in, a landing page, card news, Meta ads, and a real-response report out. My part: backend and AI, the content pipeline, per-user data isolation, long-running jobs, and the Meta Ads integration. [Live](https://marketvaley.vercel.app)
+- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
+  A local-first document agent that reads, connects, and safely edits HWP, Office, and PDF files while preserving evidence from the originals. Team of four. My part: the entire AI agent runtime, a FastAPI sidecar built on the Claude Agent SDK where the model gets no write tools, every change is previewed as an exact diff and hash-approved by the user, files are replaced atomically with crash-recoverable journals and undo, and an outbox publishes each verified knowledge build to the search graph.
+- **[HeungMap](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
+  Festival demand forecasting on Korea Tourism Organization open data, entered in the 2026 Tourism Data Contest. Lead developer in a team of two. My part: the D-30 regional visitor model (seasonal baseline plus LightGBM residuals, WAPE 3.9% on a time holdout), the FastAPI service, Claude-written planning reports with server-side checks that reject numbers absent from the input, daily retraining on an Oracle Cloud cron, and the Next.js planner and visitor web app.
 
 ## Open source
 
@@ -31,20 +35,12 @@ Merged upstream. [All PRs on GitHub](https://github.com/search?q=is%3Apr+author%
 
 Under review: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull/7925), [OpenTelemetry Python Contrib](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032), [Spring AI](https://github.com/spring-projects/spring-ai/pull/6929), [Lettuce](https://github.com/redis/lettuce/pull/3909), [SlowAPI](https://github.com/laurentS/slowapi/pull/305).
 
-## Writing
-
-Incident and design notes from operating the projects above, in English and Korean.
-
-- [Reducing 100 same-seat requests to one upstream write](https://seongju.vercel.app/en/writing/durable-reservation-intent-queue/)
-- [Why I added CPU instead of another index for a 2.68-second spatial p95](https://seongju.vercel.app/en/writing/load-test-cpu-not-index/)
-- [Why green CI left ARM64 k3s running the previous image](https://seongju.vercel.app/en/writing/arm64-gitops-image-drift/)
-- [Aligning identity boundaries from the browser to private MCP tools](https://seongju.vercel.app/en/writing/server-verified-principal-boundary/)
 
 ## Awards
 
-- Manifest Special Award · UNITHON 2026 · marketvalley
-- Silver Prize · Soongsil University CS Software Competition 2026 · Cham Domi
-- Excellence Award · Soongsil University Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
+- 🏆 Manifest Special Award · UNITHON 2026 · marketvalley
+- 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · Cham Domi
+- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
 
 ## Stack
 
