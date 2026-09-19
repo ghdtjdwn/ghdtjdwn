@@ -12,6 +12,23 @@ parts of one end-to-end service.
 
 [Email](mailto:seongjuice999@gmail.com)
 
+## Experience
+
+| Role | Period | Work |
+| --- | --- | --- |
+| Founding Engineer · [TrabyOS](https://trabyos-website.vercel.app/) | Sep 2026 – Present | Building a voice-first AI trading workspace across backend services, agent orchestration, and trading workflows. |
+| AI Agent Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) | Sep 2026 – Present | Designing and building production AI agent systems for fashion and e-commerce domain workflows. |
+
+## Open Source Contributions
+
+Merged upstream. Each row links the problem, the fix, and the maintainer review.
+
+| Project | What I fixed | Evidence |
+| --- | --- | --- |
+| [Ouroboros](https://github.com/Q00/ouroboros) · agent OS and MCP runtime | Cancelling an in-progress `MCPClientAdapter.connect()` left `is_connected=True` and the adapter's own HTTP client open. Reset adapter state and clean up owned resources before re-raising `CancelledError`, with six regression cases. | Reported [#2364](https://github.com/Q00/ouroboros/issues/2364) → merged [PR #2365](https://github.com/Q00/ouroboros/pull/2365), approved by two maintainers |
+| [Caveman](https://github.com/JuliusBrussee/caveman) · token-saving skill for coding agents | `--force` never refreshed editor rule files once a repo was initialized, so rule updates could not reach `.cursor`, `.windsurf`, or `.clinerules`. One-character fix with red-first tests. | [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) → cherry-picked into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015) and merged with authorship preserved |
+| [psycopg](https://github.com/psycopg/psycopg) · PostgreSQL adapter for Python | `AsyncConnectionPool.getconn()` could swallow task cancellation during a connection check, hanging worker shutdown (seen in Procrastinate). Reproduced it, wrote a deterministic check-after-growth regression, and verified the maintainer's fix. | Verification requested and accepted by the maintainer on [#1345](https://github.com/psycopg/psycopg/issues/1345); fixed by [PR #1407](https://github.com/psycopg/psycopg/pull/1407) · [regression tests](https://github.com/MarthalaJagruthiReddy/psycopg/pull/1) |
+
 ## Recent Awards
 
 | Award | Scope | Outcome · Evidence |
@@ -19,12 +36,6 @@ parts of one end-to-end service.
 | UNITHON 2026 — Manifest Special Award · marketvalley | Backend & AI: data flows connecting validation hypotheses to landing pages, social media cards, and ad copy; Anthropic-powered generation; per-user data isolation and APIs; long-running job state management; Meta Ads and Insights | Official Manifest Special Award · [Service](https://marketvaley.vercel.app) · [Repository](https://github.com/unithon26/marketvalley) |
 | 2026 Soongsil University School of Computer Science Software Contest — Silver Award · Cham Domi | End-to-end frontend, roommate backend, and production infrastructure | Silver Award and public service delivery · [Service](https://chamdomi.vercel.app) · [Organization](https://github.com/chamdormie) |
 | Soongsil University Solved Code Algorithm Competition — Excellence Award · 2025 | Problem analysis, algorithm design, and implementation | Excellence Award · [solved.ac](https://solved.ac/profile/akftjdwn) |
-
-## Open Source Contribution
-
-| Project | Contribution | Result |
-| --- | --- | --- |
-| [Caveman](https://github.com/JuliusBrussee/caveman) | Fixed `--force` refresh so an existing installation receives updated editor rule files as documented | Adopted into [maintainer triage PR #1015](https://github.com/JuliusBrussee/caveman/pull/1015) and merged into `main` with authorship preserved · [Original PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) |
 
 ## SSU Campus AI Platform
 
