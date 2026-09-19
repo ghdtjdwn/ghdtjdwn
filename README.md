@@ -7,7 +7,7 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Now
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . Sole developer of a voice-first AI trading workspace: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
 - **AI Agent Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 – . Production AI agents for fashion e-commerce operations.
 
 ## Projects
@@ -21,7 +21,7 @@ I build services end to end: the data model and API, agent orchestration, deploy
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
   Automated market validation: one idea in, a landing page, card news, Meta ads, and a real-response report out. My part: backend and AI, the content pipeline, per-user data isolation, long-running jobs, and the Meta Ads integration. [Live](https://marketvaley.vercel.app)
 - **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
-  A local-first document agent that reads, connects, and safely edits HWP, Office, and PDF files while preserving evidence from the originals. Team of four. My part: the entire AI agent runtime, a FastAPI sidecar built on the Claude Agent SDK where the model gets no write tools, every change is previewed as an exact diff and hash-approved by the user, files are replaced atomically with crash-recoverable journals and undo, and an outbox publishes each verified knowledge build to the search graph.
+  A local-first document agent that reads, connects, and safely edits HWP, Office, and PDF files while preserving evidence from the originals. Team of four. My part: the entire AI agent runtime and the knowledge graph. The runtime is a FastAPI sidecar built on the Claude Agent SDK where the model gets no write tools, every change is previewed as an exact diff and hash-approved by the user, and files are replaced atomically with crash-recoverable journals and undo. The knowledge graph derives relationships between converted documents from shared entities, keeps the supporting sentence from each source as evidence, and is rebuilt as an immutable version after every verified change.
 - **[HeungMap](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
   Festival demand forecasting on Korea Tourism Organization open data, entered in the 2026 Tourism Data Contest. Lead developer in a team of two. My part: the D-30 regional visitor model (seasonal baseline plus LightGBM residuals, WAPE 3.9% on a time holdout), the FastAPI service, Claude-written planning reports with server-side checks that reject numbers absent from the input, daily retraining on an Oracle Cloud cron, and the Next.js planner and visitor web app.
 

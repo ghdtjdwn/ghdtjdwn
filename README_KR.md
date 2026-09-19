@@ -7,7 +7,7 @@
 
 ## 현재
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 – . 음성 중심 AI 트레이딩 워크스페이스를 단독 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 – . 이 스타트업의 유일한 개발자로 음성 중심 AI 트레이딩 워크스페이스 전체를 혼자 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
 - **AI Agent Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · 2026.09 – . 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트.
 
 ## 프로젝트
@@ -21,7 +21,7 @@
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
   자동 시장 검증. 아이디어 한 번 입력으로 랜딩, 카드뉴스, Meta 광고, 실제 반응 리포트까지. 담당: 백엔드와 AI, 콘텐츠 생성 파이프라인, 사용자별 데이터 격리, 장기 실행 작업, Meta 광고 연동. [서비스](https://marketvaley.vercel.app)
 - **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
-  HWP·Office·PDF 문서를 읽고 연결하고 원본 근거를 보존한 채 안전하게 수정하는 로컬 우선 문서 에이전트. 4인 팀. 담당: AI 에이전트 런타임 전체. Claude Agent SDK 기반 FastAPI 사이드카로 모델에는 쓰기 도구를 주지 않고, 모든 변경을 exact diff로 미리 보여 준 뒤 사용자가 해시를 승인해야만 실행하며, 저널과 undo를 갖춘 원자적 파일 교체와 검증된 지식 빌드만 검색 그래프에 공개하는 outbox를 구현.
+  HWP·Office·PDF 문서를 읽고 연결하고 원본 근거를 보존한 채 안전하게 수정하는 로컬 우선 문서 에이전트. 4인 팀. 담당: AI 에이전트 런타임 전체와 지식 그래프 구축. 런타임은 Claude Agent SDK 기반 FastAPI 사이드카로 모델에는 쓰기 도구를 주지 않고, 모든 변경을 exact diff로 미리 보여 준 뒤 사용자가 해시를 승인해야만 실행하며, 저널과 undo를 갖춘 원자적 파일 교체를 수행. 지식 그래프는 변환된 문서들이 공유하는 엔티티로 관계를 도출하고, 각 원문의 근거 문장을 함께 보존하며, 검증된 변경마다 불변 버전으로 다시 빌드.
 - **[흥할지도](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
   한국관광공사 공개 데이터로 축제 수요를 예측하는 2026 관광데이터 활용 공모전 출품작. 2인 팀 주 개발자. 담당: D-30 지역 방문수요 모델(계절 기준선 + LightGBM 잔차 보정, 시간 홀드아웃 WAPE 3.9%), FastAPI 서비스, 입력에 없는 숫자를 서버가 검사해 거부하는 Claude 기획 보고서, 오라클 클라우드 cron 일일 재학습, Next.js 기획자·방문객 웹.
 
