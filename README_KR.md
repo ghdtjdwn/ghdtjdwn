@@ -7,7 +7,7 @@
 
 ## 현재
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 – . 음성 중심 AI 트레이딩 워크스페이스. Spring Boot 코어, Python 코디네이터, 결정적 종목 해석, 주문 전 명시적 승인.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 – . 음성 중심 AI 트레이딩 워크스페이스를 단독 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
 - **AI Agent Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · 2026.09 – . 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트.
 
 ## 프로젝트
@@ -20,6 +20,10 @@
   기숙사 탐색과 설명 가능한 룸메이트 매칭, 채팅. 3인 팀. 담당: 프론트엔드, 룸메이트 매칭 백엔드(Irving의 Stable Roommates를 완전 탐색 오라클과 대조 검증), MySQL을 정본으로 하는 채팅, k3s/Helm 운영 인프라. [서비스](https://chamdomi.vercel.app)
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
   자동 시장 검증. 아이디어 한 번 입력으로 랜딩, 카드뉴스, Meta 광고, 실제 반응 리포트까지. 담당: 백엔드와 AI, 콘텐츠 생성 파이프라인, 사용자별 데이터 격리, 장기 실행 작업, Meta 광고 연동. [서비스](https://marketvaley.vercel.app)
+- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
+  HWP·Office·PDF 문서를 읽고 연결하고 원본 근거를 보존한 채 안전하게 수정하는 로컬 우선 문서 에이전트. 4인 팀. 담당: AI 에이전트 런타임 전체. Claude Agent SDK 기반 FastAPI 사이드카로 모델에는 쓰기 도구를 주지 않고, 모든 변경을 exact diff로 미리 보여 준 뒤 사용자가 해시를 승인해야만 실행하며, 저널과 undo를 갖춘 원자적 파일 교체와 검증된 지식 빌드만 검색 그래프에 공개하는 outbox를 구현.
+- **[흥할지도](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
+  한국관광공사 공개 데이터로 축제 수요를 예측하는 2026 관광데이터 활용 공모전 출품작. 2인 팀 주 개발자. 담당: D-30 지역 방문수요 모델(계절 기준선 + LightGBM 잔차 보정, 시간 홀드아웃 WAPE 3.9%), FastAPI 서비스, 입력에 없는 숫자를 서버가 검사해 거부하는 Claude 기획 보고서, 오라클 클라우드 cron 일일 재학습, Next.js 기획자·방문객 웹.
 
 ## 오픈소스
 
@@ -31,20 +35,12 @@
 
 리뷰 진행 중: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull/7925), [OpenTelemetry Python Contrib](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032), [Spring AI](https://github.com/spring-projects/spring-ai/pull/6929), [Lettuce](https://github.com/redis/lettuce/pull/3909), [SlowAPI](https://github.com/laurentS/slowapi/pull/305).
 
-## 글
-
-위 프로젝트를 운영하며 남긴 장애와 설계 기록입니다. 한국어와 영어로 씁니다.
-
-- [동일 좌석 100건을 외부 쓰기 1건으로 줄인 예약 큐](https://seongju.vercel.app/writing/durable-reservation-intent-queue/)
-- [공간 검색 p95 2.68초에서 인덱스 대신 CPU를 늘린 근거](https://seongju.vercel.app/writing/load-test-cpu-not-index/)
-- [CI는 성공했는데 ARM64 k3s가 이전 이미지를 실행한 이유](https://seongju.vercel.app/writing/arm64-gitops-image-drift/)
-- [브라우저에서 MCP 도구까지, 세 서비스의 신원 경계를 맞춘 과정](https://seongju.vercel.app/writing/server-verified-principal-boundary/)
 
 ## 수상
 
-- 매니패스트 특별상 · UNITHON 2026 · marketvalley
-- 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · 참도미
-- 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
+- 🏆 매니패스트 특별상 · UNITHON 2026 · marketvalley
+- 🥈 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · 참도미
+- 🏅 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
 
 ## 기술
 
