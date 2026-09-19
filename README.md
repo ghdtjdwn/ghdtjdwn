@@ -1,63 +1,51 @@
-<p align="center">
-  <img src="./assets/profile-header.svg" width="100%" alt="Hong Seong Ju — Backend, Platform, and AI Systems" />
-</p>
+# Seongju Hong
 
-<p align="right"><a href="./README_KR.md">Korean</a></p>
+Backend and AI systems engineer. Computer Science student at Soongsil University.
+I build services end to end: the data model and API, agent orchestration, deployment, observability, and failure recovery.
 
-# Hong Seong Ju | Backend · Platform · AI Systems
+[Blog](https://seongju.vercel.app/en/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
-I study Computer Science at Soongsil University and build and operate backend, data, and AI systems.
-I treat authentication boundaries, data consistency, failure recovery, deployment, and observability as
-parts of one end-to-end service.
+## Now
 
-[Email](mailto:seongjuice999@gmail.com)
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . A voice-first AI trading workspace: Spring Boot core, Python coordinator, deterministic instrument resolution, and explicit approval before any order.
+- **AI Agent Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 – . Production AI agents for fashion e-commerce operations.
 
-## Experience
+## Projects
 
-| Role | Period | Work |
-| --- | --- | --- |
-| Founding Engineer · [TrabyOS](https://trabyos-website.vercel.app/) | Sep 2026 – Present | Building a voice-first AI trading workspace across backend services, agent orchestration, and trading workflows. |
-| AI Agent Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) | Sep 2026 – Present | Designing and building production AI agent systems for fashion and e-commerce domain workflows. |
+- **[ssu Campus AI Platform](https://seongju.vercel.app/en/projects/ssu-platform/)** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
+  Soongsil University's public and personal academic, LMS, and library data, served through a web app, a natural-language agent, and 52 MCP tools. Four services that I designed and operate: [ssuAI](https://github.com/ghdtjdwn/ssuAI) (web, same-origin BFF, SSE), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) (domain tools, REST, approval-gated writes), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) (LangGraph routing, PostgreSQL checkpoints, human-in-the-loop), and [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) (embedding gateway). PostgreSQL is the source of truth, Redis handles coordination and rate limits, Kafka handles fan-out, and Argo CD delivers to ARM64 Kubernetes with Prometheus, Tempo, Loki, and Grafana. [Live](https://ssuai.vercel.app)
+- **[Geuneul](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS ECS` `Terraform`
+  A summer survival map: 150k+ public POIs, radius and kNN search on PostGIS, and real-time user reports over LISTEN/NOTIFY and SSE. Solo project. Terraform-declared AWS, OIDC deploys from GitHub Actions, k6 load tests, and tuning decided from EXPLAIN plans. [Live](https://geuneul.vercel.app)
+- **[Cham Domi](https://seongju.vercel.app/en/projects/cham-domi/)** `Spring Boot` `Next.js` `MySQL` `k3s`
+  Dormitory discovery with explainable roommate matching and chat, built by a team of three. My part: the frontend, the roommate matching backend (Irving's Stable Roommates checked against a brute-force oracle), chat with MySQL as the authority, and the k3s/Helm production infrastructure. [Live](https://chamdomi.vercel.app)
+- **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
+  Automated market validation: one idea in, a landing page, card news, Meta ads, and a real-response report out. My part: backend and AI, the content pipeline, per-user data isolation, long-running jobs, and the Meta Ads integration. [Live](https://marketvaley.vercel.app)
 
-## Open Source Contributions
+## Open source
 
-Merged upstream. Each row links the problem, the fix, and the maintainer review.
+Merged upstream. [All PRs on GitHub](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
-| Project | What I fixed | Evidence |
-| --- | --- | --- |
-| [Ouroboros](https://github.com/Q00/ouroboros) · agent OS and MCP runtime | Cancelling an in-progress `MCPClientAdapter.connect()` left `is_connected=True` and the adapter's own HTTP client open. Reset adapter state and clean up owned resources before re-raising `CancelledError`, with six regression cases. | Reported [#2364](https://github.com/Q00/ouroboros/issues/2364) → merged [PR #2365](https://github.com/Q00/ouroboros/pull/2365), approved by two maintainers |
-| [Caveman](https://github.com/JuliusBrussee/caveman) · token-saving skill for coding agents | `--force` never refreshed editor rule files once a repo was initialized, so rule updates could not reach `.cursor`, `.windsurf`, or `.clinerules`. One-character fix with red-first tests. | [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) → cherry-picked into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015) and merged with authorship preserved |
-| [psycopg](https://github.com/psycopg/psycopg) · PostgreSQL adapter for Python | `AsyncConnectionPool.getconn()` could swallow task cancellation during a connection check, hanging worker shutdown (seen in Procrastinate). Reproduced it, wrote a deterministic check-after-growth regression, and verified the maintainer's fix. | Verification requested and accepted by the maintainer on [#1345](https://github.com/psycopg/psycopg/issues/1345); fixed by [PR #1407](https://github.com/psycopg/psycopg/pull/1407) · [regression tests](https://github.com/MarthalaJagruthiReddy/psycopg/pull/1) |
+- **[psycopg](https://github.com/psycopg/psycopg)** `Python` · `AsyncConnectionPool.getconn()` could swallow task cancellation during a connection check and hang worker shutdown. Reproduced it, wrote a deterministic regression test, and verified the maintainer's fix. [#1345](https://github.com/psycopg/psycopg/issues/1345) · [PR #1407](https://github.com/psycopg/psycopg/pull/1407)
+- **[Ouroboros](https://github.com/Q00/ouroboros)** `Python` · Cancelling an in-progress MCP client connect left the adapter marked connected with its HTTP client open. Reset state and release owned resources before re-raising, with six regression tests. [#2364](https://github.com/Q00/ouroboros/issues/2364) · [PR #2365](https://github.com/Q00/ouroboros/pull/2365)
+- **[Caveman](https://github.com/JuliusBrussee/caveman)** `Go` · `--force` never refreshed editor rule files once a repo was initialized. One-character fix with red-first tests. [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · merged via [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)
+
+Under review: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull/7925), [OpenTelemetry Python Contrib](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032), [Spring AI](https://github.com/spring-projects/spring-ai/pull/6929), [Lettuce](https://github.com/redis/lettuce/pull/3909), [SlowAPI](https://github.com/laurentS/slowapi/pull/305).
+
+## Writing
+
+Incident and design notes from operating the projects above, in English and Korean.
+
+- [Reducing 100 same-seat requests to one upstream write](https://seongju.vercel.app/en/writing/durable-reservation-intent-queue/)
+- [Why I added CPU instead of another index for a 2.68-second spatial p95](https://seongju.vercel.app/en/writing/load-test-cpu-not-index/)
+- [Why green CI left ARM64 k3s running the previous image](https://seongju.vercel.app/en/writing/arm64-gitops-image-drift/)
+- [Aligning identity boundaries from the browser to private MCP tools](https://seongju.vercel.app/en/writing/server-verified-principal-boundary/)
 
 ## Awards
 
-- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley) — backend and AI for a marketing-validation tool: Anthropic content pipeline, per-user data isolation, long-running jobs, Meta Ads · [Live](https://marketvaley.vercel.app)
-- **Silver Award** · Soongsil CS Software Contest 2026 · [Cham Domi](https://github.com/chamdormie) — frontend, roommate backend, production infrastructure · [Live](https://chamdomi.vercel.app)
-- **Excellence Award** · Soongsil Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
+- Manifest Special Award · UNITHON 2026 · marketvalley
+- Silver Prize · Soongsil University CS Software Competition 2026 · Cham Domi
+- Excellence Award · Soongsil University Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
 
-## SSU Campus AI Platform
+## Stack
 
-An operational platform that connects Soongsil University's public information and personal academic,
-LMS, and library data through the web, a natural-language agent, and standard MCP tools. Browser
-authentication, conversation orchestration, campus-domain tools, and model serving are separated into
-independent service boundaries.
-
-| Service | Responsibility | Links |
-| --- | --- | --- |
-| ssuAI | Next.js web app, same-origin BFF, responsive dashboards, and SSE/HITL UX | [Service](https://ssuai.vercel.app) · [Repository](https://github.com/ghdtjdwn/ssuAI) |
-| ssuMCP | Spring Boot campus domain service, MCP tools, REST APIs, authentication, and approval-gated writes | [Repository](https://github.com/ghdtjdwn/ssuMCP) |
-| ssuAgent | FastAPI/LangGraph routing, PostgreSQL checkpoints, SSE, and human-in-the-loop workflows | [Repository](https://github.com/ghdtjdwn/ssuAgent) |
-| ssu-ai-service | Standalone embedding gateway with authentication, input, and concurrency boundaries | [Repository](https://github.com/ghdtjdwn/ssu-ai-service) |
-
-PostgreSQL is the source of truth for durable consistency, Redis handles shared coordination and rate
-limiting, and Kafka provides event fan-out. Tested images are delivered to ARM64 Kubernetes through
-Argo CD, with Prometheus, Tempo, Loki, and Grafana providing operational visibility.
-
-## Technologies and Notes
-
-- Backend · AI: Java 21, Kotlin, Spring Boot, Python, FastAPI, LangGraph, MCP
-- Data: PostgreSQL, PostGIS, Redis, Kafka
-- Web: TypeScript, Next.js, React, Astro
-- Platform: Docker, Kubernetes, Argo CD, Terraform, AWS, GitHub Actions
-- Observability: Prometheus, Grafana, Tempo, Loki, OpenTelemetry
-- [Computer Science coursework archive](https://github.com/ghdtjdwn/cs-coursework)
+Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
