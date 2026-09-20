@@ -3,7 +3,7 @@
 Backend and AI systems engineer. Computer Science student at Soongsil University.
 I build services end to end: the data model and API, agent orchestration, deployment, observability, and failure recovery.
 
-[Blog](https://seongju.vercel.app/en/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
+[Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
 ## Now
 
@@ -12,11 +12,11 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Projects
 
-- **[ssu Campus AI Platform](https://seongju.vercel.app/en/projects/ssu-platform/)** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
+- **ssu Campus AI Platform** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
   Soongsil University's public and personal academic, LMS, and library data, served through a web app, a natural-language agent, and 52 MCP tools. Four services that I designed and operate: [ssuAI](https://github.com/ghdtjdwn/ssuAI) (web, same-origin BFF, SSE), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) (domain tools, REST, approval-gated writes), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) (LangGraph routing, PostgreSQL checkpoints, human-in-the-loop), and [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) (embedding gateway). PostgreSQL is the source of truth, Redis handles coordination and rate limits, Kafka handles fan-out, and Argo CD delivers to ARM64 Kubernetes with Prometheus, Tempo, Loki, and Grafana. [Live](https://ssuai.vercel.app)
 - **[Geuneul](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS ECS` `Terraform`
   A summer survival map: 150k+ public POIs, radius and kNN search on PostGIS, and real-time user reports over LISTEN/NOTIFY and SSE. Solo project. Terraform-declared AWS, OIDC deploys from GitHub Actions, k6 load tests, and tuning decided from EXPLAIN plans. [Live](https://geuneul.vercel.app)
-- **[Cham Domi](https://seongju.vercel.app/en/projects/cham-domi/)** `Spring Boot` `Next.js` `MySQL` `k3s`
+- **Cham Domi** `Spring Boot` `Next.js` `MySQL` `k3s`
   Dormitory discovery with explainable roommate matching and chat, built by a team of three. My part: the frontend, the roommate matching backend (Irving's Stable Roommates checked against a brute-force oracle), chat with MySQL as the authority, and the k3s/Helm production infrastructure. [Live](https://chamdomi.vercel.app)
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
   Automated market validation: one idea in, a landing page, card news, Meta ads, and a real-response report out. My part: backend and AI, the content pipeline, per-user data isolation, long-running jobs, and the Meta Ads integration. [Live](https://marketvaley.vercel.app)
@@ -40,7 +40,7 @@ Under review: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull
 
 - 🏆 Manifest Special Award · UNITHON 2026 · marketvalley
 - 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · Cham Domi
-- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025 · [solved.ac](https://solved.ac/profile/akftjdwn)
+- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025
 
 ## Stack
 
