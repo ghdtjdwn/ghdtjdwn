@@ -7,8 +7,8 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Now
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 – . The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
-- **AI Agent Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 – . Production AI agents for fashion e-commerce operations.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 ~ present . The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
+- **AI Agent Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 ~ present . Production AI agents for fashion e-commerce operations.
 
 ## Projects
 
