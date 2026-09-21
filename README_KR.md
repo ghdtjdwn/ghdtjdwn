@@ -5,10 +5,10 @@
 
 [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
-## 현재
+## 경력
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 – . 이 스타트업의 유일한 개발자로 음성 중심 AI 트레이딩 워크스페이스 전체를 혼자 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
-- **AI Agent Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · 2026.09 – . 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 ~ 현재. 이 스타트업의 유일한 개발자로 음성 중심 AI 트레이딩 워크스페이스 전체를 혼자 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
+- **AI Agent Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · 2026.09 ~ 현재. 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트.
 
 ## 프로젝트
 
@@ -41,6 +41,11 @@
 - 🏆 매니패스트 특별상 · UNITHON 2026 · marketvalley
 - 🥈 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · 참도미
 - 🏅 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+
+## 학력 · 병역
+
+- **숭실대학교 컴퓨터학부** · 2022 ~ 현재
+- **대한민국 육군** · 2023.05 ~ 2024.11 · 병역 이행
 
 ## 기술
 

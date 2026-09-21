@@ -5,10 +5,10 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
-## Now
+## Experience
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 ~ present . The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
-- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 ~ present . Production AI agents for fashion e-commerce operations.
+- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 ~ present. The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
+- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · Sep 2026 ~ present. Production AI agents for fashion e-commerce operations.
 
 ## Projects
 
@@ -41,6 +41,11 @@ Under review: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull
 - 🏆 Manifest Special Award · UNITHON 2026 · marketvalley
 - 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · Cham Domi
 - 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025
+
+## Education & Service
+
+- **Soongsil University**, School of Computer Science & Engineering · 2022 ~ present
+- **Republic of Korea Army** · May 2023 ~ Nov 2024 · Mandatory military service
 
 ## Stack
 
