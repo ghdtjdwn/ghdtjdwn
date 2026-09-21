@@ -8,7 +8,7 @@ I build services end to end: the data model and API, agent orchestration, deploy
 ## Experience
 
 - **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 ~ present. The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order.
-- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · [MXN Commerce Group](https://www.mxncommerce.com/en) · Sep 2026 ~ present. Production AI agents for fashion e-commerce operations.
+- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** ·([MXN Commerce Group](https://www.mxncommerce.com/en)) · Sep 2026 ~ present. Production AI agents for fashion e-commerce operations.
 - **Republic of Korea Army** · May 2023 ~ Nov 2024. Mandatory military service.
 - **Soongsil University**, School of Computer Science & Engineering · 2022 ~ present.
 
