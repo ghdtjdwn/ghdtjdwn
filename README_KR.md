@@ -7,7 +7,7 @@
 
 ## 경력
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · 2026.09 ~ 현재. 이 스타트업의 유일한 개발자로 음성 중심 AI 트레이딩 워크스페이스 전체를 혼자 개발. Spring Boot 코어, Python 코디네이터, Swift 네이티브 음성 클라이언트, 결정적 종목 해석, 주문 전 명시적 승인.
+- **Founding Engineer, [TrabyOS](https://github.com/TrabyOS)** · 2026.09 ~ 현재. 결정적 주문 해석부터 macOS 네이티브 음성 인터페이스까지 음성 중심 AI 트레이딩 워크스페이스의 기술을 총괄. [웹사이트](https://trabyos-website.vercel.app/) · [무료 테스트 빌드](https://github.com/TrabyOS/trabyos-test/releases/latest)
 - **Software Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · [MXN Commerce Group](https://www.mxncommerce.com/en) · 2026.09 ~ 현재. 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트.
 - **대한민국 육군** · 2023.05 ~ 2024.11. 병역 이행.
 - **숭실대학교 컴퓨터학부** · 2022 ~ 현재.
@@ -15,17 +15,17 @@
 ## 프로젝트
 
 - **ssu 캠퍼스 AI 플랫폼** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
-  숭실대학교의 공개 정보와 개인 학사·LMS·도서관 데이터를 웹, 자연어 에이전트, 52개 MCP 도구로 제공합니다. 직접 설계하고 운영하는 4개 서비스: [ssuAI](https://github.com/ghdtjdwn/ssuAI)(웹, same-origin BFF, SSE), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP)(도메인 도구, REST, 승인 기반 쓰기), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent)(LangGraph 라우팅, PostgreSQL checkpoint, human-in-the-loop), [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)(임베딩 게이트웨이). PostgreSQL을 정본으로 두고 Redis로 조정과 rate limit을, Kafka로 fan-out을 처리하며 Argo CD로 ARM64 Kubernetes에 배포하고 Prometheus·Tempo·Loki·Grafana로 관측합니다. [서비스](https://ssuai.vercel.app)
-- **[그늘](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS ECS` `Terraform`
-  여름 생존 지도. 공공 POI 15만 건 이상, PostGIS 반경·kNN 검색, LISTEN/NOTIFY와 SSE로 전달하는 실시간 제보. 1인 프로젝트. Terraform으로 선언한 AWS, GitHub Actions OIDC 배포, k6 부하 테스트, EXPLAIN 계획에 근거한 튜닝. [서비스](https://geuneul.vercel.app)
-- **참도미** `Spring Boot` `Next.js` `MySQL` `k3s`
-  기숙사 탐색과 설명 가능한 룸메이트 매칭, 채팅. 3인 팀. 담당: 프론트엔드, 룸메이트 매칭 백엔드(Irving의 Stable Roommates를 완전 탐색 오라클과 대조 검증), MySQL을 정본으로 하는 채팅, k3s/Helm 운영 인프라. [서비스](https://chamdomi.vercel.app)
+  숭실대학교의 공개 정보와 개인 학사·LMS·도서관 데이터를 웹, 자연어 에이전트, 승인 경계를 갖춘 52개 MCP 도구로 제공합니다. [ssuAI](https://github.com/ghdtjdwn/ssuAI), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent), [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)로 나눠 ARM64 Kubernetes에 배포하고 전 구간을 관측합니다. [웹](https://ssuai.vercel.app)
+- **[그늘](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS → OCI` `Terraform`
+  공공 POI 15만 건 이상을 GiST 기반 반경·kNN으로 검색하고 LISTEN/NOTIFY와 SSE로 실시간 제보를 전달하는 여름 생존 지도입니다. 저장소에 AWS에서 OCI로 데이터를 보존하며 이전하는 현재 상태를 기록합니다. [웹](https://geuneul.vercel.app)
+- **[참도미](https://github.com/chamdormie)** `Spring Boot` `Next.js` `MySQL` `k3s`
+  기숙사 탐색, 설명 가능한 룸메이트 매칭, 채팅을 잇습니다. 매칭 엔진은 Irving의 Stable Roommates 알고리즘을 구현하고 완전 탐색 오라클과 대조해 검증했습니다. [웹](https://chamdomi.vercel.app)
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
-  자동 시장 검증. 아이디어 한 번 입력으로 랜딩, 카드뉴스, Meta 광고, 실제 반응 리포트까지. 담당: 백엔드와 AI, 콘텐츠 생성 파이프라인, 사용자별 데이터 격리, 장기 실행 작업, Meta 광고 연동. [서비스](https://marketvaley.vercel.app)
-- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
-  HWP·Office·PDF 문서를 읽고 연결하고 원본 근거를 보존한 채 안전하게 수정하는 로컬 우선 문서 에이전트. 4인 팀. 담당: AI 에이전트 런타임 전체와 지식 그래프 구축. 런타임은 Claude Agent SDK 기반 FastAPI 사이드카로 모델에는 쓰기 도구를 주지 않고, 모든 변경을 exact diff로 미리 보여 준 뒤 사용자가 해시를 승인해야만 실행하며, 저널과 undo를 갖춘 원자적 파일 교체를 수행. 지식 그래프는 변환된 문서들이 공유하는 엔티티로 관계를 도출하고, 각 원문의 근거 문장을 함께 보존하며, 검증된 변경마다 불변 버전으로 다시 빌드.
+  아이디어 하나를 랜딩, 소셜 카드 5장, Meta 광고, 실제 방문·예약·Insights에 근거한 리포트로 이어 줍니다. 브라우저를 닫아도 PostgreSQL lease 상태 머신이 장기 작업을 계속합니다. [웹](https://marketvaley.vercel.app)
+- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Gemma 4` `Electron` `SQLite`
+  HWP·Office·PDF를 다루는 로컬 우선 문서 에이전트입니다. 원문 근거를 보존하는 지식 그래프로 문서를 연결하고, exact diff 승인·원본 해시 검증·원자적 교체·undo로 수정을 검토 가능하고 복구 가능하게 만듭니다.
 - **[흥할지도](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
-  한국관광공사 공개 데이터로 축제 수요를 예측하는 2026 관광데이터 활용 공모전 출품작. 2인 팀 주 개발자. 담당: D-30 지역 방문수요 모델(계절 기준선 + LightGBM 잔차 보정, 시간 홀드아웃 WAPE 3.9%), FastAPI 서비스, 입력에 없는 숫자를 서버가 검사해 거부하는 Claude 기획 보고서, 오라클 클라우드 cron 일일 재학습, Next.js 기획자·방문객 웹.
+  한국관광공사 공개 데이터로 축제 수요를 예측합니다. 계절 기준선에 LightGBM 잔차 모델을 더해 시간 홀드아웃 WAPE 3.9%를 기록했고, 생성된 기획 보고서의 숫자가 모델 입력에 없으면 서버가 거부합니다.
 
 ## 오픈소스
 
@@ -46,4 +46,4 @@
 
 ## 기술
 
-Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
+Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · Swift, macOS · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS, OCI · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
