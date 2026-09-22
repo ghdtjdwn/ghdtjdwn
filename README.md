@@ -29,14 +29,21 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Open source
 
-Merged upstream. [All PRs on GitHub](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+Mostly cancellation, races, and lost state in concurrent runtimes, each starting from a reproduction and a failing test. [All PRs on GitHub](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+
+**Merged upstream**
 
 - **[psycopg](https://github.com/psycopg/psycopg)** `Python` · `AsyncConnectionPool.getconn()` could swallow task cancellation during a connection check and hang worker shutdown. Reproduced it, wrote a deterministic regression test, and verified the maintainer's fix. [#1345](https://github.com/psycopg/psycopg/issues/1345) · [PR #1407](https://github.com/psycopg/psycopg/pull/1407)
 - **[Ouroboros](https://github.com/Q00/ouroboros)** `Python` · Cancelling an in-progress MCP client connect left the adapter marked connected with its HTTP client open. Reset state and release owned resources before re-raising, with six regression tests. [#2364](https://github.com/Q00/ouroboros/issues/2364) · [PR #2365](https://github.com/Q00/ouroboros/pull/2365)
 - **[Caveman](https://github.com/JuliusBrussee/caveman)** `Go` · `--force` never refreshed editor rule files once a repo was initialized. One-character fix with red-first tests. [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · merged via [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)
 
-Under review: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull/7925), [OpenTelemetry Python Contrib](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032), [Spring AI](https://github.com/spring-projects/spring-ai/pull/6929), [Lettuce](https://github.com/redis/lettuce/pull/3909), [SlowAPI](https://github.com/laurentS/slowapi/pull/305).
+**Under review**
 
+- **[OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib)** `Python` · WSGI SERVER spans received captured request headers only after sampling, so samplers could not use them. Pass the configured, sanitized headers as initial span attributes while keeping them out of INTERNAL spans and metrics; the shared `CapturingSampler` test utility requested in review goes to the core repository. [contrib PR #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) · [core PR #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)
+- **[Lettuce](https://github.com/redis/lettuce)** `Java` · A concurrent `setOptions()` could mix configurations during connection initialization. Pass captured `ClientOptions` through `RedisClient`, `RedisClusterClient`, and the shared handshake, including custom factory hooks and asynchronous retries; the maintainer proposed widening this into an explicit `ClientOptions` parameter on the public connection-factory API. [#3591](https://github.com/redis/lettuce/issues/3591) · [PR #3909](https://github.com/redis/lettuce/pull/3909)
+- **[Spring AI](https://github.com/spring-projects/spring-ai)** `Java` · A custom `ChatMemory` bean that depends on `RedisChatMemoryRepository` blocked the repository's auto-configuration and failed context startup. Narrow the missing-bean condition to `ChatMemoryRepository`, with integration tests for custom memory, custom repository precedence, and the default memory. [#6926](https://github.com/spring-projects/spring-ai/issues/6926) · [PR #6929](https://github.com/spring-projects/spring-ai/pull/6929)
+- **[SlowAPI](https://github.com/laurentS/slowapi)** `Python` · Endpoints were keyed by module and `__name__`, so same-named class methods such as `First.index` and `Second.index` shared one rate limit and one exemption. Use `__qualname__` for registration, lookup, exemptions, and middleware matching, with 18 regression cases. [#173](https://github.com/laurentS/slowapi/issues/173) · [PR #305](https://github.com/laurentS/slowapi/pull/305)
+- **[Micrometer](https://github.com/micrometer-metrics/micrometer)** `Java` · Documented custom tags for Java `HttpClient` observations through `HttpClientObservationConvention`, with examples taken from a compiled test. [#4962](https://github.com/micrometer-metrics/micrometer/issues/4962) · [PR #7925](https://github.com/micrometer-metrics/micrometer/pull/7925)
 
 ## Awards
 
