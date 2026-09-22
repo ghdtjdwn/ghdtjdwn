@@ -7,25 +7,25 @@ I build services end to end: the data model and API, agent orchestration, deploy
 
 ## Experience
 
-- **Founding Engineer, [TrabyOS](https://trabyos-website.vercel.app/)** · Sep 2026 ~ present. The startup's only developer. I build the whole voice-first AI trading workspace alone: Spring Boot core, Python coordinator, Swift native voice client, deterministic instrument resolution, and explicit approval before any order. [GitHub](https://github.com/TrabyOS)
-- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** ·([MXN Commerce Group](https://www.mxncommerce.com/en)) · Sep 2026 ~ present. Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
+- **Founding Engineer, [TrabyOS](https://github.com/TrabyOS)** · Sep 2026 ~ present. Technical owner of a voice-first AI trading workspace for macOS, from deterministic trade resolution to the native voice interface. [Website](https://trabyos-website.vercel.app/) · [Free test build](https://github.com/TrabyOS/trabyos-test/releases/latest)
+- **Software Engineer Intern, [Bizarre Cube AI](https://www.bzrr.ai/)** · [MXN Commerce Group](https://www.mxncommerce.com/en) · Sep 2026 ~ present. Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
 - **Republic of Korea Army** · May 2023 ~ Nov 2024. Mandatory military service.
 - **Soongsil University**, School of Computer Science & Engineering · 2022 ~ present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
 ## Projects
 
 - **ssu Campus AI Platform** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
-  Soongsil University's public and personal academic, LMS, and library data, served through a web app, a natural-language agent, and 52 MCP tools. Four services that I designed and operate: [ssuAI](https://github.com/ghdtjdwn/ssuAI) (web, same-origin BFF, SSE), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) (domain tools, REST, approval-gated writes), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) (LangGraph routing, PostgreSQL checkpoints, human-in-the-loop), and [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service) (embedding gateway). PostgreSQL is the source of truth, Redis handles coordination and rate limits, Kafka handles fan-out, and Argo CD delivers to ARM64 Kubernetes with Prometheus, Tempo, Loki, and Grafana. [Live](https://ssuai.vercel.app)
-- **[Geuneul](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS ECS` `Terraform`
-  A summer survival map: 150k+ public POIs, radius and kNN search on PostGIS, and real-time user reports over LISTEN/NOTIFY and SSE. Solo project. Terraform-declared AWS, OIDC deploys from GitHub Actions, k6 load tests, and tuning decided from EXPLAIN plans. [Live](https://geuneul.vercel.app)
+  Soongsil University's public and personal academic, LMS, and library data through a web app, a natural-language agent, and 52 approval-aware MCP tools. The platform is split into [ssuAI](https://github.com/ghdtjdwn/ssuAI), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent), and [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service), deployed to ARM64 Kubernetes with end-to-end observability. [Web](https://ssuai.vercel.app)
+- **[Geuneul](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS → OCI` `Terraform`
+  A summer survival map for 150k+ public POIs, with GiST-backed radius and kNN search and real-time reports over LISTEN/NOTIFY and SSE. The repository records the current data-preserving migration from AWS to OCI. [Web](https://geuneul.vercel.app)
 - **[Cham Domi](https://github.com/chamdormie)** `Spring Boot` `Next.js` `MySQL` `k3s`
-  Dormitory discovery with explainable roommate matching and chat, built by a team of three. My part: the frontend, the roommate matching backend (Irving's Stable Roommates checked against a brute-force oracle), chat with MySQL as the authority, and the k3s/Helm production infrastructure. [Live](https://chamdomi.vercel.app)
+  Dormitory discovery, explainable roommate matching, and chat. The matching engine implements Irving's Stable Roommates algorithm and is checked against a brute-force oracle. [Web](https://chamdomi.vercel.app)
 - **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
-  Automated market validation: one idea in, a landing page, card news, Meta ads, and a real-response report out. My part: backend and AI, the content pipeline, per-user data isolation, long-running jobs, and the Meta Ads integration. [Live](https://marketvaley.vercel.app) · [Team](https://github.com/unithon26)
-- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Claude Agent SDK` `Electron` `SQLite`
-  A local-first document agent that reads, connects, and safely edits HWP, Office, and PDF files while preserving evidence from the originals. Team of four. My part: the entire AI agent runtime and the knowledge graph. The runtime is a FastAPI sidecar built on the Claude Agent SDK where the model gets no write tools, every change is previewed as an exact diff and hash-approved by the user, and files are replaced atomically with crash-recoverable journals and undo. The knowledge graph derives relationships between converted documents from shared entities, keeps the supporting sentence from each source as evidence, and is rebuilt as an immutable version after every verified change. [Team](https://github.com/dotenv-uploaded)
+  One idea becomes a landing page, five social cards, Meta ads, and a report grounded in actual visits, reservations, and Insights. Long-running work survives a closed browser through a leased PostgreSQL state machine. [Web](https://marketvaley.vercel.app) · [Team](https://github.com/unithon26)
+- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Gemma 4` `Electron` `SQLite`
+  A local-first document agent for HWP, Office, and PDF. Its evidence-backed knowledge graph connects files by shared entities; exact-diff approval, source-hash checks, atomic replacement, and undo keep edits reviewable and recoverable. [Team](https://github.com/dotenv-uploaded)
 - **[HeungMap](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
-  Festival demand forecasting on Korea Tourism Organization open data, entered in the 2026 Tourism Data Contest. Lead developer in a team of two. My part: the D-30 regional visitor model (seasonal baseline plus LightGBM residuals, WAPE 3.9% on a time holdout), the FastAPI service, Claude-written planning reports with server-side checks that reject numbers absent from the input, daily retraining on an Oracle Cloud cron, and the Next.js planner and visitor web app.
+  Festival demand forecasting on Korea Tourism Organization open data. A seasonal baseline plus LightGBM residual model reached 3.9% WAPE on a time holdout; generated planning reports reject figures absent from the model input.
 
 ## Open source
 
@@ -44,4 +44,4 @@ Merged upstream. [All PRs on GitHub](https://github.com/search?q=is%3Apr+author%
 
 ## Stack
 
-Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
+Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · Swift, macOS · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS, OCI · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
