@@ -1,47 +1,64 @@
 # 홍성주
 
-백엔드·AI 시스템 엔지니어. 숭실대학교 컴퓨터학부 재학 중.
-데이터 모델과 API, 에이전트 오케스트레이션, 배포, 관측, 장애 복구까지 서비스를 끝까지 만들고 운영합니다.
+숭실대학교 컴퓨터학부에서 공부하는 백엔드·AI 시스템 엔지니어입니다.
+모델의 출력이 실제 데이터, 사용자의 명시적 결정, 데모 뒤에도 계속 돌아가야 하는 시스템과 만나는 제품을 만듭니다.
 
 [웹사이트](https://seongju.vercel.app) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
-## 경력
+## 현재
 
-- **Founding Engineer, [TrabyOS](https://github.com/TrabyOS)** · 2026.09 ~ 현재. 결정적 주문 해석부터 macOS 네이티브 음성 인터페이스까지 음성 중심 AI 트레이딩 워크스페이스의 기술을 총괄. [웹사이트](https://trabyos-website.vercel.app/) · [무료 테스트 빌드](https://github.com/TrabyOS/trabyos-test/releases/latest)
-- **Software Engineer Intern, [비자르큐브 AI](https://www.bzrr.ai/)** · [MXN Commerce Group](https://www.mxncommerce.com/en) · 2026.09 ~ 현재. 패션 이커머스 운영 업무를 위한 실서비스 AI 에이전트. [GitHub](https://github.com/bizarrecube)
-- **대한민국 육군** · 2023.05 ~ 2024.11. 병역 이행.
-- **숭실대학교 컴퓨터학부** · 2022 ~ 현재. [전공 과제 아카이브](https://github.com/ghdtjdwn/cs-coursework)
+- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · Mac에서 실시간 시장 정보를 묻고, 완성된 주문 카드를 확인한 뒤 음성으로 모의 주문을 승인·수정·취소하는 트레이딩 워크스페이스를 만들고 있습니다. [웹사이트](https://trabyos-website.vercel.app/) · [무료 테스트 빌드](https://github.com/TrabyOS/trabyos-test/releases/latest)
+- **[비자르큐브 AI](https://www.bzrr.ai/), [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
+- **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
-## 프로젝트
+## 제품
 
-- **ssu 캠퍼스 AI 플랫폼** `Spring Boot` `LangGraph` `Next.js` `Kubernetes`
-  숭실대학교의 공개 정보와 개인 학사·LMS·도서관 데이터를 웹, 자연어 에이전트, 승인 경계를 갖춘 52개 MCP 도구로 제공합니다. [ssuAI](https://github.com/ghdtjdwn/ssuAI), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent), [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)로 나눠 ARM64 Kubernetes에 배포하고 전 구간을 관측합니다. [웹](https://ssuai.vercel.app)
-- **[그늘](https://github.com/ghdtjdwn/geuneul)** `Spring Boot` `PostGIS` `AWS → OCI` `Terraform`
-  공공 POI 15만 건 이상을 GiST 기반 반경·kNN으로 검색하고 LISTEN/NOTIFY와 SSE로 실시간 제보를 전달하는 여름 생존 지도입니다. 저장소에 AWS에서 OCI로 데이터를 보존하며 이전하는 현재 상태를 기록합니다. [웹](https://geuneul.vercel.app)
-- **[참도미](https://github.com/chamdormie)** `Spring Boot` `Next.js` `MySQL` `k3s`
-  기숙사 탐색, 설명 가능한 룸메이트 매칭, 채팅을 잇습니다. 매칭 엔진은 Irving의 Stable Roommates 알고리즘을 구현하고 완전 탐색 오라클과 대조해 검증했습니다. [웹](https://chamdomi.vercel.app)
-- **[marketvalley](https://github.com/unithon26/marketvalley)** `Next.js` `Supabase` `Meta Marketing API`
-  아이디어 하나를 랜딩, 소셜 카드 5장, Meta 광고, 실제 방문·예약·Insights에 근거한 리포트로 이어 줍니다. 브라우저를 닫아도 PostgreSQL lease 상태 머신이 장기 작업을 계속합니다. [웹](https://marketvaley.vercel.app) · [팀](https://github.com/unithon26)
-- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** `FastAPI` `Gemma 4` `Electron` `SQLite`
-  HWP·Office·PDF를 다루는 로컬 우선 문서 에이전트입니다. 원문 근거를 보존하는 지식 그래프로 문서를 연결하고, exact diff 승인·원본 해시 검증·원자적 교체·undo로 수정을 검토 가능하고 복구 가능하게 만듭니다. [팀](https://github.com/dotenv-uploaded)
-- **[흥할지도](https://github.com/ghdtjdwn/heungmap)** `FastAPI` `LightGBM` `Next.js` `Claude`
-  한국관광공사 공개 데이터로 축제 수요를 예측합니다. 계절 기준선에 LightGBM 잔차 모델을 더해 시간 홀드아웃 WAPE 3.9%를 기록했고, 생성된 기획 보고서의 숫자가 모델 입력에 없으면 서버가 거부합니다.
+### [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuAI)
+
+학생이 학교 공개 정보와 자신의 학사·LMS·도서관 데이터를 하나의 웹 앱이나 자연어 에이전트에서 찾고 활용합니다. 명시적인 승인 경계를 둔 MCP 도구 52개를 [ssuAI](https://github.com/ghdtjdwn/ssuAI), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent), [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)가 나누어 제공합니다. [서비스 열기](https://ssuai.vercel.app)
+
+`Spring Boot` `LangGraph` `Next.js` `Kubernetes`
+
+### [그늘](https://github.com/ghdtjdwn/geuneul)
+
+15만 건이 넘는 공공 장소에서 가까운 그늘과 폭염 대피시설을 찾는 여름 생존 지도입니다. PostGIS로 반경·최근접 검색을 처리하고, 이용자의 현장 제보는 지도를 새로고침하지 않아도 실시간으로 도착합니다. [지도 열기](https://geuneul.vercel.app)
+
+`Spring Boot` `PostGIS` `SSE` `Terraform`
+
+### [참도미](https://github.com/chamdormie)
+
+학생의 조건을 기숙사 모집요강과 비교해 어떤 자격을 충족하거나 놓쳤는지 보여 주고, 그 결과를 룸메이트 탐색으로 이어 줍니다. 여덟 가지 생활 성향의 추천 근거, 모집글, 참여 신청과 승인, 1:1·단체 채팅으로 추천에서 실제 방 구성까지 연결합니다. [참도미 열기](https://chamdomi.vercel.app)
+
+`Spring Boot` `Next.js` `MySQL` `WebSocket`
+
+### [marketvalley](https://github.com/unithon26)
+
+초기 창업자가 문제와 솔루션을 한 번 입력하면 하나의 검증 가설에서 공개 랜딩, 소셜 카드 5장, 문구와 Meta 광고를 만듭니다. 이후 실제 Insights, 방문, 동의 기반 예약을 모아 다음 검증 여부를 사람이 판단할 수 있게 돌려줍니다. [서비스 열기](https://marketvaley.vercel.app) · [소스 코드](https://github.com/unithon26/marketvalley)
+
+`Next.js` `Supabase` `Anthropic` `Meta Marketing API`
+
+### [Folding](https://github.com/dotenv-uploaded)
+
+HWP·Office·PDF를 위한 로컬 우선 데스크톱 워크스페이스입니다. 선택한 폴더 전체에 질문하고 원문 근거와 문서 관계를 확인한 뒤, 원본을 조용히 덮어쓰지 않고 새 파일을 만들어 다시 검증하는 형식별 편집을 승인할 수 있습니다. [소스 코드](https://github.com/dotenv-uploaded/_FOLDING_)
+
+`Electron` `FastAPI` `Gemma 4` `SQLite`
+
+### [흥할지도](https://github.com/ghdtjdwn/heungmap)
+
+한국관광공사 데이터로 기획자와 방문객을 연결하는 축제 기획·탐색 서비스입니다. 축제 관람객 수가 아니라 행사 30일 전에 알 수 있는 시군구 전체 방문자-일의 범위와 요인, What-if 비교를 제공합니다. 채택한 계절 기준선과 LightGBM 잔차 모델은 시간 홀드아웃에서 WAPE 3.939%를 기록했고, 기획 보고서가 모델 입력에 없는 숫자를 만들면 서버에서 거부됩니다.
+
+`FastAPI` `LightGBM` `Next.js` `Claude`
 
 ## 오픈소스
 
-업스트림에 병합된 기여입니다. [전체 PR 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+업스트림에 병합된 작업입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
-- **[psycopg](https://github.com/psycopg/psycopg)** `Python` · `AsyncConnectionPool.getconn()`이 연결 검사 도중 태스크 취소를 삼켜 워커 종료가 멈추는 문제(Procrastinate에서 발생). 재현하고 결정적 회귀 테스트를 작성했으며, 유지보수자의 요청으로 수정을 검증해 이슈를 종결. [#1345](https://github.com/psycopg/psycopg/issues/1345) · [PR #1407](https://github.com/psycopg/psycopg/pull/1407)
-- **[Ouroboros](https://github.com/Q00/ouroboros)** `Python` · 진행 중인 MCP 클라이언트 연결이 취소되면 어댑터가 연결 상태로 남고 HTTP 클라이언트가 열린 채 유지되는 문제. 다시 던지기 전에 상태를 초기화하고 소유 자원을 정리, 회귀 테스트 6건. 유지보수자 2명 승인. [#2364](https://github.com/Q00/ouroboros/issues/2364) · [PR #2365](https://github.com/Q00/ouroboros/pull/2365)
-- **[Caveman](https://github.com/JuliusBrussee/caveman)** `Go` · 한 번 초기화된 저장소에서 `--force`로도 에디터 규칙 파일이 갱신되지 않아 `.cursor`·`.windsurf`·`.clinerules`에 규칙 변경이 전달되지 않던 문제. 한 글자 수정과 실패 우선 테스트. 유지보수자가 "파급력 큰 한 글자 버그"로 평가. [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 작성자 이력을 보존한 채 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)로 병합
-
+- [psycopg #1407](https://github.com/psycopg/psycopg/pull/1407) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고 결정적 회귀 테스트를 추가했으며, 유지보수자와 최종 수정을 검증했습니다.
+- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
+- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 초기화 뒤 `--force`가 에디터 규칙 파일을 갱신하지 못하던 문제를 수정했으며, 작성자 이력을 보존한 후속 PR로 병합됐습니다.
 
 ## 수상
 
 - 🏆 매니패스트 특별상 · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
 - 🥈 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
 - 🏅 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025
-
-## 기술
-
-Java, Kotlin, Spring Boot · Python, FastAPI, LangGraph, MCP · TypeScript, Next.js · Swift, macOS · PostgreSQL, PostGIS, Redis, Kafka · Docker, Kubernetes, Argo CD, Terraform, AWS, OCI · Prometheus, Grafana, Tempo, Loki, OpenTelemetry
