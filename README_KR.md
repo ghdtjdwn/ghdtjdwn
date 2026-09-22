@@ -35,8 +35,6 @@
 - **[Ouroboros](https://github.com/Q00/ouroboros)** `Python` · 진행 중인 MCP 클라이언트 연결이 취소되면 어댑터가 연결 상태로 남고 HTTP 클라이언트가 열린 채 유지되는 문제. 다시 던지기 전에 상태를 초기화하고 소유 자원을 정리, 회귀 테스트 6건. 유지보수자 2명 승인. [#2364](https://github.com/Q00/ouroboros/issues/2364) · [PR #2365](https://github.com/Q00/ouroboros/pull/2365)
 - **[Caveman](https://github.com/JuliusBrussee/caveman)** `Go` · 한 번 초기화된 저장소에서 `--force`로도 에디터 규칙 파일이 갱신되지 않아 `.cursor`·`.windsurf`·`.clinerules`에 규칙 변경이 전달되지 않던 문제. 한 글자 수정과 실패 우선 테스트. 유지보수자가 "파급력 큰 한 글자 버그"로 평가. [PR #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 작성자 이력을 보존한 채 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)로 병합
 
-리뷰 진행 중: [Micrometer](https://github.com/micrometer-metrics/micrometer/pull/7925), [OpenTelemetry Python Contrib](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032), [Spring AI](https://github.com/spring-projects/spring-ai/pull/6929), [Lettuce](https://github.com/redis/lettuce/pull/3909), [SlowAPI](https://github.com/laurentS/slowapi/pull/305).
-
 
 ## 수상
 
