@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: "0 18 * * *" # 03:00 KST
   workflow_dispatch:
+  push:
+    branches: [profile/activity-widgets] # TEMP: test run before merge
 
 permissions:
   contents: write
