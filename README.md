@@ -119,12 +119,6 @@ Merged upstream work. [Browse all pull requests](https://github.com/search?q=is%
 <!-- Languages (most used / recently used) · lowlighter/metrics -->
 <p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/languages.svg" alt="Languages" /></p>
 
-<!-- Achievements · lowlighter/metrics -->
-<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/achievements.svg" alt="Achievements" /></p>
-
-<!-- Notable contributions to other repositories · lowlighter/metrics -->
-<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/notable.svg" alt="Notable contributions" /></p>
-
 <!-- 3D contribution skyline · yoshi389111/github-profile-3d-contrib (.github/workflows/profile-widgets.yml) -->
 <p align="center">
   <picture>
