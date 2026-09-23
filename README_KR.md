@@ -8,7 +8,7 @@
 ## 현재
 
 - **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · Mac에서 실시간 시장 정보를 묻고, 완성된 주문 카드를 확인한 뒤 음성으로 모의 주문을 승인·수정·취소하는 트레이딩 워크스페이스를 만들고 있습니다. [웹사이트](https://trabyos-website.vercel.app/) · [무료 테스트 빌드](https://github.com/TrabyOS/trabyos-test/releases/latest)
-- **[비자르큐브 AI](https://www.bzrr.ai/), [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
+- **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
 ## 제품
