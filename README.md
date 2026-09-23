@@ -8,7 +8,7 @@ I build products where model output meets real data, explicit user decisions, an
 ## Now
 
 - **Founding Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice-first trading workspace for macOS. Users ask for live market context, review a complete order card, and approve, correct, or cancel a paper trade by voice. [Website](https://trabyos-website.vercel.app/) · [Free test build](https://github.com/TrabyOS/trabyos-test/releases/latest)
-- **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/), [MXN Commerce Group](https://www.mxncommerce.com/en)** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
+- **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
 - **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
 ## Products
@@ -62,3 +62,84 @@ Merged upstream work. [Browse all pull requests](https://github.com/search?q=is%
 - 🏆 Manifest Special Award · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
 - 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
 - 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025
+
+## GitHub Activity
+
+<!-- Profile views · komarev/github-profile-views-counter -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=ghdtjdwn&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
+
+<!-- Streak · DenverCoder1/github-readme-streak-stats -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ghdtjdwn&timezone=Asia/Seoul&theme=dark&hide_border=true" />
+    <img src="https://streak-stats.demolab.com?user=ghdtjdwn&timezone=Asia/Seoul&hide_border=true" alt="GitHub streak" />
+  </picture>
+</p>
+
+<!-- Profile details · vn7n24fzkq/github-profile-summary-cards (.github/workflows/profile-widgets.yml) -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github_dark/0-profile-details.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github/0-profile-details.svg" alt="Profile details" />
+  </picture>
+</p>
+
+<!-- Stats + commits by hour of day (KST) · github-profile-summary-cards -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github_dark/3-stats.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github/3-stats.svg" alt="Stats" height="180" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github_dark/4-productive-time.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github/4-productive-time.svg" alt="Commits by hour" height="180" />
+  </picture>
+</p>
+
+<!-- Languages · github-profile-summary-cards -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github_dark/1-repos-per-language.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github/1-repos-per-language.svg" alt="Repos per language" height="180" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github_dark/2-most-commit-language.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/summary-cards/github/2-most-commit-language.svg" alt="Most commit language" height="180" />
+  </picture>
+</p>
+
+<!-- Metrics overview · lowlighter/metrics (.github/workflows/profile-widgets.yml) -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/overview.svg" alt="Metrics overview" /></p>
+
+<!-- Coding habits (commit hours, weekdays, indentation, languages) · lowlighter/metrics -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/habits.svg" alt="Coding habits" /></p>
+
+<!-- Isometric contribution calendar · lowlighter/metrics -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/isocalendar.svg" alt="Contribution calendar" /></p>
+
+<!-- Languages (most used / recently used) · lowlighter/metrics -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/languages.svg" alt="Languages" /></p>
+
+<!-- Achievements · lowlighter/metrics -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/achievements.svg" alt="Achievements" /></p>
+
+<!-- Notable contributions to other repositories · lowlighter/metrics -->
+<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/notable.svg" alt="Notable contributions" /></p>
+
+<!-- 3D contribution skyline · yoshi389111/github-profile-3d-contrib (.github/workflows/profile-widgets.yml) -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/3d-contrib/profile-night-rainbow.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/3d-contrib/profile-green-animate.svg" alt="3D contributions" />
+  </picture>
+</p>
+
+<!-- Contribution snake · Platane/snk (.github/workflows/profile-widgets.yml) -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/snake/github-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/snake/github-snake.svg" alt="Contribution snake" />
+  </picture>
+</p>

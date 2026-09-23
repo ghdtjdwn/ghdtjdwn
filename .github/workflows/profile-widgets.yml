@@ -1,0 +1,180 @@
+# Renders the profile README widgets and publishes them to the `output` branch.
+# main is protected (PR only), so generated files never go to main.
+# Uses secrets.METRICS_TOKEN (classic PAT: read:user, repo) when set; otherwise public data only.
+name: Profile widgets
+
+on:
+  schedule:
+    - cron: "0 18 * * *" # 03:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-widgets
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    env:
+      USER_LOGIN: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v5
+
+      # Keep the previous render of any widget whose step fails today
+      - name: Restore previous renders
+        run: |
+          mkdir -p dist
+          if git ls-remote --exit-code --heads origin output >/dev/null; then
+            git fetch --depth 1 origin output
+            git --work-tree=dist checkout FETCH_HEAD -- .
+            git reset -q
+          fi
+
+      # --- lowlighter/metrics ------------------------------------------------
+      - name: "Metrics: overview"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/overview.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: header, activity, community, repositories, metadata
+
+      - name: "Metrics: coding habits"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/habits.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: ""
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_facts: yes
+          plugin_habits_trim: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 30
+
+      - name: "Metrics: isometric calendar"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: "Metrics: languages"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/languages.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: ""
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_sections: most-used, recently-used
+
+      - name: "Metrics: achievements"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/achievements.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: B
+          plugin_achievements_secrets: yes
+
+      - name: "Metrics: notable contributions"
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: metrics/notable.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          output_action: none
+          config_timezone: Asia/Seoul
+          base: ""
+          plugin_notable: yes
+          plugin_notable_from: all
+          plugin_notable_types: pull
+          plugin_notable_indepth: yes
+          plugin_notable_self: no
+
+      - name: Collect metrics
+        run: |
+          if [ -d /metrics_renders/metrics ]; then
+            mkdir -p dist/metrics
+            sudo cp -R /metrics_renders/metrics/. dist/metrics/
+            sudo chown -R "$(id -u):$(id -g)" dist
+          fi
+
+      # --- vn7n24fzkq/github-profile-summary-cards ---------------------------
+      - name: Profile summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ env.USER_LOGIN }}
+          UTC_OFFSET: 9
+          AUTO_PUSH: false
+
+      - name: Collect summary cards
+        run: |
+          for theme in github github_dark; do
+            if [ -d "profile-summary-card-output/$theme" ]; then
+              mkdir -p "dist/summary-cards/$theme"
+              cp -R "profile-summary-card-output/$theme/." "dist/summary-cards/$theme/"
+            fi
+          done
+
+      # --- yoshi389111/github-profile-3d-contrib -----------------------------
+      - name: 3D contributions
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ env.USER_LOGIN }}
+
+      - name: Collect 3D contributions
+        run: |
+          if [ -d profile-3d-contrib ]; then
+            mkdir -p dist/3d-contrib
+            cp -R profile-3d-contrib/. dist/3d-contrib/
+          fi
+
+      # --- Platane/snk -------------------------------------------------------
+      - name: Contribution snake
+        uses: Platane/snk@v3
+        continue-on-error: true
+        with:
+          github_user_name: ${{ env.USER_LOGIN }}
+          outputs: |
+            dist/snake/github-snake.svg
+            dist/snake/github-snake-dark.svg?palette=github-dark
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
