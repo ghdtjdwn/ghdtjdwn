@@ -113,9 +113,6 @@ Merged upstream work. [Browse all pull requests](https://github.com/search?q=is%
 <!-- Metrics overview · lowlighter/metrics (.github/workflows/profile-widgets.yml) -->
 <p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/overview.svg" alt="Metrics overview" /></p>
 
-<!-- Coding habits (commit hours, weekdays, indentation, languages) · lowlighter/metrics -->
-<p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/habits.svg" alt="Coding habits" /></p>
-
 <!-- Isometric contribution calendar · lowlighter/metrics -->
 <p align="center"><img src="https://raw.githubusercontent.com/ghdtjdwn/ghdtjdwn/output/metrics/isocalendar.svg" alt="Contribution calendar" /></p>
 
