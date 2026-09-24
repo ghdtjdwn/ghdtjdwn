@@ -51,11 +51,11 @@ HWP·Office·PDF를 위한 로컬 우선 데스크톱 워크스페이스입니�
 
 ## 오픈소스
 
-업스트림에 병합된 작업입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+업스트림에 반영된 기여입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
-- [psycopg #1407](https://github.com/psycopg/psycopg/pull/1407) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고 결정적 회귀 테스트를 추가했으며, 유지보수자와 최종 수정을 검증했습니다.
 - [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
 - [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 초기화 뒤 `--force`가 에디터 규칙 파일을 갱신하지 못하던 문제를 수정했으며, 작성자 이력을 보존한 후속 PR로 병합됐습니다.
+- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고, 릴리스 전에 유지보수자의 수정 [#1407](https://github.com/psycopg/psycopg/pull/1407)을 검증했습니다.
 
 ## 수상
 
