@@ -7,7 +7,7 @@ I build products where model output meets real data, explicit user decisions, an
 
 ## Now
 
-- **Founding Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice-first trading app for macOS. Users ask for live market data by voice, review a complete order card, and approve, correct, or cancel it; the order reaches the exchange only after that approval. [Website](https://trabyos-website.vercel.app/)
+- **Founding Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
 - **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
 - **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
