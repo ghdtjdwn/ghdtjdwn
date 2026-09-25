@@ -7,7 +7,7 @@
 
 ## 현재
 
-- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · Mac용 음성 우선 트레이딩 앱입니다. 음성으로 실시간 시장 정보를 묻고, 완성된 주문 카드를 확인한 뒤 승인·수정·취소하며, 주문은 승인한 뒤에만 거래소로 나갑니다. [웹사이트](https://trabyos-website.vercel.app/)
+- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · Mac용 암호화폐 음성 트레이딩 비서입니다. 키를 누른 채 시세·잔고·뉴스를 묻거나 현물·무기한 선물 주문을 말하면, 주문 카드로 보여주고 승인한 뒤에만 거래소로 보냅니다. [웹사이트](https://trabyos-website.vercel.app/)
 - **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
