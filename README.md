@@ -11,6 +11,21 @@ I build products where model output meets real data, explicit user decisions, an
 - **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
 - **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
+## Awards
+
+- 🏆 Manifest Special Award · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025
+
+## Open source
+
+Contributions that landed upstream. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+
+- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Documented custom tags for Java `HttpClient` observations, with the examples taken from a compiled test that checks the recorded custom and default tags.
+- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Fixed cancellation cleanup for an in-progress MCP client connection and added six regression tests.
+- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Fixed `--force` failing to refresh editor rule files after initialization; authorship was preserved in the merged follow-up.
+- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Reproduced a swallowed cancellation in `AsyncConnectionPool.getconn()` and verified the maintainer's fix in [#1407](https://github.com/psycopg/psycopg/pull/1407) before release.
+
 ## Products
 
 ### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI)
@@ -48,17 +63,3 @@ A local-first desktop workspace for HWP, Office, and PDF. Users ask across a fol
 A planning and discovery service built from Korea Tourism Organization data. It forecasts city- or county-wide visitor-days available 30 days before a festival—not festival attendance—and shows planners a range, contributing factors, and what-if comparisons. The adopted seasonal baseline plus LightGBM residual model reached 3.939% WAPE on a time holdout; generated reports reject figures absent from the model input.
 
 `FastAPI` `LightGBM` `Next.js` `Claude`
-
-## Open source
-
-Merged upstream work. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
-
-- [psycopg #1407](https://github.com/psycopg/psycopg/pull/1407) · Reproduced a swallowed cancellation in `AsyncConnectionPool.getconn()` and added a deterministic regression test; verified the final fix with the maintainer.
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Fixed cancellation cleanup for an in-progress MCP client connection and added six regression tests.
-- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Fixed `--force` failing to refresh editor rule files after initialization; authorship was preserved in the merged follow-up.
-
-## Awards
-
-- 🏆 Manifest Special Award · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025

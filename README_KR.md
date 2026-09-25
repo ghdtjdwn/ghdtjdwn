@@ -11,6 +11,21 @@
 - **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
+## 수상
+
+- 🏆 매니패스트 특별상 · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
+- 🏅 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+
+## 오픈소스
+
+업스트림에 반영된 기여입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+
+- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Java `HttpClient` 관측에 사용자 정의 태그를 붙이는 방법을 문서화했으며, 예제는 기록된 사용자 정의 태그와 기본 태그를 검증하는 컴파일된 테스트에서 가져왔습니다.
+- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
+- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 초기화 뒤 `--force`가 에디터 규칙 파일을 갱신하지 못하던 문제를 수정했으며, 작성자 이력을 보존한 후속 PR로 병합됐습니다.
+- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고, 릴리스 전에 유지보수자의 수정 [#1407](https://github.com/psycopg/psycopg/pull/1407)을 검증했습니다.
+
 ## 제품
 
 ### [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuAI)
@@ -48,17 +63,3 @@ HWP·Office·PDF를 위한 로컬 우선 데스크톱 워크스페이스입니�
 한국관광공사 데이터로 기획자와 방문객을 연결하는 축제 기획·탐색 서비스입니다. 축제 관람객 수가 아니라 행사 30일 전에 알 수 있는 시군구 전체 방문자-일의 범위와 요인, What-if 비교를 제공합니다. 채택한 계절 기준선과 LightGBM 잔차 모델은 시간 홀드아웃에서 WAPE 3.939%를 기록했고, 기획 보고서가 모델 입력에 없는 숫자를 만들면 서버에서 거부됩니다.
 
 `FastAPI` `LightGBM` `Next.js` `Claude`
-
-## 오픈소스
-
-업스트림에 병합된 작업입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
-
-- [psycopg #1407](https://github.com/psycopg/psycopg/pull/1407) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고 결정적 회귀 테스트를 추가했으며, 유지보수자와 최종 수정을 검증했습니다.
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
-- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 초기화 뒤 `--force`가 에디터 규칙 파일을 갱신하지 못하던 문제를 수정했으며, 작성자 이력을 보존한 후속 PR로 병합됐습니다.
-
-## 수상
-
-- 🏆 매니패스트 특별상 · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 은상 · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
-- 🏅 우수상 · 숭실대학교 솔브드 코드 알고리즘 대회 2025
