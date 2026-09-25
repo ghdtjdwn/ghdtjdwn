@@ -21,6 +21,7 @@ I build products where model output meets real data, explicit user decisions, an
 
 Contributions that landed upstream. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
+- [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · Added a shared `CapturingSampler` to `opentelemetry-test-utils` at a maintainer's request, so instrumentation tests can check the attributes a sampler receives at span start.
 - [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Documented custom tags for Java `HttpClient` observations, with the examples taken from a compiled test that checks the recorded custom and default tags.
 - [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Fixed cancellation cleanup for an in-progress MCP client connection and added six regression tests.
 - [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Fixed `--force` failing to refresh editor rule files after initialization; authorship was preserved in the merged follow-up.
