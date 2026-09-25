@@ -7,7 +7,7 @@
 
 ## 현재
 
-- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · Mac용 암호화폐 음성 트레이딩 비서입니다. 키를 누른 채 시세·잔고·뉴스를 묻거나 현물·무기한 선물 주문을 말하면, 주문 카드로 보여주고 승인한 뒤에만 거래소로 보냅니다. [웹사이트](https://trabyos-website.vercel.app/)
+- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · 말로 실제 암호화폐 거래를 해주는 음성 트레이딩 비서입니다. 현물·무기한 선물 주문을 말하면 주문 카드로 보여주고, 승인하면 거래소에서 주문을 실행합니다. 시세·잔고·뉴스도 물어볼 수 있습니다. [웹사이트](https://trabyos-website.vercel.app/)
 - **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
