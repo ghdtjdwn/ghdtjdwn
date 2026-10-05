@@ -21,6 +21,7 @@
 
 업스트림에 반영된 기여입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
+- [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Pi 확장이 `/tree`로 브랜치를 옮긴 뒤에도 이전 모드를 유지하던 문제를 수정해, 주입되는 지침과 상태 표시줄이 선택한 브랜치에 저장된 모드를 따르도록 했습니다.
 - [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · 메인테이너 요청으로 `opentelemetry-test-utils`에 공용 `CapturingSampler`를 추가해, 계측 테스트가 span 시작 시점에 샘플러가 받는 속성을 검증할 수 있게 했습니다.
 - [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Java `HttpClient` 관측에 사용자 정의 태그를 붙이는 방법을 문서화했으며, 예제는 기록된 사용자 정의 태그와 기본 태그를 검증하는 컴파일된 테스트에서 가져왔습니다.
 - [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
