@@ -21,6 +21,7 @@ I build products where model output meets real data, explicit user decisions, an
 
 Contributions that landed upstream. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
+- [OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) · Made configured, sanitized WSGI request headers available at span creation so samplers can use them in sampling decisions, while keeping captured headers out of internal spans and metrics.
 - [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Fixed the Pi extension keeping the previous mode after `/tree` navigation, so the injected instructions and status bar follow the mode saved on the selected branch.
 - [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · Added a shared `CapturingSampler` to `opentelemetry-test-utils` at a maintainer's request, so instrumentation tests can check the attributes a sampler receives at span start.
 - [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Documented custom tags for Java `HttpClient` observations, with the examples taken from a compiled test that checks the recorded custom and default tags.
