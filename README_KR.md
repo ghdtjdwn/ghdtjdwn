@@ -21,6 +21,7 @@
 
 업스트림에 반영된 기여입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
+- [OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) · 설정에 따라 수집하고 민감 값을 마스킹한 WSGI 요청 헤더를 span 생성 시점에 전달해 샘플링 판단에 사용할 수 있도록 수정했습니다. 수집한 헤더가 내부 span과 메트릭에 포함되지 않는 동작도 유지했습니다.
 - [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Pi 확장이 `/tree`로 브랜치를 옮긴 뒤에도 이전 모드를 유지하던 문제를 수정해, 주입되는 지침과 상태 표시줄이 선택한 브랜치에 저장된 모드를 따르도록 했습니다.
 - [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · 메인테이너 요청으로 `opentelemetry-test-utils`에 공용 `CapturingSampler`를 추가해, 계측 테스트가 span 시작 시점에 샘플러가 받는 속성을 검증할 수 있게 했습니다.
 - [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Java `HttpClient` 관측에 사용자 정의 태그를 붙이는 방법을 문서화했으며, 예제는 기록된 사용자 정의 태그와 기본 태그를 검증하는 컴파일된 테스트에서 가져왔습니다.
