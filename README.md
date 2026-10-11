@@ -19,15 +19,35 @@ I build products where model output meets real data, explicit user decisions, an
 
 ## Open source
 
-Contributions that landed upstream. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+Six changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer. Ordered from the most involved work to the smallest fix. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
-- [OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) · Made configured, sanitized WSGI request headers available at span creation so samplers can use them in sampling decisions, while keeping captured headers out of internal spans and metrics.
-- [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Fixed the Pi extension keeping the previous mode after `/tree` navigation, so the injected instructions and status bar follow the mode saved on the selected branch.
-- [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · Added a shared `CapturingSampler` to `opentelemetry-test-utils` at a maintainer's request, so instrumentation tests can check the attributes a sampler receives at span start.
-- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Documented custom tags for Java `HttpClient` observations, with the examples taken from a compiled test that checks the recorded custom and default tags.
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Fixed cancellation cleanup for an in-progress MCP client connection and added six regression tests.
-- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Fixed `--force` failing to refresh editor rule files after initialization; authorship was preserved in the merged follow-up.
-- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Reproduced a swallowed cancellation in `AsyncConnectionPool.getconn()` and verified the maintainer's fix in [#1407](https://github.com/psycopg/psycopg/pull/1407) before release.
+- **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · Request headers for sampling decisions in WSGI
+
+  The WSGI middleware collected request headers only after the server span had been created, so a sampler could not use them. The configured, sanitized headers are now passed in when the span is created, and they still stay out of internal spans and metrics. Merged after a month of review with three approvals; it covers the WSGI item of a maintainer's tracking issue, [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975).
+
+- **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · A shared `CapturingSampler` for instrumentation tests
+
+  While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django instrumentation tests.
+
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365)** · Cleanup when an MCP client connection is cancelled
+
+  Cancelling `MCPClientAdapter.connect()` midway left the adapter marked as connected and its HTTP client open. I found this and reported it in [#2364](https://github.com/Q00/ouroboros/issues/2364). The fix resets the state and closes the owned client before the cancellation propagates, even if another cleanup step fails. Six regression tests, two maintainer approvals, released in v0.54.5.
+
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345)** · Reproduction and fix verification for a cancellation lost in the async pool
+
+  `AsyncConnectionPool.getconn()` could swallow a cancellation raised during the connection check and hand a connection to a caller that had already been cancelled. I reproduced the report with instrumentation, shared a deterministic regression test, and confirmed at the maintainer's request that the fix in [#1407](https://github.com/psycopg/psycopg/pull/1407) resolves it. The fix is the maintainer's and shipped in psycopg_pool 3.3.2.
+
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925)** · Reference docs for custom tags on Java `HttpClient` observations
+
+  Resolved a documentation request that had been open since 2024, [#4962](https://github.com/micrometer-metrics/micrometer/issues/4962). The new section shows how to add tags through an `HttpClientObservationConvention` while keeping the default ones. Its snippets come from a test that sends a request and checks the recorded timer, so the example is compiled and tested with the project.
+
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828)** · Mode restored after `/tree` navigation in the Pi extension
+
+  After `/ponytail off`, going back to an earlier branch with `/tree` left Ponytail disabled, because the extension restored the saved mode only at session start. It now does the same on tree navigation, so the injected instructions and the status bar follow the selected branch. Released in v4.13.0.
+
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)** · `--force` now refreshes existing editor rule files
+
+  On a repository that was already initialized, `caveman-init --force` reported the Cursor, Windsurf, and Cline rule files as installed and left stale rules in place. A one-character fix with three regression tests. The maintainer cherry-picked my commit into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015), and it was released in v2.7.0.
 
 ## Products
 
