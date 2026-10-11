@@ -19,15 +19,35 @@
 
 ## 오픈소스
 
-업스트림에 반영된 기여입니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+업스트림에 병합된 변경 6건과, 메인테이너 요청으로 재현·검증한 수정 1건입니다. 작업이 깊었던 순서로 적었습니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
-- [OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) · 설정에 따라 수집하고 민감 값을 마스킹한 WSGI 요청 헤더를 span 생성 시점에 전달해 샘플링 판단에 사용할 수 있도록 수정했습니다. 수집한 헤더가 내부 span과 메트릭에 포함되지 않는 동작도 유지했습니다.
-- [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Pi 확장이 `/tree`로 브랜치를 옮긴 뒤에도 이전 모드를 유지하던 문제를 수정해, 주입되는 지침과 상태 표시줄이 선택한 브랜치에 저장된 모드를 따르도록 했습니다.
-- [OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · 메인테이너 요청으로 `opentelemetry-test-utils`에 공용 `CapturingSampler`를 추가해, 계측 테스트가 span 시작 시점에 샘플러가 받는 속성을 검증할 수 있게 했습니다.
-- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Java `HttpClient` 관측에 사용자 정의 태그를 붙이는 방법을 문서화했으며, 예제는 기록된 사용자 정의 태그와 기본 태그를 검증하는 컴파일된 테스트에서 가져왔습니다.
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 진행 중인 MCP 클라이언트 연결이 취소될 때 상태와 HTTP 자원이 남는 문제를 수정하고 회귀 테스트 6건을 추가했습니다.
-- [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 초기화 뒤 `--force`가 에디터 규칙 파일을 갱신하지 못하던 문제를 수정했으며, 작성자 이력을 보존한 후속 PR로 병합됐습니다.
-- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · `AsyncConnectionPool.getconn()`이 취소를 삼키는 문제를 재현하고, 릴리스 전에 유지보수자의 수정 [#1407](https://github.com/psycopg/psycopg/pull/1407)을 검증했습니다.
+- **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · WSGI에서 요청 헤더로 샘플링 판단하기
+
+  WSGI 미들웨어가 요청 헤더를 서버 span이 만들어진 뒤에야 수집해서, 샘플러가 헤더를 보고 판단할 수 없었습니다. 설정으로 지정하고 민감 값을 가린 헤더를 span 생성 시점에 넘기도록 바꿨고, 내부 span과 메트릭에는 헤더가 들어가지 않는 기존 동작을 유지했습니다. 한 달간 리뷰를 거쳐 세 명의 승인으로 병합됐으며, 메인테이너가 올린 추적 이슈 [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)의 WSGI 항목에 해당합니다.
+
+- **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · 계측 테스트용 공용 `CapturingSampler`
+
+  위 변경을 리뷰하던 메인테이너가 계측마다 테스트용 샘플러를 따로 만들지 말고 하나를 같이 쓰자고 요청해, 코어 저장소의 `opentelemetry-test-utils`에 추가했습니다. 테스트는 이 샘플러로 span 시작 시점에 샘플러가 받는 속성을 확인합니다. 1.45.0 릴리스에 포함됐고, 이후 Django 계측 테스트에서도 쓰이고 있습니다.
+
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365)** · MCP 클라이언트 연결이 취소될 때의 정리
+
+  `MCPClientAdapter.connect()`를 도중에 취소하면 어댑터가 연결된 상태로 남고 HTTP 클라이언트도 닫히지 않는 문제를 발견해 [#2364](https://github.com/Q00/ouroboros/issues/2364)로 보고했습니다. 취소를 전파하기 전에 상태를 되돌리고 직접 만든 클라이언트를 닫도록 고쳤으며, 다른 정리 단계가 실패해도 닫습니다. 회귀 테스트 6건을 추가했고, 메인테이너 두 명의 승인을 받아 v0.54.5에 포함됐습니다.
+
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345)** · 비동기 풀에서 취소가 사라지는 문제의 재현과 수정 검증
+
+  `AsyncConnectionPool.getconn()`이 연결 검사 중에 발생한 취소를 삼켜, 이미 취소된 호출자에게 연결을 돌려주는 경우가 있었습니다. 계측을 넣어 이 보고를 재현하고 결정적인 회귀 테스트를 공유했으며, 메인테이너 요청으로 [#1407](https://github.com/psycopg/psycopg/pull/1407)의 수정이 문제를 해결하는지 확인했습니다. 수정 코드는 메인테이너가 작성했고 psycopg_pool 3.3.2로 배포됐습니다.
+
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925)** · Java `HttpClient` 관측의 사용자 정의 태그 문서
+
+  2024년부터 열려 있던 문서 요청 [#4962](https://github.com/micrometer-metrics/micrometer/issues/4962)를 해결했습니다. `HttpClientObservationConvention`으로 기본 태그를 유지하면서 태그를 추가하는 방법을 레퍼런스 문서에 넣었습니다. 예제는 실제로 요청을 보내고 기록된 타이머를 검증하는 테스트에서 가져오므로, 프로젝트와 함께 컴파일되고 테스트됩니다.
+
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828)** · Pi 확장에서 `/tree` 이동 후 모드 복원
+
+  `/ponytail off` 뒤에 `/tree`로 이전 브랜치에 돌아가도 Ponytail이 꺼진 채로 남았습니다. 확장이 저장된 모드를 세션 시작 때만 복원했기 때문입니다. 트리 이동 때도 복원하도록 고쳐, 주입되는 지침과 상태 표시줄이 선택한 브랜치의 모드를 따릅니다. v4.13.0에 포함됐습니다.
+
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)** · `--force`로 기존 에디터 규칙 파일 갱신
+
+  이미 초기화한 저장소에서 `caveman-init --force`를 실행해도 Cursor·Windsurf·Cline 규칙 파일을 설치된 것으로 보고 건너뛰어, 오래된 규칙이 그대로 남았습니다. 한 글자를 고치고 회귀 테스트 3건을 추가했습니다. 메인테이너가 제 커밋을 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했고 v2.7.0에 포함됐습니다.
 
 ## 제품
 
