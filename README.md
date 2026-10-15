@@ -19,7 +19,7 @@ I build products where model output meets real data, explicit user decisions, an
 
 ## Open source
 
-Six changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer. Ordered from the most involved work to the smallest fix. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+Seven changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer. Ordered from the most involved work to the smallest fix. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
 - **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · Request headers for sampling decisions in WSGI
 
@@ -28,6 +28,10 @@ Six changes merged into upstream projects, plus one fix I reproduced and verifie
 - **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · A shared `CapturingSampler` for instrumentation tests
 
   While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django instrumentation tests.
+
+- **[OpenTelemetry Python Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170)** · Sanitized, regex-matched header capture in Tornado
+
+  Tornado was the only HTTP server instrumentation that looked up captured header names literally and ignored `OTEL_INSTRUMENTATION_HTTP_CAPTURE_HEADERS_SANITIZE_FIELDS`, so sensitive header values could land on spans as-is. It now uses the same shared helper as the WSGI and aiohttp-server instrumentations: names match case-insensitively as regular expressions, and values of sensitive headers are recorded as `[REDACTED]`. I found the gap while working on [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975), where captured headers also start reaching samplers. Merged with two maintainer approvals.
 
 - **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365)** · Cleanup when an MCP client connection is cancelled
 
