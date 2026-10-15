@@ -19,7 +19,7 @@
 
 ## 오픈소스
 
-업스트림에 병합된 변경 6건과, 메인테이너 요청으로 재현·검증한 수정 1건입니다. 작업이 깊었던 순서로 적었습니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+업스트림에 병합된 변경 7건과, 메인테이너 요청으로 재현·검증한 수정 1건입니다. 작업이 깊었던 순서로 적었습니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
 - **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · WSGI에서 요청 헤더로 샘플링 판단하기
 
@@ -28,6 +28,10 @@
 - **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · 계측 테스트용 공용 `CapturingSampler`
 
   위 변경을 리뷰하던 메인테이너가 계측마다 테스트용 샘플러를 따로 만들지 말고 하나를 같이 쓰자고 요청해, 코어 저장소의 `opentelemetry-test-utils`에 추가했습니다. 테스트는 이 샘플러로 span 시작 시점에 샘플러가 받는 속성을 확인합니다. 1.45.0 릴리스에 포함됐고, 이후 Django 계측 테스트에서도 쓰이고 있습니다.
+
+- **[OpenTelemetry Python Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170)** · Tornado에서 캡처하는 헤더의 민감 값 가리기와 정규식 매칭
+
+  Tornado는 HTTP 서버 계측 가운데 유일하게 캡처할 헤더 이름을 글자 그대로만 찾고 `OTEL_INSTRUMENTATION_HTTP_CAPTURE_HEADERS_SANITIZE_FIELDS`를 무시해서, 민감한 헤더 값이 span에 그대로 기록될 수 있었습니다. WSGI·aiohttp-server 계측과 같은 공용 헬퍼를 쓰도록 바꿔, 헤더 이름은 대소문자 구분 없이 정규식으로 매칭하고 민감한 헤더 값은 `[REDACTED]`로 기록합니다. 캡처한 헤더가 샘플러에도 전달되는 [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975) 작업을 하다 발견했고, 메인테이너 두 명의 승인으로 병합됐습니다.
 
 - **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365)** · MCP 클라이언트 연결이 취소될 때의 정리
 
