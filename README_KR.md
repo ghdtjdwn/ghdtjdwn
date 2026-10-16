@@ -7,7 +7,7 @@ AI 에이전트를 실제 업무 현장에 배포하고, 그 아래에서 돌아
 
 ## 현재
 
-- **[TrabyOS](https://github.com/TrabyOS) 공동창업자·리드 엔지니어** · 말로 실제 암호화폐 거래를 해주는 음성 트레이딩 비서입니다. 현물·무기한 선물 주문을 말하면 주문 카드로 보여주고, 승인하면 거래소에서 주문을 실행합니다. 시세·잔고·뉴스도 물어볼 수 있습니다. [웹사이트](https://trabyos-website.vercel.app/)
+- **[TrabyOS](https://github.com/TrabyOS) 공동창업자·CTO** · 말로 실제 암호화폐 거래를 해주는 음성 트레이딩 비서입니다. 현물·무기한 선물 주문을 말하면 주문 카드로 보여주고, 승인하면 거래소에서 주문을 실행합니다. 시세·잔고·뉴스도 물어볼 수 있습니다. [웹사이트](https://trabyos-website.vercel.app/)
 - **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) AI Agent Engineer 인턴** · 패션 브랜드 MD가 매일 가격·수량·판매 시점을 정하는 데 쓰는 실서비스 의사결정 에이전트를 혼자 맡고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 

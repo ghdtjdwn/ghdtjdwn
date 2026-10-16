@@ -7,7 +7,7 @@ I ship AI agents into real operations and run the platform they depend on.
 
 ## Now
 
-- **Co-founder & Lead Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
+- **Co-founder & CTO at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
 - **AI Agent Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Sole engineer on a production decision agent that a fashion brand's merchandisers use every day to set price, quantity and timing. [GitHub](https://github.com/bizarrecube)
 - **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
