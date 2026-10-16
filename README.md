@@ -1,14 +1,14 @@
 # Seongju Hong
 
-Forward deployed and platform engineer studying Computer Science at Soongsil University.
-I ship AI agents into real operations and run the platform they depend on.
+Backend and AI systems engineer studying Computer Science at Soongsil University.
+I build products where model output meets real data, explicit user decisions, and systems that must keep working after the demo.
 
-[LinkedIn](https://www.linkedin.com/in/ghdtjdwn) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
+[Website](https://seongju.vercel.app) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
 ## Now
 
-- **Co-founder & CTO at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
-- **AI Agent Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Sole engineer on a production decision agent that a fashion brand's merchandisers use every day to set price, quantity and timing. [GitHub](https://github.com/bizarrecube)
+- **Founding Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
+- **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
 - **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
 
 ## Awards
@@ -19,7 +19,7 @@ I ship AI agents into real operations and run the platform they depend on.
 
 ## Open source
 
-Changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer, ordered from the most involved work to the smallest. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+Seven changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer. Ordered from the most involved work to the smallest fix. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
 - **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · Request headers for sampling decisions in WSGI
 
@@ -52,10 +52,6 @@ Changes merged into upstream projects, plus one fix I reproduced and verified fo
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)** · `--force` now refreshes existing editor rule files
 
   On a repository that was already initialized, `caveman-init --force` reported the Cursor, Windsurf, and Cline rule files as installed and left stale rules in place. A one-character fix with three regression tests. The maintainer cherry-picked my commit into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015), and it was released in v2.7.0.
-
-## Platform
-
-I run a small k3s platform on OCI ARM64 for my own products: Argo CD GitOps, Helm, digest-pinned GHCR images, and Prometheus, Grafana, Loki and Tempo. It hosts ssuMCP, ssuAgent, ssu-ai-service, the Cham Domi backend and the TrabyOS web app.
 
 ## Products
 
