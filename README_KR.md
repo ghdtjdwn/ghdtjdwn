@@ -1,14 +1,14 @@
 # 홍성주
 
-숭실대학교 컴퓨터학부에서 공부하는 Forward Deployed·플랫폼 엔지니어입니다.
-AI 에이전트를 실제 업무 현장에 배포하고, 그 아래에서 돌아가는 플랫폼을 직접 운영합니다.
+숭실대학교 컴퓨터학부에서 공부하는 백엔드·AI 시스템 엔지니어입니다.
+모델의 출력이 실제 데이터, 사용자의 명시적 결정, 데모 뒤에도 계속 돌아가야 하는 시스템과 만나는 제품을 만듭니다.
 
-[링크드인](https://www.linkedin.com/in/ghdtjdwn) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
+[웹사이트](https://seongju.vercel.app) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
 ## 현재
 
-- **[TrabyOS](https://github.com/TrabyOS) 공동창업자·CTO** · 말로 실제 암호화폐 거래를 해주는 음성 트레이딩 비서입니다. 현물·무기한 선물 주문을 말하면 주문 카드로 보여주고, 승인하면 거래소에서 주문을 실행합니다. 시세·잔고·뉴스도 물어볼 수 있습니다. [웹사이트](https://trabyos-website.vercel.app/)
-- **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) AI Agent Engineer 인턴** · 패션 브랜드 MD가 매일 가격·수량·판매 시점을 정하는 데 쓰는 실서비스 의사결정 에이전트를 혼자 맡고 있습니다. [GitHub](https://github.com/bizarrecube)
+- **[TrabyOS](https://github.com/TrabyOS) Founding Engineer** · 말로 실제 암호화폐 거래를 해주는 음성 트레이딩 비서입니다. 현물·무기한 선물 주문을 말하면 주문 카드로 보여주고, 승인하면 거래소에서 주문을 실행합니다. 시세·잔고·뉴스도 물어볼 수 있습니다. [웹사이트](https://trabyos-website.vercel.app/)
+- **[비자르큐브 AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en)) Software Engineer Intern** · 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 만들고 있습니다. [GitHub](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부** · 2022–현재. [전공 과제](https://github.com/ghdtjdwn/cs-coursework)
 
 ## 수상
@@ -19,7 +19,7 @@ AI 에이전트를 실제 업무 현장에 배포하고, 그 아래에서 돌아
 
 ## 오픈소스
 
-업스트림에 병합된 변경과, 메인테이너 요청으로 재현·검증한 수정입니다. 작업이 깊었던 순서로 적었습니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+업스트림에 병합된 변경 7건과, 메인테이너 요청으로 재현·검증한 수정 1건입니다. 작업이 깊었던 순서로 적었습니다. [전체 Pull Request 보기](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
 
 - **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · WSGI에서 요청 헤더로 샘플링 판단하기
 
@@ -52,10 +52,6 @@ AI 에이전트를 실제 업무 현장에 배포하고, 그 아래에서 돌아
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)** · `--force`로 기존 에디터 규칙 파일 갱신
 
   이미 초기화한 저장소에서 `caveman-init --force`를 실행해도 Cursor·Windsurf·Cline 규칙 파일을 설치된 것으로 보고 건너뛰어, 오래된 규칙이 그대로 남았습니다. 한 글자를 고치고 회귀 테스트 3건을 추가했습니다. 메인테이너가 제 커밋을 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했고 v2.7.0에 포함됐습니다.
-
-## 플랫폼
-
-제 제품을 올리는 작은 k3s 플랫폼을 OCI ARM64에서 직접 운영합니다. Argo CD GitOps, Helm, digest로 고정한 GHCR 이미지, Prometheus·Grafana·Loki·Tempo로 구성했고, ssuMCP·ssuAgent·ssu-ai-service·참도미 백엔드·TrabyOS 웹앱이 여기서 돌아갑니다.
 
 ## 제품
 
