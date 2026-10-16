@@ -27,7 +27,7 @@ Seven changes merged into upstream projects, plus one fix I reproduced and verif
 
 - **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · A shared `CapturingSampler` for instrumentation tests
 
-  While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django instrumentation tests.
+  While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django and aiohttp-server instrumentation tests.
 
 - **[OpenTelemetry Python Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170)** · Sanitized, regex-matched header capture in Tornado
 
