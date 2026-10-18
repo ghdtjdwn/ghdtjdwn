@@ -25,6 +25,8 @@ Seven changes merged into upstream projects, plus one fix I reproduced and verif
 
   The WSGI middleware collected request headers only after the server span had been created, so a sampler could not use them. The configured, sanitized headers are now passed in when the span is created, and they still stay out of internal spans and metrics. Merged after a month of review with three approvals; it covers the WSGI item of a maintainer's tracking issue, [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975).
 
+  I also reviewed and locally tested the follow-up changes for [Falcon #5160](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5160), [Flask #5161](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5161), and [Pyramid #5162](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5162), checking that captured headers reach samplers without entering metrics. All three were merged on October 16, 2026, completing the tracking issue.
+
 - **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · A shared `CapturingSampler` for instrumentation tests
 
   While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django and aiohttp-server instrumentation tests.
