@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/profile-header.svg" width="100%" alt="Seongju Hong - Backend, Infrastructure, and AI Systems" />
-</p>
-
 **I build backend systems, infrastructure, and AI products - with concurrency, observability, and recovery designed in.**
 
 My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means a voice trading startup, production AI agents, and contributions to the tools those systems depend on.
