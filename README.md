@@ -1,94 +1,147 @@
-# Seongju Hong
+<p align="center">
+  <img src="./assets/profile-header.svg" width="100%" alt="Seongju Hong — Backend, Infrastructure, and AI Systems" />
+</p>
 
-Backend and AI systems engineer studying Computer Science at Soongsil University.
-I build products where model output meets real data, explicit user decisions, and systems that must keep working after the demo.
+**I build backend systems, infrastructure, and AI products — with concurrency, observability, and recovery designed in.**
 
-[Website](https://seongju.vercel.app) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
+My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means a voice trading startup, production AI agents, and contributions to the tools those systems depend on.
+
+[LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md) · [Open-source contributions](#open-source)
 
 ## Now
 
-- **Founding Engineer at [TrabyOS](https://github.com/TrabyOS)** · A voice trading assistant that places real crypto trades. Say an order for spot or perpetual futures, and TrabyOS shows it as an order card and executes it on the exchange once you approve. You can also ask for prices, your balance, or the news. [Website](https://trabyos-website.vercel.app/)
-- **Software Engineer Intern at [Bizarre Cube AI](https://www.bzrr.ai/) ([MXN Commerce Group](https://www.mxncommerce.com/en))** · Production AI agents for fashion e-commerce operations. [GitHub](https://github.com/bizarrecube)
-- **B.S. in Computer Science, Soongsil University** · 2022–present. [Coursework](https://github.com/ghdtjdwn/cs-coursework)
-
-## Awards
-
-- 🏆 Manifest Special Award · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 Silver Prize · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- 🏅 Excellence Award · Soongsil University Solved Code Algorithm Competition 2025
+- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** — Lead engineering across the voice trading product, backend, and native/web integration.
+- **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** — Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
+- **Computer Science · Soongsil University, 2022–present** — [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
 
 ## Open source
 
-Seven changes merged into upstream projects, plus one fix I reproduced and verified for a maintainer. Ordered from the most involved work to the smallest fix. [Browse all pull requests](https://github.com/search?q=is%3Apr+author%3Aghdtjdwn+-org%3Aghdtjdwn&type=pullrequests)
+**7 changes accepted across 6 upstream repositories** — six directly merged PRs and one change cherry-picked by a maintainer. My focus is observability, cancellation, state consistency, and regression tests. Status checked **2026-10-19**.
 
-- **[OpenTelemetry Python Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)** · Request headers for sampling decisions in WSGI
+### [OpenTelemetry](https://github.com/open-telemetry) · From one instrumentation bug to shared test infrastructure
 
-  The WSGI middleware collected request headers only after the server span had been created, so a sampler could not use them. The configured, sanitized headers are now passed in when the span is created, and they still stay out of internal spans and metrics. Merged after a month of review with three approvals; it covers the WSGI item of a maintainer's tracking issue, [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975).
+- **Turn a PR-local test into a maintainer-requested shared utility.** During review of my WSGI fix, an OpenTelemetry maintainer [asked for a common sampler in the core test utilities](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032#discussion_r4061074604). I implemented `CapturingSampler`, released in **1.45.0** and now reused in the tests of **8 HTTP instrumentation packages**: WSGI, Django, ASGI, aiohttp-server, Falcon, Flask, Pyramid, and Tornado. [Core #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · [Adoption example](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py)
+- **Make headers available when sampling happens.** Fixed WSGI request-header collection at span creation, with sanitized values kept out of internal spans and metrics. Merged with approvals from three maintainers. [Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)
+- **Follow the change into the rest of the ecosystem.** Verified and reviewed **6 follow-up instrumentation PRs**. Found Tornado ignoring sensitive-header masking settings and fixed it using the shared capture helper. [Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) · [Tracking issue #4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)
 
-  I also reviewed and locally tested the follow-up changes for [Falcon #5160](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5160), [Flask #5161](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5161), and [Pyramid #5162](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5162), checking that captured headers reach samplers without entering metrics. All three were merged on October 16, 2026, completing the tracking issue.
+### Reliability work beyond my own applications
 
-- **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · A shared `CapturingSampler` for instrumentation tests
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Cancellation cleanup — merged, v0.54.5.** Fixed leaked HTTP resources and stale connected state when MCP initialization is cancelled; added **6 regression tests**.
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Async pool cancellation — reproduction & verification.** Reproduced swallowed cancellation, supplied a deterministic regression test, and verified the maintainer's fix, released in psycopg_pool 3.3.2. This contribution is separate from the 7 accepted changes above.
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Tested observability documentation — merged.** Documented custom Java HttpClient observation tags with examples compiled and exercised by the test suite.
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration — merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates — adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
 
-  While reviewing the change above, a maintainer asked for one common sampler in place of a test double in every instrumentation. I added it to `opentelemetry-test-utils` in the core repository, where tests use it to check the attributes a sampler receives at span start. Released with 1.45.0 and since picked up by the Django and aiohttp-server instrumentation tests.
+## Projects
 
-- **[OpenTelemetry Python Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170)** · Sanitized, regex-matched header capture in Tornado
+### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
 
-  Tornado was the only HTTP server instrumentation that looked up captured header names literally and ignored `OTEL_INSTRUMENTATION_HTTP_CAPTURE_HEADERS_SANITIZE_FIELDS`, so sensitive header values could land on spans as-is. It now uses the same shared helper as the WSGI and aiohttp-server instrumentations: names match case-insensitively as regular expressions, and values of sensitive headers are recorded as `[REDACTED]`. I found the gap while working on [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975), where captured headers also start reaching samplers. Merged with two maintainer approvals.
+**Co-founder & CTO.** A voice trading workspace for web and macOS: ask for market context, review an order, revise it, and approve execution on your exchange account. The product also provides voice technology for partner platforms.
 
-- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365)** · Cleanup when an MCP client connection is cancelled
+- **Own the path across languages and surfaces.** Python orchestration, Spring Boot services, native Swift UI, and the web experience connect market data, account state, and order workflows.
+- **Separate interpretation from execution authority.** Natural language prepares the action; explicit user approval and deterministic checks govern execution. Market identity, quantities, and account state stay part of the transaction contract.
+- **Build beyond the conversation.** Exchange integration, real-time updates, onboarding, packaging, and deployment make the system usable outside a development session.
 
-  Cancelling `MCPClientAdapter.connect()` midway left the adapter marked as connected and its HTTP client open. I found this and reported it in [#2364](https://github.com/Q00/ouroboros/issues/2364). The fix resets the state and closes the owned client before the cancellation propagates, even if another cleanup step fails. Six regression tests, two maintainer approvals, released in v0.54.5.
+`Python` · `Java / Spring Boot` · `Swift / SwiftUI` · `TypeScript` · `PostgreSQL / WebSocket`
 
-- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345)** · Reproduction and fix verification for a cancellation lost in the async pool
+[Organization & product overview](https://github.com/TrabyOS) · [Live web app](https://trabyos.ssumcp.duckdns.org/) · [Website & Mac download](https://trabyos-website.vercel.app/#download)
 
-  `AsyncConnectionPool.getconn()` could swallow a cancellation raised during the connection check and hand a connection to a caller that had already been cancelled. I reproduced the report with instrumentation, shared a deterministic regression test, and confirmed at the maintainer's request that the fix in [#1407](https://github.com/psycopg/psycopg/pull/1407) resolves it. The fix is the maintainer's and shipped in psycopg_pool 3.3.2.
+### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI) · Campus services, with a reliable path from intent to action
 
-- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925)** · Reference docs for custom tags on Java `HttpClient` observations
+Students search university information and use their own academic, LMS, and library data through a web app or an agent. I built the **four-service platform**, from connectors and orchestration to deployment and observability.
 
-  Resolved a documentation request that had been open since 2024, [#4962](https://github.com/micrometer-metrics/micrometer/issues/4962). The new section shows how to add tags through an `HttpClientObservationConvention` while keeping the default ones. Its snippets come from a test that sends a request and checks the recorded timer, so the example is compiled and tested with the project.
+- **52 MCP tools, one business-logic boundary.** REST and MCP share service rules; LangGraph manages specialist routing, persistent conversations, and approval before writes.
+- **100 competing reservations → 1 upstream write.** An intent queue and same-seat suppression protect the university system. Verified with 100 concurrent requests against WireMock; this is a reduction in external writes, with a deliberate latency trade-off. [Load-test evidence](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
+- **Built and operated the delivery path.** ARM64 images move through GitHub Actions, GHCR, and ArgoCD to k3s. Prometheus/Grafana, Tempo, and Loki connect metrics, traces, and logs; fault injection verified circuit-breaker isolation and recovery. [Observability & incident records](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
 
-- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828)** · Mode restored after `/tree` navigation in the Pi extension
+`Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
 
-  After `/ponytail off`, going back to an earlier branch with `/tree` left Ponytail disabled, because the extension restored the saved mode only at session start. It now does the same on tree navigation, so the injected instructions and the status bar follow the selected branch. Released in v4.13.0.
+[Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat) · [Frontend](https://github.com/ghdtjdwn/ssuAI) · [Backend & MCP](https://github.com/ghdtjdwn/ssuMCP) · [Agent](https://github.com/ghdtjdwn/ssuAgent) · [Embedding gateway](https://github.com/ghdtjdwn/ssu-ai-service)
 
-- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)** · `--force` now refreshes existing editor rule files
+### [marketvalley](https://github.com/unithon26/marketvalley) · One hypothesis, a complete market-validation workflow
 
-  On a repository that was already initialized, `caveman-init --force` reported the Cursor, Windsurf, and Cline rule files as installed and left stale rules in place. A one-character fix with three regression tests. The maintainer cherry-picked my commit into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015), and it was released in v2.7.0.
+**Backend, AI, and platform.** A founder describes a problem and solution once; the team product creates a landing page, **five social cards**, copy, and a Meta ad, then brings back Insights, visits, and consented early-access reservations.
 
-## Products
+Built the durable workflow behind it: PostgreSQL jobs, `SKIP LOCKED`, leases, operation keys, and checkpoints keep generation, ad creation, and result collection independent of a browser tab, with controlled retries around external side effects. [Architecture](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
 
-### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI)
+**Manifest Special Award · UNITHON 2026.**
 
-Students can search university information and work with their own academic, LMS, and library data from one web app or natural-language agent. The system exposes 52 MCP tools with an explicit approval boundary and runs across [ssuAI](https://github.com/ghdtjdwn/ssuAI), [ssuMCP](https://github.com/ghdtjdwn/ssuMCP), [ssuAgent](https://github.com/ghdtjdwn/ssuAgent), and [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service). [Open the service](https://ssuai.vercel.app)
+`Next.js` · `Supabase / PostgreSQL` · `Anthropic` · `Meta Marketing API`
 
-`Spring Boot` `LangGraph` `Next.js` `Kubernetes`
+[Organization](https://github.com/unithon26) · [Source & team roles](https://github.com/unithon26/marketvalley) · [Live service](https://marketvaley.vercel.app)
 
-### [Geuneul](https://github.com/ghdtjdwn/geuneul)
+### [Geuneul](https://github.com/ghdtjdwn/geuneul) · Find relief from the heat, without waiting on the map
 
-A summer survival map that finds nearby shade and heat-relief facilities among 150k+ public points of interest. Radius and nearest-neighbor search are backed by PostGIS, while live community reports arrive without refreshing the map. [Open the map](https://geuneul.vercel.app)
+A summer survival map over **150k+ public points of interest**, with nearby shade, shelters, and live community reports. I built the data ingestion, spatial backend, application, and infrastructure.
 
-`Spring Boot` `PostGIS` `SSE` `Terraform`
+- **Found the bottleneck in the execution plan.** Spatial indexes were already working; expired reports were still scanned for every scored search. Indexing their expiry filter cut SQL execution time **361 → 172 ms (~52%)** on the same synthetic dataset: 300k places and 210k reports, measured locally under QEMU. [EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
+- **Kept data and updates repeatable.** Idempotent ETL, PostGIS radius/nearest-neighbor queries, SSE reports, and infrastructure as code connect ingestion to the map.
 
-### [Cham Domi](https://github.com/chamdormie)
+`Spring Boot` · `PostgreSQL / PostGIS` · `SSE` · `Terraform / AWS`
 
-Students compare their circumstances with dormitory admission rules, see why a requirement passes or fails, and then continue into roommate discovery. Eight lifestyle dimensions power explainable recommendations; recruitment posts, applications, approvals, one-to-one chat, and group chat turn a recommendation into an actual room. [Open Cham Domi](https://chamdomi.vercel.app)
+[Source & architecture](https://github.com/ghdtjdwn/geuneul) · [Open the map](https://geuneul.vercel.app)
 
-`Spring Boot` `Next.js` `MySQL` `WebSocket`
+### [Cham Domi](https://github.com/chamdormie) · From dormitory eligibility to an actual roommate group
 
-### [marketvalley](https://github.com/unithon26)
+**Frontend, roommate domain, integration, and application infrastructure.** Built explainable recommendations across **eight lifestyle dimensions**, recruitment/application flows, and one-to-one/group chat. Owned the application's Spring Boot/MySQL deployment, Helm configuration, network isolation, image-digest checks, and backup/restore gates.
 
-An early founder describes a problem and solution once. The service creates a public landing page, five social cards, copy, and a Meta ad from one validation hypothesis, then returns actual Insights, visits, and consented reservations for the founder's next decision. [Open the service](https://marketvaley.vercel.app) · [Source](https://github.com/unithon26/marketvalley)
+**Silver Prize · Soongsil University CS Software Competition 2026.** The team delivered the dormitory eligibility and roommate experience together.
 
-`Next.js` `Supabase` `Anthropic` `Meta Marketing API`
+`Spring Boot` · `Next.js` · `MySQL` · `WebSocket` · `Helm`
 
-### [Folding](https://github.com/dotenv-uploaded)
+[Organization](https://github.com/chamdormie) · [Open the service](https://chamdomi.vercel.app)
 
-A local-first desktop workspace for HWP, Office, and PDF. Users ask across a folder, inspect source evidence and document relationships, then approve format-aware edits that create and verify a new file instead of silently overwriting the original. [Source](https://github.com/dotenv-uploaded/_FOLDING_)
+### [HeungMap](https://github.com/ghdtjdwn/heungmap) · Turn a forecast into a decision a planner can use
 
-`Electron` `FastAPI` `Gemma 4` `SQLite`
+**Backend, data, modeling, and integration.** A tourism-data product that connects festival planning with visitor discovery. The model forecasts **regional visitor-days**, with D−30 information constraints, prediction ranges, and contributing factors.
 
-### [HeungMap](https://github.com/ghdtjdwn/heungmap)
+- **WAPE 4.256% → 3.939%.** A seasonal baseline plus LightGBM residual model improved WAPE by **7.43% relative** on a retrospective time holdout of **4,959 region-days**. [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
+- **Forecast coverage 30 → 98 out of 100 real events.** Corrected date-window and administrative-region history handling to make more events usable without changing the prediction target to festival attendance. [Decision record](https://github.com/ghdtjdwn/heungmap/blob/main/docs/DECISION_LOG.md)
+- **Keep generated reports grounded.** The API rejects unsupported figures; scheduled retraining only adopts models that pass five acceptance gates.
 
-A planning and discovery service built from Korea Tourism Organization data. It forecasts city- or county-wide visitor-days available 30 days before a festival—not festival attendance—and shows planners a range, contributing factors, and what-if comparisons. The adopted seasonal baseline plus LightGBM residual model reached 3.939% WAPE on a time holdout; generated reports reject figures absent from the model input.
+`FastAPI` · `LightGBM / pandas` · `Next.js` · `Claude` · `Scheduled data pipelines`
 
-`FastAPI` `LightGBM` `Next.js` `Claude`
+[Source](https://github.com/ghdtjdwn/heungmap) · [Live service](https://heungmap.vercel.app)
+
+### [Folding](https://github.com/dotenv-uploaded/_FOLDING_) · Ask across documents; approve the changes
+
+**Agent backend and file-operation boundaries.** A local-first workspace for HWP, Office, and PDF. Built the FastAPI sidecar, agent orchestration, approvals, file edits/undo, and knowledge synchronization. Retrieval exposes source evidence; approved edits produce and verify a new file while preserving the original.
+
+`FastAPI` · `Electron` · `SQLite` · `Local LLM`
+
+[Organization](https://github.com/dotenv-uploaded) · [Product repository](https://github.com/dotenv-uploaded/_FOLDING_) · [Agent backend](https://github.com/dotenv-uploaded/_FOLDING_/tree/main/services/agent) · [Run locally](https://github.com/dotenv-uploaded/_FOLDING_#running-locally)
+
+### [Trip Sheet · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · Give a team a repeatable deployment path
+
+**Team infrastructure.** Built the infrastructure foundation for a collaborative product: **three OCI ARM servers** separating production application, production data, and development/monitoring.
+
+- **Build once, promote the same image.** Reusable GitHub Actions workflows build ARM64 images, deploy to development, and support manual promotion to production. Environment-level deployment coordination and health-check rollback protect the delivery path.
+- **Include the work after deployment.** OpenTofu, Docker Compose, Nginx, PostgreSQL/Redis, backups, and Prometheus/Loki/Grafana cover provisioning through operations. Deployment and timeout behavior were checked in an isolated integration environment; application rollout is being connected.
+
+`OCI / OpenTofu` · `GitHub Actions / GHCR` · `Docker / Nginx` · `PostgreSQL / Redis` · `Prometheus / Grafana / Loki`
+
+[JECT](https://github.com/JECT-Study) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Frontend](https://github.com/JECT-Study/Billit-5th-Client)
+
+## Awards
+
+- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+
+## Earlier work & experiments
+
+| Work | What I worked on |
+| :--- | :--- |
+| [Macro](https://github.com/UNITHON24/Macro) · [UNITHON24](https://github.com/UNITHON24) | Voice access to existing kiosk software. Reworked fragile coordinate automation into UIA/OCR actions, postcondition checks, and an idempotent SQLite queue; 76 recorded tests and Linux/Windows CI. |
+| AI말평 experiments | Compared **19 encoder backbones / 24 configurations** with nested out-of-fold evaluation; further checked finalists with leave-one-prompt-out evaluation and leakage audits under deployment constraints. |
+| AXWAR submissions | Built three pipelines for grounded FAQ answers, disclosure summaries, and refund calculation, separating model-generated text from deterministic numeric and evidence validation. |
+
+## Tools I use
+
+| Area | Stack |
+| :--- | :--- |
+| **Backend & data** | Java · Spring Boot · Python · FastAPI · PostgreSQL/PostGIS · MySQL · Redis |
+| **Infrastructure & observability** | Docker · Kubernetes/k3s · ArgoCD · GitHub Actions · Terraform/OpenTofu · AWS/OCI · OpenTelemetry · Prometheus/Grafana · Tempo/Loki |
+| **AI & product integration** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
+
+<sub>Performance figures link to their measurement conditions. Project roles distinguish individual ownership from team delivery.</sub>
