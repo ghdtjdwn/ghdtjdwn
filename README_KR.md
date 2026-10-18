@@ -10,7 +10,7 @@
 
 ## 현재
 
-- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** — 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
+- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** — 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
 - **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** — 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
 - **숭실대학교 컴퓨터학부 · 2022–현재** — [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
 
@@ -34,7 +34,7 @@
 
 ## 프로젝트
 
-### [TrabyOS](https://github.com/TrabyOS) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
+### [TrabyOS](https://trabyos.com) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
 
 **Co-founder & CTO.** 웹과 macOS에서 시세를 묻고, 주문을 검토·수정한 뒤 승인하여 본인의 거래소 계좌에서 실행하는 제품입니다. 파트너 플랫폼을 위한 음성 기술도 제공합니다.
 
@@ -44,7 +44,7 @@
 
 `Python` · `Java / Spring Boot` · `Swift / SwiftUI` · `TypeScript` · `PostgreSQL / WebSocket`
 
-[조직·제품 소개](https://github.com/TrabyOS) · [라이브 웹 앱](https://trabyos.ssumcp.duckdns.org/) · [웹사이트·Mac 다운로드](https://trabyos-website.vercel.app/#download)
+[공식 웹사이트](https://trabyos.com) · [GitHub 조직](https://github.com/TrabyOS)
 
 ### [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuAI) · 사용자의 의도를 실제 학사 작업까지 연결하는 플랫폼
 
