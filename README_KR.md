@@ -25,6 +25,8 @@
 
   WSGI 미들웨어가 요청 헤더를 서버 span이 만들어진 뒤에야 수집해서, 샘플러가 헤더를 보고 판단할 수 없었습니다. 설정으로 지정하고 민감 값을 가린 헤더를 span 생성 시점에 넘기도록 바꿨고, 내부 span과 메트릭에는 헤더가 들어가지 않는 기존 동작을 유지했습니다. 한 달간 리뷰를 거쳐 세 명의 승인으로 병합됐으며, 메인테이너가 올린 추적 이슈 [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)의 WSGI 항목에 해당합니다.
 
+  이어서 [Falcon #5160](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5160), [Flask #5161](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5161), [Pyramid #5162](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5162)의 후속 변경을 리뷰하고 로컬에서 테스트해, 캡처한 헤더가 샘플러에 전달되면서 메트릭에는 들어가지 않는지 확인했습니다. 세 PR 모두 2026년 10월 16일 병합되면서 추적 이슈의 작업이 완료됐습니다.
+
 - **[OpenTelemetry Python #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681)** · 계측 테스트용 공용 `CapturingSampler`
 
   위 변경을 리뷰하던 메인테이너가 계측마다 테스트용 샘플러를 따로 만들지 말고 하나를 같이 쓰자고 요청해, 코어 저장소의 `opentelemetry-test-utils`에 추가했습니다. 테스트는 이 샘플러로 span 시작 시점에 샘플러가 받는 속성을 확인합니다. 1.45.0 릴리스에 포함됐고, 이후 Django와 aiohttp-server 계측 테스트에서도 쓰이고 있습니다.
