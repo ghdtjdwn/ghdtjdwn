@@ -66,7 +66,7 @@
 
 PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생성·광고 생성·결과 수집을 브라우저 탭의 수명과 분리했습니다. 외부 작업의 중복 실행을 제어하면서 실패한 단계부터 재시도할 수 있게 했습니다. [아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
 
-**UNITHON 2026 매니패스트 특별상.**
+🏆 **UNITHON 2026 매니패스트 특별상.**
 
 `Next.js` · `Supabase / PostgreSQL` · `Anthropic` · `Meta Marketing API`
 
@@ -87,7 +87,7 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 **프런트엔드·룸메이트 도메인·통합·애플리케이션 인프라 담당.** **8가지 생활 성향**의 설명 가능한 추천, 모집·신청 흐름, 1:1·단체 채팅을 구현했습니다. 애플리케이션의 Spring Boot/MySQL 배포, Helm 구성, 네트워크 격리, 이미지 digest 검증과 백업·복구 검증 조건을 담당했습니다.
 
-**숭실대학교 컴퓨터학부 소프트웨어공모전 2026 은상.** 팀과 함께 기숙사 입주 자격 확인부터 룸메이트 구성까지 연결했습니다.
+🥈 **숭실대학교 컴퓨터학부 소프트웨어공모전 2026 은상.** 팀과 함께 기숙사 입주 자격 확인부터 룸메이트 구성까지 연결했습니다.
 
 `Spring Boot` · `Next.js` · `MySQL` · `WebSocket` · `Helm`
 
@@ -126,9 +126,9 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 ## 수상
 
-- **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
-- **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+- 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
+- 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
 
 ## 이전 제작물·실험
 

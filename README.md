@@ -66,7 +66,7 @@ Students search university information and use their own academic, LMS, and libr
 
 Built the durable workflow behind it: PostgreSQL jobs, `SKIP LOCKED`, leases, operation keys, and checkpoints keep generation, ad creation, and result collection independent of a browser tab, with controlled retries around external side effects. [Architecture](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
 
-**Manifest Special Award · UNITHON 2026.**
+🏆 **Manifest Special Award · UNITHON 2026.**
 
 `Next.js` · `Supabase / PostgreSQL` · `Anthropic` · `Meta Marketing API`
 
@@ -87,7 +87,7 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 **Frontend, roommate domain, integration, and application infrastructure.** Built explainable recommendations across **eight lifestyle dimensions**, recruitment/application flows, and one-to-one/group chat. Owned the application's Spring Boot/MySQL deployment, Helm configuration, network isolation, image-digest checks, and backup/restore gates.
 
-**Silver Prize · Soongsil University CS Software Competition 2026.** The team delivered the dormitory eligibility and roommate experience together.
+🥈 **Silver Prize · Soongsil University CS Software Competition 2026.** The team delivered the dormitory eligibility and roommate experience together.
 
 `Spring Boot` · `Next.js` · `MySQL` · `WebSocket` · `Helm`
 
@@ -126,9 +126,9 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 ## Awards
 
-- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
 
 ## Earlier work & experiments
 
