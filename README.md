@@ -39,7 +39,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 - 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
 
 <details>
-<summary><strong>Projects, experiments & tools</strong></summary>
+<summary><h2>Explore 8 projects, experiments &amp; tools</h2></summary>
 
 ## Projects
 
