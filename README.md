@@ -32,6 +32,15 @@ My work connects three things: useful products, explicit system guarantees, and 
 - **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration — merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates — adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
 
+## Awards
+
+- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+
+<details>
+<summary><strong>Projects, experiments & tools</strong></summary>
+
 ## Projects
 
 ### [TrabyOS](https://trabyos.com) · A spoken request becomes a reviewed trade
@@ -124,12 +133,6 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 [JECT](https://github.com/JECT-Study) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Frontend](https://github.com/JECT-Study/Billit-5th-Client)
 
-## Awards
-
-- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
-
 ## Earlier work & experiments
 
 | Work | What I worked on |
@@ -147,3 +150,5 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 | **AI & product integration** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>Performance figures link to their measurement conditions. Project roles distinguish individual ownership from team delivery.</sub>
+
+</details>

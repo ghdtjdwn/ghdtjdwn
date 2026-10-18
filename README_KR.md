@@ -32,6 +32,15 @@
 - **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · 분기별 상태 복원 — 병합, v4.13.0.** 대화 트리 이동 시 선택한 분기의 저장된 모드가 복원되도록 수정했습니다.
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 강제 갱신 복구 — v2.7.0 반영.** **에디터 3종**의 규칙 파일 갱신을 복구하고 회귀 테스트를 추가했습니다. 메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했습니다.
 
+## 수상
+
+- 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
+- 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+
+<details>
+<summary><strong>프로젝트 · 이전 제작물·실험 · 사용하는 기술</strong></summary>
+
 ## 프로젝트
 
 ### [TrabyOS](https://trabyos.com) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
@@ -124,12 +133,6 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 [JECT](https://github.com/JECT-Study) · [인프라](https://github.com/JECT-Study/Billit-5th-Infra) · [백엔드](https://github.com/JECT-Study/Billit-5th-Server) · [프런트엔드](https://github.com/JECT-Study/Billit-5th-Client)
 
-## 수상
-
-- 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
-- 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
-
 ## 이전 제작물·실험
 
 | 작업 | 구현·검증한 내용 |
@@ -147,3 +150,5 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 | **AI·제품 통합** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>성능 수치는 측정 조건을 담은 자료로 연결했습니다. 개인 담당 범위와 팀 전체의 제품 성과를 구분해 적었습니다.</sub>
+
+</details>
