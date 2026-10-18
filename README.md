@@ -10,7 +10,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Now
 
-- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** — Lead engineering across the voice trading product, backend, and native/web integration.
+- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** — Lead engineering across the voice trading product, backend, and native/web integration.
 - **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** — Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
 - **Computer Science · Soongsil University, 2022–present** — [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
 
@@ -34,7 +34,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Projects
 
-### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
+### [TrabyOS](https://trabyos.com) · A spoken request becomes a reviewed trade
 
 **Co-founder & CTO.** A voice trading workspace for web and macOS: ask for market context, review an order, revise it, and approve execution on your exchange account. The product also provides voice technology for partner platforms.
 
@@ -44,7 +44,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 `Python` · `Java / Spring Boot` · `Swift / SwiftUI` · `TypeScript` · `PostgreSQL / WebSocket`
 
-[Organization & product overview](https://github.com/TrabyOS) · [Live web app](https://trabyos.ssumcp.duckdns.org/) · [Website & Mac download](https://trabyos-website.vercel.app/#download)
+[Official website](https://trabyos.com) · [GitHub organization](https://github.com/TrabyOS)
 
 ### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI) · Campus services, with a reliable path from intent to action
 
