@@ -52,7 +52,7 @@
 
 학교 공개 정보와 개인 학사·LMS·도서관 데이터를 웹 앱과 에이전트에서 활용합니다. 커넥터와 에이전트부터 배포·관측까지 **4개 서비스로 구성된 플랫폼**을 만들었습니다.
 
-- **MCP 도구 52개, 공통 비즈니스 규칙.** REST와 MCP가 같은 서비스 계층을 사용하고, LangGraph가 전문 에이전트 라우팅·대화 영속화·쓰기 전 승인을 관리합니다.
+- **웹 앱과 MCP 서버로 같은 캠퍼스 기능 제공.** 학교 정보 조회와 학사·LMS·도서관 작업을 **MCP 도구 52개**로 제공해 Claude Desktop·Cursor 같은 MCP 클라이언트에서도 사용할 수 있습니다. REST와 MCP는 같은 서비스 계층을 사용하고, LangGraph가 전문 에이전트 라우팅·대화 영속화·쓰기 전 승인을 관리합니다. [MCP 연결 안내](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100명 예약 경합 → 외부 쓰기 1회.** Intent 큐와 동일 좌석 중복 억제로 학교 시스템을 보호했습니다. WireMock 대상 동시 요청 100건으로 검증했으며, 처리 지연을 감수하고 외부 쓰기를 줄인 설계입니다. [부하 시험 근거](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
 - **배포부터 장애 관측까지 운영.** ARM64 이미지를 GitHub Actions·GHCR·ArgoCD로 k3s에 배포하고, Prometheus/Grafana·Tempo·Loki로 메트릭·트레이스·로그를 연결했습니다. 장애 주입으로 서킷브레이커의 차단과 복구까지 확인했습니다. [관측성·장애 대응 기록](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
 

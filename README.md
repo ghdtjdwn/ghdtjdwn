@@ -52,7 +52,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 Students search university information and use their own academic, LMS, and library data through a web app or an agent. I built the **four-service platform**, from connectors and orchestration to deployment and observability.
 
-- **52 MCP tools, one business-logic boundary.** REST and MCP share service rules; LangGraph manages specialist routing, persistent conversations, and approval before writes.
+- **Campus workflows through both a web app and an MCP server.** Expose **52 MCP tools** for university information and academic, LMS, and library tasks, usable from clients such as Claude Desktop and Cursor. REST and MCP share business rules; LangGraph manages specialist routing, persistent conversations, and approval before writes. [MCP connection guide](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100 competing reservations → 1 upstream write.** An intent queue and same-seat suppression protect the university system. Verified with 100 concurrent requests against WireMock; this is a reduction in external writes, with a deliberate latency trade-off. [Load-test evidence](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
 - **Built and operated the delivery path.** ARM64 images move through GitHub Actions, GHCR, and ArgoCD to k3s. Prometheus/Grafana, Tempo, and Loki connect metrics, traces, and logs; fault injection verified circuit-breaker isolation and recovery. [Observability & incident records](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
 
