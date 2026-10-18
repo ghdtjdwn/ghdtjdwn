@@ -6,7 +6,7 @@
 
 사용자에게 필요한 제품, 명확한 시스템 보장, 구현을 입증하는 근거를 연결합니다. 음성 트레이딩 제품의 창업 개발과 실서비스 AI 에이전트 개발을 하며, 시스템의 기반이 되는 오픈소스에도 기여하고 있습니다.
 
-[LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md) · [오픈소스 기여](#오픈소스)
+[LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
 ## 현재
 
