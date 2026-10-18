@@ -46,7 +46,9 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 [Official website](https://trabyos.com) · [GitHub organization](https://github.com/TrabyOS)
 
-### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI) · Campus services, with a reliable path from intent to action
+### ssu Campus AI · Campus services, with a reliable path from intent to action
+
+[ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
 
 Students search university information and use their own academic, LMS, and library data through a web app or an agent. I built the **four-service platform**, from connectors and orchestration to deployment and observability.
 
@@ -56,7 +58,7 @@ Students search university information and use their own academic, LMS, and libr
 
 `Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
 
-[Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat) · [Frontend](https://github.com/ghdtjdwn/ssuAI) · [Backend & MCP](https://github.com/ghdtjdwn/ssuMCP) · [Agent](https://github.com/ghdtjdwn/ssuAgent) · [Embedding gateway](https://github.com/ghdtjdwn/ssu-ai-service)
+[Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat)
 
 ### [marketvalley](https://github.com/unithon26/marketvalley) · One hypothesis, a complete market-validation workflow
 

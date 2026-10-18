@@ -46,7 +46,9 @@
 
 [공식 웹사이트](https://trabyos.com) · [GitHub 조직](https://github.com/TrabyOS)
 
-### [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuAI) · 사용자의 의도를 실제 학사 작업까지 연결하는 플랫폼
+### ssu 캠퍼스 AI · 사용자의 의도를 실제 학사 작업까지 연결하는 플랫폼
+
+[ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
 
 학교 공개 정보와 개인 학사·LMS·도서관 데이터를 웹 앱과 에이전트에서 활용합니다. 커넥터와 에이전트부터 배포·관측까지 **4개 서비스로 구성된 플랫폼**을 만들었습니다.
 
@@ -56,7 +58,7 @@
 
 `Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
 
-[웹 앱](https://ssuai.vercel.app) · [챗봇](https://ssuai.vercel.app/chat) · [프런트엔드](https://github.com/ghdtjdwn/ssuAI) · [백엔드·MCP](https://github.com/ghdtjdwn/ssuMCP) · [에이전트](https://github.com/ghdtjdwn/ssuAgent) · [임베딩 게이트웨이](https://github.com/ghdtjdwn/ssu-ai-service)
+[웹 앱](https://ssuai.vercel.app) · [챗봇](https://ssuai.vercel.app/chat)
 
 ### [marketvalley](https://github.com/unithon26/marketvalley) · 하나의 가설에서 시장 검증 전체 흐름으로
 
