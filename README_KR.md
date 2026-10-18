@@ -32,6 +32,15 @@
 - **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · 분기별 상태 복원 — 병합, v4.13.0.** 대화 트리 이동 시 선택한 분기의 저장된 모드가 복원되도록 수정했습니다.
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 강제 갱신 복구 — v2.7.0 반영.** **에디터 3종**의 규칙 파일 갱신을 복구하고 회귀 테스트를 추가했습니다. 메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했습니다.
 
+## 수상
+
+- 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
+- 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+
+<details>
+<summary><strong>프로젝트 · 이전 제작물·실험 · 사용하는 기술</strong></summary>
+
 ## 프로젝트
 
 ### [TrabyOS](https://trabyos.com) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
@@ -46,17 +55,19 @@
 
 [공식 웹사이트](https://trabyos.com) · [GitHub 조직](https://github.com/TrabyOS)
 
-### [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuAI) · 사용자의 의도를 실제 학사 작업까지 연결하는 플랫폼
+### ssu 캠퍼스 AI · 사용자의 의도를 실제 학사 작업까지 연결하는 플랫폼
+
+[ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
 
 학교 공개 정보와 개인 학사·LMS·도서관 데이터를 웹 앱과 에이전트에서 활용합니다. 커넥터와 에이전트부터 배포·관측까지 **4개 서비스로 구성된 플랫폼**을 만들었습니다.
 
-- **MCP 도구 52개, 공통 비즈니스 규칙.** REST와 MCP가 같은 서비스 계층을 사용하고, LangGraph가 전문 에이전트 라우팅·대화 영속화·쓰기 전 승인을 관리합니다.
+- **웹 앱과 MCP 서버로 같은 캠퍼스 기능 제공.** 학교 정보 조회와 학사·LMS·도서관 작업을 **MCP 도구 52개**로 제공해 Claude Desktop·Cursor 같은 MCP 클라이언트에서도 사용할 수 있습니다. REST와 MCP는 같은 서비스 계층을 사용하고, LangGraph가 전문 에이전트 라우팅·대화 영속화·쓰기 전 승인을 관리합니다. [MCP 연결 안내](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100명 예약 경합 → 외부 쓰기 1회.** Intent 큐와 동일 좌석 중복 억제로 학교 시스템을 보호했습니다. WireMock 대상 동시 요청 100건으로 검증했으며, 처리 지연을 감수하고 외부 쓰기를 줄인 설계입니다. [부하 시험 근거](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
 - **배포부터 장애 관측까지 운영.** ARM64 이미지를 GitHub Actions·GHCR·ArgoCD로 k3s에 배포하고, Prometheus/Grafana·Tempo·Loki로 메트릭·트레이스·로그를 연결했습니다. 장애 주입으로 서킷브레이커의 차단과 복구까지 확인했습니다. [관측성·장애 대응 기록](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
 
 `Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
 
-[웹 앱](https://ssuai.vercel.app) · [챗봇](https://ssuai.vercel.app/chat) · [프런트엔드](https://github.com/ghdtjdwn/ssuAI) · [백엔드·MCP](https://github.com/ghdtjdwn/ssuMCP) · [에이전트](https://github.com/ghdtjdwn/ssuAgent) · [임베딩 게이트웨이](https://github.com/ghdtjdwn/ssu-ai-service)
+[웹 앱](https://ssuai.vercel.app) · [챗봇](https://ssuai.vercel.app/chat)
 
 ### [marketvalley](https://github.com/unithon26/marketvalley) · 하나의 가설에서 시장 검증 전체 흐름으로
 
@@ -64,7 +75,7 @@
 
 PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생성·광고 생성·결과 수집을 브라우저 탭의 수명과 분리했습니다. 외부 작업의 중복 실행을 제어하면서 실패한 단계부터 재시도할 수 있게 했습니다. [아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
 
-**UNITHON 2026 매니패스트 특별상.**
+🏆 **UNITHON 2026 매니패스트 특별상.**
 
 `Next.js` · `Supabase / PostgreSQL` · `Anthropic` · `Meta Marketing API`
 
@@ -85,7 +96,7 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 **프런트엔드·룸메이트 도메인·통합·애플리케이션 인프라 담당.** **8가지 생활 성향**의 설명 가능한 추천, 모집·신청 흐름, 1:1·단체 채팅을 구현했습니다. 애플리케이션의 Spring Boot/MySQL 배포, Helm 구성, 네트워크 격리, 이미지 digest 검증과 백업·복구 검증 조건을 담당했습니다.
 
-**숭실대학교 컴퓨터학부 소프트웨어공모전 2026 은상.** 팀과 함께 기숙사 입주 자격 확인부터 룸메이트 구성까지 연결했습니다.
+🥈 **숭실대학교 컴퓨터학부 소프트웨어공모전 2026 은상.** 팀과 함께 기숙사 입주 자격 확인부터 룸메이트 구성까지 연결했습니다.
 
 `Spring Boot` · `Next.js` · `MySQL` · `WebSocket` · `Helm`
 
@@ -122,12 +133,6 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 [JECT](https://github.com/JECT-Study) · [인프라](https://github.com/JECT-Study/Billit-5th-Infra) · [백엔드](https://github.com/JECT-Study/Billit-5th-Server) · [프런트엔드](https://github.com/JECT-Study/Billit-5th-Client)
 
-## 수상
-
-- **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
-- **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
-
 ## 이전 제작물·실험
 
 | 작업 | 구현·검증한 내용 |
@@ -145,3 +150,5 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 | **AI·제품 통합** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>성능 수치는 측정 조건을 담은 자료로 연결했습니다. 개인 담당 범위와 팀 전체의 제품 성과를 구분해 적었습니다.</sub>
+
+</details>

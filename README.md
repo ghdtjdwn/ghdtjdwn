@@ -32,6 +32,15 @@ My work connects three things: useful products, explicit system guarantees, and 
 - **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration — merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
 - **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates — adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
 
+## Awards
+
+- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+
+<details>
+<summary><strong>Projects, experiments & tools</strong></summary>
+
 ## Projects
 
 ### [TrabyOS](https://trabyos.com) · A spoken request becomes a reviewed trade
@@ -46,17 +55,19 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 [Official website](https://trabyos.com) · [GitHub organization](https://github.com/TrabyOS)
 
-### [ssu Campus AI](https://github.com/ghdtjdwn/ssuAI) · Campus services, with a reliable path from intent to action
+### ssu Campus AI · Campus services, with a reliable path from intent to action
+
+[ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
 
 Students search university information and use their own academic, LMS, and library data through a web app or an agent. I built the **four-service platform**, from connectors and orchestration to deployment and observability.
 
-- **52 MCP tools, one business-logic boundary.** REST and MCP share service rules; LangGraph manages specialist routing, persistent conversations, and approval before writes.
+- **Campus workflows through both a web app and an MCP server.** Expose **52 MCP tools** for university information and academic, LMS, and library tasks, usable from clients such as Claude Desktop and Cursor. REST and MCP share business rules; LangGraph manages specialist routing, persistent conversations, and approval before writes. [MCP connection guide](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100 competing reservations → 1 upstream write.** An intent queue and same-seat suppression protect the university system. Verified with 100 concurrent requests against WireMock; this is a reduction in external writes, with a deliberate latency trade-off. [Load-test evidence](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
 - **Built and operated the delivery path.** ARM64 images move through GitHub Actions, GHCR, and ArgoCD to k3s. Prometheus/Grafana, Tempo, and Loki connect metrics, traces, and logs; fault injection verified circuit-breaker isolation and recovery. [Observability & incident records](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
 
 `Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
 
-[Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat) · [Frontend](https://github.com/ghdtjdwn/ssuAI) · [Backend & MCP](https://github.com/ghdtjdwn/ssuMCP) · [Agent](https://github.com/ghdtjdwn/ssuAgent) · [Embedding gateway](https://github.com/ghdtjdwn/ssu-ai-service)
+[Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat)
 
 ### [marketvalley](https://github.com/unithon26/marketvalley) · One hypothesis, a complete market-validation workflow
 
@@ -64,7 +75,7 @@ Students search university information and use their own academic, LMS, and libr
 
 Built the durable workflow behind it: PostgreSQL jobs, `SKIP LOCKED`, leases, operation keys, and checkpoints keep generation, ad creation, and result collection independent of a browser tab, with controlled retries around external side effects. [Architecture](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)
 
-**Manifest Special Award · UNITHON 2026.**
+🏆 **Manifest Special Award · UNITHON 2026.**
 
 `Next.js` · `Supabase / PostgreSQL` · `Anthropic` · `Meta Marketing API`
 
@@ -85,7 +96,7 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 **Frontend, roommate domain, integration, and application infrastructure.** Built explainable recommendations across **eight lifestyle dimensions**, recruitment/application flows, and one-to-one/group chat. Owned the application's Spring Boot/MySQL deployment, Helm configuration, network isolation, image-digest checks, and backup/restore gates.
 
-**Silver Prize · Soongsil University CS Software Competition 2026.** The team delivered the dormitory eligibility and roommate experience together.
+🥈 **Silver Prize · Soongsil University CS Software Competition 2026.** The team delivered the dormitory eligibility and roommate experience together.
 
 `Spring Boot` · `Next.js` · `MySQL` · `WebSocket` · `Helm`
 
@@ -122,12 +133,6 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 [JECT](https://github.com/JECT-Study) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Frontend](https://github.com/JECT-Study/Billit-5th-Client)
 
-## Awards
-
-- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
-
 ## Earlier work & experiments
 
 | Work | What I worked on |
@@ -145,3 +150,5 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 | **AI & product integration** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>Performance figures link to their measurement conditions. Project roles distinguish individual ownership from team delivery.</sub>
+
+</details>
