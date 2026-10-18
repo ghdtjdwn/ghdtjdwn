@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-header.svg" width="100%" alt="홍성주 — 백엔드, 인프라, AI 시스템" />
+  <img src="./assets/profile-header.svg" width="100%" alt="홍성주 - 백엔드, 인프라, AI 시스템" />
 </p>
 
 **백엔드·인프라·AI 제품을 만듭니다. 동시성·데이터 정합성부터 배포·관측·복구까지 설계합니다.**
@@ -10,9 +10,9 @@
 
 ## 현재
 
-- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** — 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
-- **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** — 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
-- **숭실대학교 컴퓨터학부 · 2022–현재** — [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
+- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
+- **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
+- **숭실대학교 컴퓨터학부 · 2022–현재** - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
 
 ## 오픈소스
 
@@ -26,11 +26,11 @@
 
 ### 다른 개발자의 시스템에서도 동작하는 신뢰성 개선
 
-- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 취소 시 자원 정리 — 병합, v0.54.5.** MCP 초기화 취소 시 HTTP 자원 누수와 연결 상태 잔류를 수정하고 **회귀 테스트 6건**을 추가했습니다.
-- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · 비동기 풀 취소 처리 — 재현·검증 기여.** 취소 유실을 재현하고 결정적 회귀 테스트를 제공한 뒤 메인테이너의 수정을 검증했습니다. 수정은 psycopg_pool 3.3.2로 배포됐으며, 이 기여는 위 변경 7건과 별도입니다.
-- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · 검증되는 관측성 문서 — 병합.** Java HttpClient 관측의 사용자 정의 태그 문서와 실제 컴파일·실행되는 검증 예제를 추가했습니다.
-- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · 분기별 상태 복원 — 병합, v4.13.0.** 대화 트리 이동 시 선택한 분기의 저장된 모드가 복원되도록 수정했습니다.
-- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 강제 갱신 복구 — v2.7.0 반영.** **에디터 3종**의 규칙 파일 갱신을 복구하고 회귀 테스트를 추가했습니다. 메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했습니다.
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 취소 시 자원 정리 - 병합, v0.54.5.** MCP 초기화 취소 시 HTTP 자원 누수와 연결 상태 잔류를 수정하고 **회귀 테스트 6건**을 추가했습니다.
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · 비동기 풀 취소 처리 - 재현·검증 기여.** 취소 유실을 재현하고 결정적 회귀 테스트를 제공한 뒤 메인테이너의 수정을 검증했습니다. 수정은 psycopg_pool 3.3.2로 배포됐으며, 이 기여는 위 변경 7건과 별도입니다.
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · 검증되는 관측성 문서 - 병합.** Java HttpClient 관측의 사용자 정의 태그 문서와 실제 컴파일·실행되는 검증 예제를 추가했습니다.
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · 분기별 상태 복원 - 병합, v4.13.0.** 대화 트리 이동 시 선택한 분기의 저장된 모드가 복원되도록 수정했습니다.
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 강제 갱신 복구 - v2.7.0 반영.** **에디터 3종**의 규칙 파일 갱신을 복구하고 회귀 테스트를 추가했습니다. 메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했습니다.
 
 ## 수상
 

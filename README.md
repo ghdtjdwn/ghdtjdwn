@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="./assets/profile-header.svg" width="100%" alt="Seongju Hong — Backend, Infrastructure, and AI Systems" />
+  <img src="./assets/profile-header.svg" width="100%" alt="Seongju Hong - Backend, Infrastructure, and AI Systems" />
 </p>
 
-**I build backend systems, infrastructure, and AI products — with concurrency, observability, and recovery designed in.**
+**I build backend systems, infrastructure, and AI products - with concurrency, observability, and recovery designed in.**
 
 My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means a voice trading startup, production AI agents, and contributions to the tools those systems depend on.
 
@@ -10,13 +10,13 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Now
 
-- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** — Lead engineering across the voice trading product, backend, and native/web integration.
-- **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** — Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
-- **Computer Science · Soongsil University, 2022–present** — [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
+- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - Lead engineering across the voice trading product, backend, and native/web integration.
+- **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
+- **Computer Science · Soongsil University, 2022–present** - [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
 
 ## Open source
 
-**7 changes accepted across 6 upstream repositories** — six directly merged PRs and one change cherry-picked by a maintainer. My focus is observability, cancellation, state consistency, and regression tests. Status checked **2026-10-19**.
+**7 changes accepted across 6 upstream repositories** - six directly merged PRs and one change cherry-picked by a maintainer. My focus is observability, cancellation, state consistency, and regression tests. Status checked **2026-10-19**.
 
 ### [OpenTelemetry](https://github.com/open-telemetry) · From one instrumentation bug to shared test infrastructure
 
@@ -26,11 +26,11 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ### Reliability work beyond my own applications
 
-- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Cancellation cleanup — merged, v0.54.5.** Fixed leaked HTTP resources and stale connected state when MCP initialization is cancelled; added **6 regression tests**.
-- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Async pool cancellation — reproduction & verification.** Reproduced swallowed cancellation, supplied a deterministic regression test, and verified the maintainer's fix, released in psycopg_pool 3.3.2. This contribution is separate from the 7 accepted changes above.
-- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Tested observability documentation — merged.** Documented custom Java HttpClient observation tags with examples compiled and exercised by the test suite.
-- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration — merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
-- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates — adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Cancellation cleanup - merged, v0.54.5.** Fixed leaked HTTP resources and stale connected state when MCP initialization is cancelled; added **6 regression tests**.
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Async pool cancellation - reproduction & verification.** Reproduced swallowed cancellation, supplied a deterministic regression test, and verified the maintainer's fix, released in psycopg_pool 3.3.2. This contribution is separate from the 7 accepted changes above.
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Tested observability documentation - merged.** Documented custom Java HttpClient observation tags with examples compiled and exercised by the test suite.
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration - merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates - adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
 
 ## Awards
 
