@@ -6,7 +6,7 @@
 
 My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means a voice trading startup, production AI agents, and contributions to the tools those systems depend on.
 
-[LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md) · [Open-source contributions](#open-source)
+[LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
 ## Now
 
