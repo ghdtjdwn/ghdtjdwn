@@ -6,10 +6,10 @@
 
 ## 경력
 
-- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
-- **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
-- **숭실대학교 컴퓨터학부 · 2022–현재** - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
-- **군 복무 · 대한민국 육군** - 2023.05–2025.11.
+- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** (2026.07 – 현재) - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
+- **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** (2026.09 – 현재) - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
+- **숭실대학교 컴퓨터학부** (2022.03 – 재학 중) - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
+- **군 복무 · 대한민국 육군** (2023.05 – 2024.11) - 만기 전역.
 
 ## 오픈소스
 
