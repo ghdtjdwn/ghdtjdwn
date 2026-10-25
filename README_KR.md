@@ -8,7 +8,7 @@
 
 - **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
 - **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
-- **숭실대학교 컴퓨터학부 · 2022–현재** - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
+- **숭실대학교 컴퓨터학부 · 2022–현재** - 2023.05–2025.11 육군 복무. [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
 
 ## 오픈소스
 
@@ -118,7 +118,7 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 [조직](https://github.com/dotenv-uploaded) · [제품 저장소](https://github.com/dotenv-uploaded/_FOLDING_) · [에이전트 백엔드](https://github.com/dotenv-uploaded/_FOLDING_/tree/main/services/agent) · [로컬 실행](https://github.com/dotenv-uploaded/_FOLDING_#running-locally)
 
-### [Trip Sheet · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · 팀이 반복해서 사용할 수 있는 배포 기반
+### [Billit · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · 팀이 반복해서 사용할 수 있는 배포 기반
 
 **팀 인프라 담당.** 운영 애플리케이션, 운영 데이터, 개발·모니터링을 분리한 **OCI ARM 서버 3대**의 인프라 기반을 구성했습니다.
 
