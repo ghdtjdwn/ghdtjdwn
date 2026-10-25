@@ -8,7 +8,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 - **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - Lead engineering across the voice trading product, backend, and native/web integration.
 - **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
-- **Computer Science · Soongsil University, 2022–present** - [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
+- **Computer Science · Soongsil University, 2022–present** - Served in the Republic of Korea Army, May 2023 – Nov 2025. [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
 
 ## Open source
 
@@ -118,7 +118,7 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 [Organization](https://github.com/dotenv-uploaded) · [Product repository](https://github.com/dotenv-uploaded/_FOLDING_) · [Agent backend](https://github.com/dotenv-uploaded/_FOLDING_/tree/main/services/agent) · [Run locally](https://github.com/dotenv-uploaded/_FOLDING_#running-locally)
 
-### [Trip Sheet · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · Give a team a repeatable deployment path
+### [Billit · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · Give a team a repeatable deployment path
 
 **Team infrastructure.** Built the infrastructure foundation for a collaborative product: **three OCI ARM servers** separating production application, production data, and development/monitoring.
 
