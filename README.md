@@ -4,11 +4,12 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
-## Now
+## Experience
 
 - **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - Lead engineering across the voice trading product, backend, and native/web integration.
 - **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
-- **Computer Science · Soongsil University, 2022–present** - Served in the Republic of Korea Army, May 2023 – Nov 2025. [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
+- **Computer Science · Soongsil University, 2022–present** - [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
+- **Military Service · Republic of Korea Army** - May 2023 – Nov 2025.
 
 ## Open source
 

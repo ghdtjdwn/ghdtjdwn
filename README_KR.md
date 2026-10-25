@@ -4,11 +4,12 @@
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
-## 현재
+## 경력
 
 - **Co-founder & CTO · [TrabyOS](https://trabyos.com)** - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌고 있습니다.
 - **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
-- **숭실대학교 컴퓨터학부 · 2022–현재** - 2023.05–2025.11 육군 복무. [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
+- **숭실대학교 컴퓨터학부 · 2022–현재** - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
+- **군 복무 · 대한민국 육군** - 2023.05–2025.11.
 
 ## 오픈소스
 
