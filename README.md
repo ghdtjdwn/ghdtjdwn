@@ -1,12 +1,12 @@
 **I build backend systems, infrastructure, and AI products - with concurrency, observability, and recovery designed in.**
 
-My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means a voice trading startup, production AI agents, and contributions to the tools those systems depend on.
+My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means production AI agents and contributions to the tools those systems depend on.
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
 ## Experience
 
-- **Co-founder & CTO · [TrabyOS](https://trabyos.com)** (Jul 2026 – Present) - Lead engineering across the voice trading product, backend, and native/web integration.
+- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** (Jul 2026 – Oct 2026) - Led engineering across the voice trading product, backend, and native/web integration.
 - **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** (Sep 2026 – Present) - Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
 - **Computer Science · Soongsil University** (Mar 2022 – Present) - [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
 - **Military Service · Republic of Korea Army** (May 2023 – Nov 2024) - Completed mandatory service; honorably discharged.
@@ -40,7 +40,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Projects
 
-### [TrabyOS](https://trabyos.com) · A spoken request becomes a reviewed trade
+### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
 
 **Co-founder & CTO.** A voice trading workspace for web and macOS: ask for market context, review an order, revise it, and approve execution on your exchange account. The product also provides voice technology for partner platforms.
 
@@ -50,7 +50,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 `Python` · `Java / Spring Boot` · `Swift / SwiftUI` · `TypeScript` · `PostgreSQL / WebSocket`
 
-[Official website](https://trabyos.com) · [GitHub organization](https://github.com/TrabyOS)
+[GitHub organization](https://github.com/TrabyOS)
 
 ### ssu Campus AI · Campus services, with a reliable path from intent to action
 
