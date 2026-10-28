@@ -6,11 +6,11 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Experience
 
-- **Software Engineer Intern · [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** (Sep 2026 – Present) - Build production AI agents for fashion e-commerce operations. [Organization](https://github.com/bizarrecube)
-- **Backend & Infrastructure Engineer · [JECT](https://ject.kr/)** (Sep 2026 – Present) - Backend and infrastructure for Billit, team 3 of the 5th cohort in an IT side-project community: three OCI servers managed with OpenTofu, a shared deploy workflow that rolls back on failed health checks, and backups and monitoring. [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra)
-- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** (Jul 2026 – Oct 2026) - Led engineering across the voice trading product, backend, and native/web integration.
-- **Computer Science · Soongsil University** (Mar 2022 – Present) - [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework).
-- **Military Service · Republic of Korea Army** (May 2023 – Nov 2024) - Completed mandatory service; honorably discharged.
+- [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern (2026.09 ~ ) · [Organization](https://github.com/bizarrecube)
+- [JECT](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra)
+- [TrabyOS](https://github.com/TrabyOS) Co-founder & CTO (2026.07 ~ 2026.10)
+- Soongsil University Computer Science (2022.03 ~ ) · [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework)
+- Republic of Korea Army Military Service (2023.05 ~ 2024.11)
 
 ## Open source
 
