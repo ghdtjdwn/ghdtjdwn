@@ -6,8 +6,9 @@
 
 ## 경력
 
-- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** (2026.07 – 2026.10) - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌었습니다.
 - **Software Engineer Intern · [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en)** (2026.09 – 현재) - 패션 이커머스 운영을 위한 실서비스 AI 에이전트를 개발하고 있습니다. [조직](https://github.com/bizarrecube)
+- **Backend & Infrastructure Engineer · [젝트(JECT)](https://ject.kr/)** (2026.09 – 현재) - IT 사이드 프로젝트 커뮤니티 5기 3팀 Billit의 백엔드와 인프라를 맡고 있습니다. OpenTofu로 OCI 서버 3대를 관리하고, 상태 확인에 실패하면 이전 이미지로 되돌리는 공통 배포 워크플로와 백업·모니터링을 구성했습니다. [인프라 저장소](https://github.com/JECT-Study/Billit-5th-Infra)
+- **Co-founder & CTO · [TrabyOS](https://github.com/TrabyOS)** (2026.07 – 2026.10) - 음성 트레이딩 제품의 백엔드와 네이티브·웹 통합을 포함한 개발 전반을 이끌었습니다.
 - **숭실대학교 컴퓨터학부** (2022.03 – 재학 중) - [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework).
 - **군 복무 · 대한민국 육군** (2023.05 – 2024.11) - 만기 전역.
 
