@@ -4,6 +4,21 @@
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
+<!-- workflow-hub:public-profile:start -->
+## 공개 기록
+
+[개발 노트 · 프로젝트](https://seongju.vercel.app/)
+
+<details>
+<summary>병합된 공개 PR 살펴보기</summary>
+
+- 2026-10-14 · [open-telemetry/opentelemetry-python-contrib#5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) — opentelemetry-instrumentation-tornado: sanitize captured headers and match them with regexes
+- 2026-10-05 · [DietrichGebert/ponytail#828](https://github.com/DietrichGebert/ponytail/pull/828) — fix(pi): restore branch mode after /tree navigation
+- 2026-09-25 · [open-telemetry/opentelemetry-python#5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) — opentelemetry-test-utils: add CapturingSampler for instrumentation tests
+
+</details>
+<!-- workflow-hub:public-profile:end -->
+
 ## 경력
 
 - [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern (2026.09 ~ ) · [조직](https://github.com/bizarrecube)
