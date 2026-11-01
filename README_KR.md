@@ -4,21 +4,6 @@
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [이메일](mailto:seongjuice999@gmail.com) · [English](./README.md)
 
-<!-- workflow-hub:public-profile:start -->
-## 공개 기록
-
-[개발 노트 · 프로젝트](https://seongju.vercel.app/)
-
-<details>
-<summary>병합된 공개 PR 살펴보기</summary>
-
-- 2026-10-14 · [open-telemetry/opentelemetry-python-contrib#5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) — opentelemetry-instrumentation-tornado: sanitize captured headers and match them with regexes
-- 2026-10-05 · [DietrichGebert/ponytail#828](https://github.com/DietrichGebert/ponytail/pull/828) — fix(pi): restore branch mode after /tree navigation
-- 2026-09-25 · [open-telemetry/opentelemetry-python#5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) — opentelemetry-test-utils: add CapturingSampler for instrumentation tests
-
-</details>
-<!-- workflow-hub:public-profile:end -->
-
 ## 경력
 
 - [비자르큐브 AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern (2026.09 ~ ) · [조직](https://github.com/bizarrecube)
@@ -47,6 +32,7 @@
 
 ## 수상
 
+- 🏅 **우수상** · 2026 관광데이터 활용 공모전 웹·앱 구현 부문 · 한국관광공사 · [흥할지도](https://github.com/ghdtjdwn/heungmap)
 - 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
 - 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
 - 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
@@ -118,6 +104,8 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 ### [흥할지도](https://github.com/ghdtjdwn/heungmap) · 예측 결과를 기획자의 판단으로 연결
 
 **백엔드·데이터·모델·통합 담당.** 관광 데이터를 바탕으로 축제 기획과 방문객 탐색을 연결합니다. 행사 30일 전의 정보 제약을 두고 **시군구 방문자-일**의 범위와 기여 요인을 예측합니다.
+
+🏅 **2026 관광데이터 활용 공모전 우수상 (한국관광공사).**
 
 - **WAPE 4.256% → 3.939%.** 계절 기준선에 LightGBM 잔차 모델을 더해 **4,959 지역·일의 후향 시간 홀드아웃**에서 WAPE를 **상대 7.43% 개선**했습니다. [모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
 - **실제 행사 100건 중 예측 가능 30 → 98건.** 날짜 구간과 행정구역 이력 처리를 보정해 지원 범위를 넓혔습니다. 이 수치는 예측 정확도가 아니라 제공 범위이며, 예측 대상도 축제 관람객 수가 아닌 지역 방문자-일입니다. [의사결정 기록](https://github.com/ghdtjdwn/heungmap/blob/main/docs/DECISION_LOG.md)

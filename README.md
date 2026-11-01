@@ -4,21 +4,6 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
-<!-- workflow-hub:public-profile:start -->
-## Public notes
-
-[Development notes · projects](https://seongju.vercel.app/)
-
-<details>
-<summary>Selected merged public pull requests</summary>
-
-- 2026-10-14 · [open-telemetry/opentelemetry-python-contrib#5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) — opentelemetry-instrumentation-tornado: sanitize captured headers and match them with regexes
-- 2026-10-05 · [DietrichGebert/ponytail#828](https://github.com/DietrichGebert/ponytail/pull/828) — fix(pi): restore branch mode after /tree navigation
-- 2026-09-25 · [open-telemetry/opentelemetry-python#5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) — opentelemetry-test-utils: add CapturingSampler for instrumentation tests
-
-</details>
-<!-- workflow-hub:public-profile:end -->
-
 ## Experience
 
 - [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern (2026.09 ~ ) · [Organization](https://github.com/bizarrecube)
@@ -47,6 +32,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Awards
 
+- 🏅 **Excellence Award** · 2026 Tourism Data Utilization Contest, Web & App track · Korea Tourism Organization · [HeungMap](https://github.com/ghdtjdwn/heungmap)
 - 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
 - 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
 - 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
@@ -118,6 +104,8 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 ### [HeungMap](https://github.com/ghdtjdwn/heungmap) · Turn a forecast into a decision a planner can use
 
 **Backend, data, modeling, and integration.** A tourism-data product that connects festival planning with visitor discovery. The model forecasts **regional visitor-days**, with D−30 information constraints, prediction ranges, and contributing factors.
+
+🏅 **Excellence Award · 2026 Tourism Data Utilization Contest (Korea Tourism Organization).**
 
 - **WAPE 4.256% → 3.939%.** A seasonal baseline plus LightGBM residual model improved WAPE by **7.43% relative** on a retrospective time holdout of **4,959 region-days**. [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
 - **Forecast coverage 30 → 98 out of 100 real events.** Corrected date-window and administrative-region history handling to make more events usable without changing the prediction target to festival attendance. [Decision record](https://github.com/ghdtjdwn/heungmap/blob/main/docs/DECISION_LOG.md)
