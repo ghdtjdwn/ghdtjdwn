@@ -38,9 +38,7 @@
 - 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
 
 <details>
-<summary><h2>프로젝트 8개 · 실험 · 사용 기술 펼쳐보기</h2></summary>
-
-## 프로젝트
+<summary><h2>프로젝트 7개 펼쳐보기</h2></summary>
 
 ### [TrabyOS](https://github.com/TrabyOS) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
 
@@ -122,33 +120,6 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 `FastAPI` · `Electron` · `SQLite` · `로컬 LLM`
 
 [조직](https://github.com/dotenv-uploaded) · [제품 저장소](https://github.com/dotenv-uploaded/_FOLDING_) · [에이전트 백엔드](https://github.com/dotenv-uploaded/_FOLDING_/tree/main/services/agent) · [로컬 실행](https://github.com/dotenv-uploaded/_FOLDING_#running-locally)
-
-### [Billit · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · 팀이 반복해서 사용할 수 있는 배포 기반
-
-**팀 인프라 담당.** 운영 애플리케이션, 운영 데이터, 개발·모니터링을 분리한 **OCI ARM 서버 3대**의 인프라 기반을 구성했습니다.
-
-- **한 번 빌드한 이미지를 환경 간 승격.** 공통 GitHub Actions 워크플로가 ARM64 이미지를 빌드하고 개발에 배포한 뒤 운영으로 수동 승격하도록 구성했습니다. 환경별 배포 조정과 상태 검사 실패 시 이전 이미지 복구로 배포 경로를 보호합니다.
-- **배포 이후의 운영까지 포함.** OpenTofu·Docker Compose·Nginx·PostgreSQL/Redis·백업·Prometheus/Loki/Grafana를 연결했습니다. 격리 통합 환경에서 배포와 대기 시간 초과 동작을 확인했으며, 실제 애플리케이션 배포 연결을 진행 중입니다.
-
-`OCI / OpenTofu` · `GitHub Actions / GHCR` · `Docker / Nginx` · `PostgreSQL / Redis` · `Prometheus / Grafana / Loki`
-
-[JECT](https://github.com/JECT-Study) · [인프라](https://github.com/JECT-Study/Billit-5th-Infra) · [백엔드](https://github.com/JECT-Study/Billit-5th-Server) · [프런트엔드](https://github.com/JECT-Study/Billit-5th-Client)
-
-## 이전 제작물·실험
-
-| 작업 | 구현·검증한 내용 |
-| :--- | :--- |
-| [Macro](https://github.com/UNITHON24/Macro) · [UNITHON24](https://github.com/UNITHON24) | 기존 키오스크 소프트웨어의 음성 접근성 클라이언트. 좌표 기반 자동화를 UIA/OCR·실행 후 상태 확인·SQLite 멱등 큐로 재설계. 기록상 테스트 76건과 Linux/Windows CI. |
-| AI말평 실험 | **인코더 backbone 19종·설정 24개**를 nested OOF로 비교하고, 최종 후보를 prompt-LOPO·데이터 누출 검사와 배포 제약으로 추가 검증. |
-| AXWAR 제출물 | 근거 기반 FAQ·공시 요약·환불 계산의 3개 파이프라인에서 모델의 문장 생성과 결정론적 수치·근거 검증을 분리. |
-
-## 사용하는 기술
-
-| 영역 | 기술 |
-| :--- | :--- |
-| **백엔드·데이터** | Java · Spring Boot · Python · FastAPI · PostgreSQL/PostGIS · MySQL · Redis |
-| **인프라·관측성** | Docker · Kubernetes/k3s · ArgoCD · GitHub Actions · Terraform/OpenTofu · AWS/OCI · OpenTelemetry · Prometheus/Grafana · Tempo/Loki |
-| **AI·제품 통합** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>성능 수치는 측정 조건을 담은 자료로 연결했습니다. 개인 담당 범위와 팀 전체의 제품 성과를 구분해 적었습니다.</sub>
 

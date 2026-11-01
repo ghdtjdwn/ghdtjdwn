@@ -38,9 +38,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 - 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
 
 <details>
-<summary><h2>Explore 8 projects, experiments &amp; tools</h2></summary>
-
-## Projects
+<summary><h2>Explore 7 projects</h2></summary>
 
 ### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
 
@@ -122,33 +120,6 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 `FastAPI` · `Electron` · `SQLite` · `Local LLM`
 
 [Organization](https://github.com/dotenv-uploaded) · [Product repository](https://github.com/dotenv-uploaded/_FOLDING_) · [Agent backend](https://github.com/dotenv-uploaded/_FOLDING_/tree/main/services/agent) · [Run locally](https://github.com/dotenv-uploaded/_FOLDING_#running-locally)
-
-### [Billit · JECT](https://github.com/JECT-Study/Billit-5th-Infra) · Give a team a repeatable deployment path
-
-**Team infrastructure.** Built the infrastructure foundation for a collaborative product: **three OCI ARM servers** separating production application, production data, and development/monitoring.
-
-- **Build once, promote the same image.** Reusable GitHub Actions workflows build ARM64 images, deploy to development, and support manual promotion to production. Environment-level deployment coordination and health-check rollback protect the delivery path.
-- **Include the work after deployment.** OpenTofu, Docker Compose, Nginx, PostgreSQL/Redis, backups, and Prometheus/Loki/Grafana cover provisioning through operations. Deployment and timeout behavior were checked in an isolated integration environment; application rollout is being connected.
-
-`OCI / OpenTofu` · `GitHub Actions / GHCR` · `Docker / Nginx` · `PostgreSQL / Redis` · `Prometheus / Grafana / Loki`
-
-[JECT](https://github.com/JECT-Study) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Frontend](https://github.com/JECT-Study/Billit-5th-Client)
-
-## Earlier work & experiments
-
-| Work | What I worked on |
-| :--- | :--- |
-| [Macro](https://github.com/UNITHON24/Macro) · [UNITHON24](https://github.com/UNITHON24) | Voice access to existing kiosk software. Reworked fragile coordinate automation into UIA/OCR actions, postcondition checks, and an idempotent SQLite queue; 76 recorded tests and Linux/Windows CI. |
-| AI말평 experiments | Compared **19 encoder backbones / 24 configurations** with nested out-of-fold evaluation; further checked finalists with leave-one-prompt-out evaluation and leakage audits under deployment constraints. |
-| AXWAR submissions | Built three pipelines for grounded FAQ answers, disclosure summaries, and refund calculation, separating model-generated text from deterministic numeric and evidence validation. |
-
-## Tools I use
-
-| Area | Stack |
-| :--- | :--- |
-| **Backend & data** | Java · Spring Boot · Python · FastAPI · PostgreSQL/PostGIS · MySQL · Redis |
-| **Infrastructure & observability** | Docker · Kubernetes/k3s · ArgoCD · GitHub Actions · Terraform/OpenTofu · AWS/OCI · OpenTelemetry · Prometheus/Grafana · Tempo/Loki |
-| **AI & product integration** | LangGraph · MCP · RAG · LightGBM · TypeScript/Next.js · Swift/SwiftUI |
 
 <sub>Performance figures link to their measurement conditions. Project roles distinguish individual ownership from team delivery.</sub>
 
