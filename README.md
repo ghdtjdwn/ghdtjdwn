@@ -6,7 +6,7 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Experience
 
-- [Bizarre Cube AI](https://www.bzrr.ai/) / [MXN Commerce Group](https://www.mxncommerce.com/en) Software Engineer Intern (2026.09 ~ ) · [Organization](https://github.com/bizarrecube)
+- [Bizarre Cube AI](https://www.bzrr.ai/) Software Engineer Intern (2026.09 ~ ) · [Organization](https://github.com/bizarrecube)
 - [JECT](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra)
 - [TrabyOS](https://github.com/TrabyOS) Co-founder & CTO (2026.07 ~ 2026.10)
 - Soongsil University Computer Science (2022.03 ~ ) · [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework)
