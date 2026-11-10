@@ -60,9 +60,9 @@
 
 - **웹 앱과 MCP 서버로 같은 캠퍼스 기능 제공.** 학교 정보 조회와 학사·LMS·도서관 작업을 **MCP 도구 52개**로 제공해 Claude Desktop·Cursor 같은 MCP 클라이언트에서도 사용할 수 있습니다. REST와 MCP는 같은 서비스 계층을 사용하고, LangGraph가 전문 에이전트 라우팅·대화 영속화·쓰기 전 승인을 관리합니다. [MCP 연결 안내](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100명 예약 경합 → 외부 쓰기 1회.** Intent 큐와 동일 좌석 중복 억제로 학교 시스템을 보호했습니다. WireMock 대상 동시 요청 100건으로 검증했으며, 처리 지연을 감수하고 외부 쓰기를 줄인 설계입니다. [부하 시험 근거](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
-- **배포부터 장애 관측까지 운영.** ARM64 이미지를 GitHub Actions·GHCR·ArgoCD로 k3s에 배포하고, Prometheus/Grafana·Tempo·Loki로 메트릭·트레이스·로그를 연결했습니다. 장애 주입으로 서킷브레이커의 차단과 복구까지 확인했습니다. [관측성·장애 대응 기록](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
+- **배포부터 장애 관측까지 운영.** ARM64 이미지를 GitHub Actions에서 빌드해 GHCR에 올립니다. 2026년 10월까지는 ArgoCD로 k3s에 배포하고 Prometheus/Grafana·Tempo·Loki로 메트릭·트레이스·로그를 연결했으며, 장애 주입으로 서킷브레이커의 차단과 복구까지 확인했습니다. 이후 무료 한도에 맞춰 VM 한 대의 Docker Compose로 옮기고, 타이머가 최신 이미지를 받아 공개 상태를 확인한 뒤 실패하면 되돌리도록 바꿨습니다. [관측성·장애 대응 기록](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md) · [플랫폼 결정 기록](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/adr/0101-single-vm-docker-compose-timer-pull.md)
 
-`Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
+`Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `Docker Compose / GHCR` · `OpenTelemetry`
 
 [웹 앱](https://ssuai.vercel.app) · [챗봇](https://ssuai.vercel.app/chat)
 
@@ -85,7 +85,7 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 - **실행계획으로 실제 병목을 특정.** 공간 인덱스는 이미 동작하고 있었지만, 점수 검색마다 만료된 제보를 다시 훑고 있었습니다. 만료 필터에 인덱스를 추가해 SQL 실행 시간을 **361 → 172ms, 약 52% 단축**했습니다. 동일한 합성 장소 30만 건·제보 21만 건을 로컬 QEMU 환경에서 비교한 결과입니다. [EXPLAIN 비교](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 - **수집부터 화면 갱신까지 반복 가능하게.** 멱등 ETL, PostGIS 반경·최근접 검색, SSE 제보, 코드로 관리하는 인프라를 연결했습니다.
 
-`Spring Boot` · `PostgreSQL / PostGIS` · `SSE` · `Terraform / AWS`
+`Spring Boot` · `PostgreSQL / PostGIS` · `SSE` · `Terraform / Oracle Cloud`
 
 [소스·아키텍처](https://github.com/ghdtjdwn/geuneul) · [지도 열기](https://geuneul.vercel.app)
 
@@ -107,7 +107,7 @@ PostgreSQL 작업 큐, `SKIP LOCKED`, lease, operation key와 checkpoint로 생�
 
 - **WAPE 4.256% → 3.939%.** 계절 기준선에 LightGBM 잔차 모델을 더해 **4,959 지역·일의 후향 시간 홀드아웃**에서 WAPE를 **상대 7.43% 개선**했습니다. [모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
 - **실제 행사 100건 중 예측 가능 30 → 98건.** 날짜 구간과 행정구역 이력 처리를 보정해 지원 범위를 넓혔습니다. 이 수치는 예측 정확도가 아니라 제공 범위이며, 예측 대상도 축제 관람객 수가 아닌 지역 방문자-일입니다. [의사결정 기록](https://github.com/ghdtjdwn/heungmap/blob/main/docs/DECISION_LOG.md)
-- **생성 보고서의 수치까지 통제.** API에서 근거 없는 수치를 거부하고, 정기 재학습은 5개 채택 조건을 통과한 모델만 반영하도록 구성했습니다.
+- **생성 보고서의 수치까지 통제.** API에서 근거 없는 수치를 거부하고, 정기 재학습은 5개 채택 조건을 통과한 모델을 반영하고, 기존 모델이 곧 만료될 때만 임시 채택임을 표시한 모델로 이어 가도록 구성했습니다.
 
 `FastAPI` · `LightGBM / pandas` · `Next.js` · `Claude` · `정기 데이터 파이프라인`
 

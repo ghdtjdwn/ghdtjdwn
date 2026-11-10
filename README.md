@@ -60,9 +60,9 @@ Students search university information and use their own academic, LMS, and libr
 
 - **Campus workflows through both a web app and an MCP server.** Expose **52 MCP tools** for university information and academic, LMS, and library tasks, usable from clients such as Claude Desktop and Cursor. REST and MCP share business rules; LangGraph manages specialist routing, persistent conversations, and approval before writes. [MCP connection guide](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/mcp-tools.md)
 - **100 competing reservations → 1 upstream write.** An intent queue and same-seat suppression protect the university system. Verified with 100 concurrent requests against WireMock; this is a reduction in external writes, with a deliberate latency trade-off. [Load-test evidence](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
-- **Built and operated the delivery path.** ARM64 images move through GitHub Actions, GHCR, and ArgoCD to k3s. Prometheus/Grafana, Tempo, and Loki connect metrics, traces, and logs; fault injection verified circuit-breaker isolation and recovery. [Observability & incident records](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md)
+- **Built and operated the delivery path.** ARM64 images are built in GitHub Actions and published to GHCR. Until October 2026 ArgoCD rolled them out to k3s, with Prometheus/Grafana, Tempo, and Loki connecting metrics, traces, and logs; fault injection verified circuit-breaker isolation and recovery. To fit a free-tier budget, I then moved the services to one VM running Docker Compose, where a timer pulls the newest image, checks public health, and rolls back on failure. [Observability & incident records](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/troubleshooting-highlights.md) · [Platform decision](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/adr/0101-single-vm-docker-compose-timer-pull.md)
 
-`Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `k3s / ArgoCD` · `OpenTelemetry`
+`Java / Spring Boot` · `Python / LangGraph` · `PostgreSQL / Redis` · `Docker Compose / GHCR` · `OpenTelemetry`
 
 [Web app](https://ssuai.vercel.app) · [Chat](https://ssuai.vercel.app/chat)
 
@@ -85,7 +85,7 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 - **Found the bottleneck in the execution plan.** Spatial indexes were already working; expired reports were still scanned for every scored search. Indexing their expiry filter cut SQL execution time **361 → 172 ms (~52%)** on the same synthetic dataset: 300k places and 210k reports, measured locally under QEMU. [EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 - **Kept data and updates repeatable.** Idempotent ETL, PostGIS radius/nearest-neighbor queries, SSE reports, and infrastructure as code connect ingestion to the map.
 
-`Spring Boot` · `PostgreSQL / PostGIS` · `SSE` · `Terraform / AWS`
+`Spring Boot` · `PostgreSQL / PostGIS` · `SSE` · `Terraform / Oracle Cloud`
 
 [Source & architecture](https://github.com/ghdtjdwn/geuneul) · [Open the map](https://geuneul.vercel.app)
 
@@ -107,7 +107,7 @@ A summer survival map over **150k+ public points of interest**, with nearby shad
 
 - **WAPE 4.256% → 3.939%.** A seasonal baseline plus LightGBM residual model improved WAPE by **7.43% relative** on a retrospective time holdout of **4,959 region-days**. [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
 - **Forecast coverage 30 → 98 out of 100 real events.** Corrected date-window and administrative-region history handling to make more events usable without changing the prediction target to festival attendance. [Decision record](https://github.com/ghdtjdwn/heungmap/blob/main/docs/DECISION_LOG.md)
-- **Keep generated reports grounded.** The API rejects unsupported figures; scheduled retraining only adopts models that pass five acceptance gates.
+- **Keep generated reports grounded.** The API rejects unsupported figures; scheduled retraining adopts models that pass five acceptance gates, and falls back to a clearly flagged provisional model only when the current one is about to expire.
 
 `FastAPI` · `LightGBM / pandas` · `Next.js` · `Claude` · `Scheduled data pipelines`
 
