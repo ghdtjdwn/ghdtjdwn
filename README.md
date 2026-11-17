@@ -5,49 +5,46 @@
 ## Experience
 
 - [Bizarre Cube AI](https://www.bzrr.ai/) Software Engineer Intern (2026.09 ~ ) · [Organization](https://github.com/bizarrecube)
-- [JECT](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) ([my PRs](https://github.com/JECT-Study/Billit-5th-Server/pulls?q=is%3Apr+author%3Aghdtjdwn)) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra)
+- [JECT](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [Backend](https://github.com/JECT-Study/Billit-5th-Server) · [My PRs](https://github.com/JECT-Study/Billit-5th-Server/pulls?q=is%3Apr+author%3Aghdtjdwn) · [Infrastructure](https://github.com/JECT-Study/Billit-5th-Infra)
 - [TrabyOS](https://github.com/TrabyOS) Co-founder & CTO (2026.07 ~ 2026.10)
 - Soongsil University Computer Science (2022.03 ~ ) · [Coursework across 12 subjects](https://github.com/ghdtjdwn/cs-coursework)
 - Republic of Korea Army Military Service (2023.05 ~ 2024.11)
 
 ## Open source
 
-Upstream work on observability, cancellation, and regression tests.
+I contribute upstream where my own systems depend on it: observability, cancellation, and regression tests.
 
-**[OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+author%3Aghdtjdwn)**
+### [OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+author%3Aghdtjdwn) · From one instrumentation bug to shared test infrastructure
 
-- [`CapturingSampler`](https://github.com/open-telemetry/opentelemetry-python/pull/5681) - a shared test sampler that a maintainer [asked for](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725) in place of a copy in each instrumentation. Released in 1.45.0; the tests of 18 contrib packages [use it](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py).
-- [WSGI #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) - request headers reach the sampler at span creation, sanitized and kept out of internal spans and metrics. Merged with three maintainer approvals.
-- [Tornado #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) - Tornado ignored the sensitive-header masking settings; fixed with the shared capture helper. Found in review of [#5163](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5163), one of six follow-up PRs I reviewed for [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975).
+- **A shared test sampler, requested by a maintainer.** A maintainer [asked for one sampler in the core test utilities](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725) instead of a copy in each instrumentation. I implemented `CapturingSampler`; it shipped in **1.45.0** and the tests of **18 contrib packages** now use it. [Core #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · [Adoption example](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py)
+- **Headers available when sampling happens.** WSGI passes sanitized request headers at span creation and keeps them out of internal spans and metrics. Merged with three maintainer approvals. [Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)
+- **A masking gap found in review.** While reviewing six follow-up PRs for [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975), I found Tornado ignoring the sensitive-header masking settings and fixed it with the shared capture helper. [Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) · [Review of #5163](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5163)
 
-**Elsewhere**
+### Reliability fixes in other projects
 
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) - HTTP resources and connection state are released when MCP initialization is cancelled. Six regression cases, v0.54.5.
-- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) - custom tags for Java HttpClient observations, documented with examples the test suite compiles and runs.
-- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) - reproduced a swallowed cancellation in the async pool, proposed a deterministic regression test, and confirmed the maintainer's fix, shipped in psycopg_pool 3.3.2.
-- Developer tools: [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) (v4.13.0) and [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013), which the maintainer cherry-picked into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015) (v2.7.0).
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Cancellation cleanup** - merged, v0.54.5. HTTP resources and connection state are released when MCP initialization is cancelled, with six regression cases.
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Tested observability documentation** - merged. Custom tags for Java HttpClient observations, with examples the test suite compiles and runs.
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Async pool cancellation** - reproduction and verification. Reproduced a swallowed cancellation, proposed a deterministic regression test, and confirmed the maintainer's fix, shipped in psycopg_pool 3.3.2.
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch state restoration** - merged, v4.13.0. The selected branch's saved mode returns after conversation-tree navigation.
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Forced rule updates** - adopted in v2.7.0. The maintainer cherry-picked the fix into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
 
-In review: [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+is%3Aopen+author%3Aghdtjdwn) · [Lettuce #3909](https://github.com/redis/lettuce/pull/3909) · [Spring AI #6929](https://github.com/spring-projects/spring-ai/pull/6929) · [slowapi #305](https://github.com/laurentS/slowapi/pull/305)
+**In review** · [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+is%3Aopen+author%3Aghdtjdwn) · [Lettuce #3909](https://github.com/redis/lettuce/pull/3909) · [Spring AI #6929](https://github.com/spring-projects/spring-ai/pull/6929) · [slowapi #305](https://github.com/laurentS/slowapi/pull/305)
 
 ## Awards
 
-- **Excellence Award** · 2026 Tourism Data Utilization Contest, Web & App track · Korea Tourism Organization · [HeungMap](https://github.com/ghdtjdwn/heungmap)
-- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+- 🏅 **Excellence Award** · 2026 Tourism Data Utilization Contest, Web & App track · Korea Tourism Organization · [HeungMap](https://github.com/ghdtjdwn/heungmap)
+- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
 
 ## Projects
 
-- **ssu Campus AI** - university, LMS, and library services for Soongsil students through a web app or 52 MCP tools; I built and operate all four services. 100 concurrent requests for the same seat become one upstream write ([load test](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)). [Web app](https://ssuai.vercel.app) · [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
-- **[HeungMap](https://github.com/ghdtjdwn/heungmap)** - visitor-demand forecasts for festival planners. A seasonal baseline plus LightGBM residuals took WAPE from 4.256% to 3.939% on a time holdout of 4,959 region-days ([model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)). [Live](https://heungmap.vercel.app)
-- **[Geuneul](https://github.com/ghdtjdwn/geuneul)** - a heat-shelter map over 150k+ public places with live reports. Indexing the report-expiry filter cut scored-search SQL from 361 ms to 172 ms on a synthetic 300k-place dataset, measured locally ([EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)). [Live](https://geuneul.vercel.app)
-- **[marketvalley](https://github.com/unithon26/marketvalley)** - one founder hypothesis becomes a landing page, social cards, and a Meta ad, and the results come back. I built the durable job workflow on PostgreSQL: `SKIP LOCKED`, leases, operation keys ([architecture](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md), [migration](https://github.com/unithon26/marketvalley/blob/main/supabase/migrations/202608260006_campaign_lifecycle.sql)). [Live](https://marketvaley.vercel.app)
-- **[TrabyOS](https://github.com/TrabyOS)** - a voice trading workspace for web and macOS. Natural language prepares an order; explicit approval and deterministic checks execute it on the user's exchange account.
-- **[Cham Domi](https://github.com/chamdormie)** - dormitory eligibility, roommate matching across eight lifestyle dimensions, and chat. I owned the roommate domain, the frontend, and the Spring Boot/MySQL deployment. [Live](https://chamdomi.vercel.app)
-- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** - a local-first workspace for HWP, Office, and PDF. I built the agent backend: approved edits write and verify a new file and keep the original.
+- **100 concurrent requests for one seat → 1 upstream write** · [ssu Campus AI](https://github.com/ghdtjdwn/ssuMCP) · [Load test](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
+- **WAPE 4.256% → 3.939%** on a time holdout of 4,959 region-days · [HeungMap](https://github.com/ghdtjdwn/heungmap) · [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
+- **361 ms → 172 ms** scored-search SQL on a synthetic 300k-place dataset, measured locally · [Geuneul](https://github.com/ghdtjdwn/geuneul) · [EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 
 <details>
-<summary><b>Project details</b></summary>
+<summary><b>Explore all 7 projects</b></summary>
 
 ### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
 

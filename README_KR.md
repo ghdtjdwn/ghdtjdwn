@@ -5,49 +5,46 @@
 ## 경력
 
 - [비자르큐브 AI](https://www.bzrr.ai/) Software Engineer Intern (2026.09 ~ ) · [조직](https://github.com/bizarrecube)
-- [젝트(JECT)](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [백엔드 저장소](https://github.com/JECT-Study/Billit-5th-Server)([내 PR](https://github.com/JECT-Study/Billit-5th-Server/pulls?q=is%3Apr+author%3Aghdtjdwn)) · [인프라 저장소](https://github.com/JECT-Study/Billit-5th-Infra)
+- [젝트(JECT)](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [백엔드 저장소](https://github.com/JECT-Study/Billit-5th-Server) · [내 PR](https://github.com/JECT-Study/Billit-5th-Server/pulls?q=is%3Apr+author%3Aghdtjdwn) · [인프라 저장소](https://github.com/JECT-Study/Billit-5th-Infra)
 - [TrabyOS](https://github.com/TrabyOS) Co-founder & CTO (2026.07 ~ 2026.10)
 - 숭실대학교 컴퓨터학부 (2022.03 ~ ) · [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework)
 - 대한민국 육군 군 복무 (2023.05 ~ 2024.11)
 
 ## 오픈소스
 
-관측성, 취소 처리, 회귀 테스트를 중심으로 업스트림에 기여합니다.
+제가 만드는 시스템이 기대는 도구에 기여합니다. 관측성, 취소 처리, 회귀 테스트가 중심입니다.
 
-**[OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+author%3Aghdtjdwn)**
+### [OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+author%3Aghdtjdwn) · 하나의 계측 결함에서 공통 테스트 기반으로
 
-- [`CapturingSampler`](https://github.com/open-telemetry/opentelemetry-python/pull/5681) - 계측마다 샘플러를 복사해 두지 말고 공용으로 두자는 [메인테이너의 요청](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725)을 코어 테스트 유틸로 구현했습니다. 1.45.0에 배포됐고, contrib 패키지 18개의 테스트가 [이 샘플러를 씁니다](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py).
-- [WSGI #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) - span을 만들 때 마스킹한 요청 헤더를 샘플러에 넘기고, 내부 span과 메트릭에는 넣지 않습니다. 메인테이너 3명의 승인으로 병합됐습니다.
-- [Tornado #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) - Tornado가 민감 헤더 마스킹 설정을 무시하던 문제를 공용 캡처 헬퍼로 고쳤습니다. [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)의 후속 PR 6건을 리뷰하던 중 [#5163](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5163) 리뷰에서 찾았습니다.
+- **메인테이너가 요청한 공용 테스트 샘플러.** 계측마다 샘플러를 복사해 두지 말고 [코어 테스트 유틸에 하나를 두자는 요청](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725)을 `CapturingSampler`로 구현했습니다. **1.45.0**에 배포됐고 **contrib 패키지 18개**의 테스트가 사용합니다. [Core #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · [사용 사례](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py)
+- **샘플링 시점에 헤더 전달.** WSGI에서 span을 만들 때 마스킹한 요청 헤더를 넘기고, 내부 span과 메트릭에는 넣지 않습니다. 메인테이너 3명의 승인으로 병합됐습니다. [Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)
+- **리뷰에서 찾은 마스킹 누락.** [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)의 후속 PR 6건을 리뷰하다가 Tornado가 민감 헤더 마스킹 설정을 무시하는 문제를 찾아 공용 캡처 헬퍼로 고쳤습니다. [Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) · [#5163 리뷰](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5163)
 
-**그 밖의 기여**
+### 다른 프로젝트의 신뢰성 수정
 
-- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) - MCP 초기화가 취소되면 HTTP 자원과 연결 상태를 정리합니다. 회귀 케이스 6건, v0.54.5.
-- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) - Java HttpClient 관측의 사용자 정의 태그를 문서화하고, 테스트가 컴파일·실행하는 예제를 붙였습니다.
-- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) - 비동기 풀에서 취소가 유실되는 문제를 재현하고 결정적 회귀 테스트를 제안했으며, 메인테이너의 수정이 문제를 해결하는지 확인했습니다. 수정은 psycopg_pool 3.3.2로 배포됐습니다.
-- 개발 도구: [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828)(v4.13.0), [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013)(메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽, v2.7.0).
+- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · 취소 시 자원 정리** - 병합, v0.54.5. MCP 초기화가 취소되면 HTTP 자원과 연결 상태를 정리하고, 회귀 케이스 6건을 추가했습니다.
+- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · 검증되는 관측성 문서** - 병합. Java HttpClient 관측의 사용자 정의 태그를 문서화하고, 테스트가 컴파일·실행하는 예제를 붙였습니다.
+- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · 비동기 풀 취소 처리** - 재현·검증 기여. 취소 유실을 재현하고 결정적 회귀 테스트를 제안했으며, 메인테이너의 수정이 문제를 해결하는지 확인했습니다. 수정은 psycopg_pool 3.3.2로 배포됐습니다.
+- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · 분기별 상태 복원** - 병합, v4.13.0. 대화 트리를 이동하면 선택한 분기의 저장된 모드가 복원됩니다.
+- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · 강제 갱신 복구** - v2.7.0 반영. 메인테이너가 [#1015](https://github.com/JuliusBrussee/caveman/pull/1015)에 체리픽해 병합했습니다.
 
-리뷰 중: [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+is%3Aopen+author%3Aghdtjdwn) · [Lettuce #3909](https://github.com/redis/lettuce/pull/3909) · [Spring AI #6929](https://github.com/spring-projects/spring-ai/pull/6929) · [slowapi #305](https://github.com/laurentS/slowapi/pull/305)
+**리뷰 중** · [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+is%3Aopen+author%3Aghdtjdwn) · [Lettuce #3909](https://github.com/redis/lettuce/pull/3909) · [Spring AI #6929](https://github.com/spring-projects/spring-ai/pull/6929) · [slowapi #305](https://github.com/laurentS/slowapi/pull/305)
 
 ## 수상
 
-- **우수상** · 2026 관광데이터 활용 공모전 웹·앱 구현 부문 · 한국관광공사 · [흥할지도](https://github.com/ghdtjdwn/heungmap)
-- **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
-- **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
+- 🏅 **우수상** · 2026 관광데이터 활용 공모전 웹·앱 구현 부문 · 한국관광공사 · [흥할지도](https://github.com/ghdtjdwn/heungmap)
+- 🏆 **매니패스트 특별상** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- 🥈 **은상** · 숭실대학교 컴퓨터학부 소프트웨어공모전 2026 · [참도미](https://github.com/chamdormie)
+- 🏅 **우수상** · 숭실대학교 솔브드 코드 알고리즘 대회 2025
 
 ## 프로젝트
 
-- **ssu 캠퍼스 AI** - 숭실대 학생이 학교 정보와 LMS·도서관 기능을 웹 앱이나 MCP 도구 52개로 씁니다. 서비스 4개를 모두 직접 만들고 운영합니다. 같은 좌석에 동시 예약 100건이 몰려도 학교 시스템 쓰기는 1회입니다([부하 시험](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)). [웹 앱](https://ssuai.vercel.app) · [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
-- **[흥할지도](https://github.com/ghdtjdwn/heungmap)** - 축제 기획자를 위한 지역 방문수요 예측입니다. 계절 기준선에 LightGBM 잔차 모델을 더해 4,959 지역·일의 시간 홀드아웃에서 WAPE를 4.256%에서 3.939%로 낮췄습니다([모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)). [서비스](https://heungmap.vercel.app)
-- **[그늘](https://github.com/ghdtjdwn/geuneul)** - 공공 장소 15만 건 이상에서 그늘·쉼터를 찾고 현장 제보를 실시간으로 보는 지도입니다. 제보 만료 필터에 인덱스를 추가해 점수 검색 SQL을 361ms에서 172ms로 줄였습니다. 합성 장소 30만 건을 로컬에서 측정한 값입니다([EXPLAIN 비교](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)). [서비스](https://geuneul.vercel.app)
-- **[marketvalley](https://github.com/unithon26/marketvalley)** - 창업자의 가설 하나로 랜딩, 소셜 카드, Meta 광고를 만들고 결과를 다시 모읍니다. PostgreSQL 위에 `SKIP LOCKED`, lease, operation key로 중단돼도 이어지는 작업 흐름을 만들었습니다([아키텍처](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md), [마이그레이션](https://github.com/unithon26/marketvalley/blob/main/supabase/migrations/202608260006_campaign_lifecycle.sql)). [서비스](https://marketvaley.vercel.app)
-- **[TrabyOS](https://github.com/TrabyOS)** - 웹과 macOS용 음성 거래 워크스페이스입니다. 자연어로 주문을 준비하고, 사용자의 명시적 승인과 결정론적 검사를 거쳐 본인 거래소 계좌에서 실행합니다.
-- **[참도미](https://github.com/chamdormie)** - 기숙사 자격 확인, 8가지 생활 성향 기반 룸메이트 추천, 채팅을 제공합니다. 룸메이트 도메인과 프런트엔드, Spring Boot/MySQL 배포를 맡았습니다. [서비스](https://chamdomi.vercel.app)
-- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** - HWP·Office·PDF를 위한 로컬 우선 워크스페이스입니다. 에이전트 백엔드를 만들었고, 승인된 편집은 원본을 두고 새 파일을 만들어 검증합니다.
+- **같은 좌석 동시 예약 100건 → 학교 시스템 쓰기 1회** · [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuMCP) · [부하 시험](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
+- **WAPE 4.256% → 3.939%**, 4,959 지역·일 시간 홀드아웃 · [흥할지도](https://github.com/ghdtjdwn/heungmap) · [모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
+- **361ms → 172ms**, 점수 검색 SQL, 합성 장소 30만 건 로컬 측정 · [그늘](https://github.com/ghdtjdwn/geuneul) · [EXPLAIN 비교](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 
 <details>
-<summary><b>프로젝트 상세</b></summary>
+<summary><b>프로젝트 7개 펼쳐보기</b></summary>
 
 ### [TrabyOS](https://github.com/TrabyOS) · 말로 요청하고, 확인한 주문을 실행하는 거래 워크스페이스
 
