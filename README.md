@@ -1,7 +1,5 @@
 **I build backend systems, infrastructure, and AI products - with concurrency, observability, and recovery designed in.**
 
-My work connects three things: useful products, explicit system guarantees, and evidence that the implementation holds up. Today, that means production AI agents and contributions to the tools those systems depend on.
-
 [LinkedIn](https://www.linkedin.com/in/ghdtjdwn/) · [Email](mailto:seongjuice999@gmail.com) · [한국어](./README_KR.md)
 
 ## Experience
@@ -14,31 +12,42 @@ My work connects three things: useful products, explicit system guarantees, and 
 
 ## Open source
 
-**7 changes accepted across 6 upstream repositories** - six directly merged PRs and one change cherry-picked by a maintainer. My focus is observability, cancellation, state consistency, and regression tests. Status checked **2026-10-19**.
+Upstream work on observability, cancellation, and regression tests.
 
-### [OpenTelemetry](https://github.com/open-telemetry) · From one instrumentation bug to shared test infrastructure
+**[OpenTelemetry Python](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+author%3Aghdtjdwn)**
 
-- **Turn a PR-local test into a maintainer-requested shared utility.** An OpenTelemetry maintainer [asked for one shared sampler in the core test utilities](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725) instead of a copy in each instrumentation, and [pointed my WSGI fix to that request](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032#discussion_r4061074604). I implemented `CapturingSampler`, released in **1.45.0** and now reused in the tests of **8 HTTP instrumentation packages**: WSGI, Django, ASGI, aiohttp-server, Falcon, Flask, Pyramid, and Tornado. [Core #5681](https://github.com/open-telemetry/opentelemetry-python/pull/5681) · [Adoption example](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py)
-- **Make headers available when sampling happens.** Fixed WSGI request-header collection at span creation, with sanitized values kept out of internal spans and metrics. Merged with approvals from three maintainers. [Contrib #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032)
-- **Follow the change into the rest of the ecosystem.** Verified and reviewed **6 follow-up instrumentation PRs**. Found Tornado ignoring sensitive-header masking settings and fixed it using the shared capture helper. [Contrib #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) · [Tracking issue #4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975)
+- [`CapturingSampler`](https://github.com/open-telemetry/opentelemetry-python/pull/5681) - a shared test sampler that a maintainer [asked for](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5073#discussion_r4061037725) in place of a copy in each instrumentation. Released in 1.45.0; the tests of 18 contrib packages [use it](https://github.com/open-telemetry/opentelemetry-python-contrib/blob/de43f819a4a919213d246a23e62a1b256aeca7b9/instrumentation/opentelemetry-instrumentation-asgi/tests/test_asgi_custom_headers.py).
+- [WSGI #5032](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5032) - request headers reach the sampler at span creation, sanitized and kept out of internal spans and metrics. Merged with three maintainer approvals.
+- [Tornado #5170](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/5170) - Tornado ignored the sensitive-header masking settings; fixed with the shared capture helper. Found while reviewing six follow-up PRs for [#4975](https://github.com/open-telemetry/opentelemetry-python-contrib/issues/4975).
 
-### Reliability work beyond my own applications
+**Elsewhere**
 
-- **[Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) · Cancellation cleanup - merged, v0.54.5.** Fixed leaked HTTP resources and stale connected state when MCP initialization is cancelled; added **6 regression tests**.
-- **[psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) · Async pool cancellation - reproduction & verification.** Reproduced swallowed cancellation, supplied a deterministic regression test, and verified the maintainer's fix, released in psycopg_pool 3.3.2. This contribution is separate from the 7 accepted changes above.
-- **[Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) · Tested observability documentation - merged.** Documented custom Java HttpClient observation tags with examples compiled and exercised by the test suite.
-- **[Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) · Branch-specific state restoration - merged, v4.13.0.** Restored the selected branch's saved mode after conversation-tree navigation.
-- **[Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013) · Reliable forced updates - adopted in v2.7.0.** Repaired rule-file updates for **3 editors** with regression tests. The maintainer cherry-picked the change into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015).
+- [Ouroboros #2365](https://github.com/Q00/ouroboros/pull/2365) - HTTP resources and connection state are released when MCP initialization is cancelled. Six regression tests, v0.54.5.
+- [Micrometer #7925](https://github.com/micrometer-metrics/micrometer/pull/7925) - custom tags for Java HttpClient observations, documented with examples the test suite compiles and runs.
+- [psycopg #1345](https://github.com/psycopg/psycopg/issues/1345) - reproduced a swallowed cancellation in the async pool, supplied a deterministic regression test, and verified the maintainer's fix in psycopg_pool 3.3.2.
+- Developer tools: [Ponytail #828](https://github.com/DietrichGebert/ponytail/pull/828) (v4.13.0) and [Caveman #1013](https://github.com/JuliusBrussee/caveman/pull/1013), which the maintainer cherry-picked into [#1015](https://github.com/JuliusBrussee/caveman/pull/1015) (v2.7.0).
+
+In review: [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-python-contrib/pulls?q=is%3Apr+is%3Aopen+author%3Aghdtjdwn) · [Lettuce #3909](https://github.com/redis/lettuce/pull/3909) · [Spring AI #6929](https://github.com/spring-projects/spring-ai/pull/6929) · [slowapi #305](https://github.com/laurentS/slowapi/pull/305)
 
 ## Awards
 
-- 🏅 **Excellence Award** · 2026 Tourism Data Utilization Contest, Web & App track · Korea Tourism Organization · [HeungMap](https://github.com/ghdtjdwn/heungmap)
-- 🏆 **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
-- 🥈 **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
-- 🏅 **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+- **Excellence Award** · 2026 Tourism Data Utilization Contest, Web & App track · Korea Tourism Organization · [HeungMap](https://github.com/ghdtjdwn/heungmap)
+- **Manifest Special Award** · UNITHON 2026 · [marketvalley](https://github.com/unithon26/marketvalley)
+- **Silver Prize** · Soongsil University CS Software Competition 2026 · [Cham Domi](https://github.com/chamdormie)
+- **Excellence Award** · Soongsil University Solved Code Algorithm Competition 2025
+
+## Projects
+
+- **ssu Campus AI** - university, LMS, and library services for Soongsil students through a web app or 52 MCP tools; I built and operate all four services. 100 concurrent seat reservations become one upstream write ([load test](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)). [Web app](https://ssuai.vercel.app) · [ssuAI](https://github.com/ghdtjdwn/ssuAI) · [ssuMCP](https://github.com/ghdtjdwn/ssuMCP) · [ssuAgent](https://github.com/ghdtjdwn/ssuAgent) · [ssu-ai-service](https://github.com/ghdtjdwn/ssu-ai-service)
+- **[HeungMap](https://github.com/ghdtjdwn/heungmap)** - visitor-demand forecasts for festival planners. A seasonal baseline plus LightGBM residuals took WAPE from 4.256% to 3.939% on a time holdout of 4,959 region-days ([model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)). [Live](https://heungmap.vercel.app)
+- **[Geuneul](https://github.com/ghdtjdwn/geuneul)** - a heat-shelter map over 150k+ public places with live reports. Indexing the report-expiry filter cut scored-search SQL from 361 ms to 172 ms on a synthetic 300k-place dataset, measured locally ([EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)). [Live](https://geuneul.vercel.app)
+- **[marketvalley](https://github.com/unithon26/marketvalley)** - one founder hypothesis becomes a landing page, social cards, and a Meta ad, and the results come back. I built the durable job workflow on PostgreSQL: `SKIP LOCKED`, leases, operation keys, checkpoints ([architecture](https://github.com/unithon26/marketvalley/blob/main/docs/architecture.md)). [Live](https://marketvaley.vercel.app)
+- **[TrabyOS](https://github.com/TrabyOS)** - a voice trading workspace for web and macOS. Natural language prepares an order; explicit approval and deterministic checks execute it on the user's exchange account.
+- **[Cham Domi](https://github.com/chamdormie)** - dormitory eligibility, roommate matching across eight lifestyle dimensions, and chat. I owned the roommate domain, the frontend, and the Spring Boot/MySQL deployment. [Live](https://chamdomi.vercel.app)
+- **[Folding](https://github.com/dotenv-uploaded/_FOLDING_)** - a local-first workspace for HWP, Office, and PDF. I built the agent backend: approved edits write and verify a new file and keep the original.
 
 <details>
-<summary><h2>Explore 7 projects</h2></summary>
+<summary><b>Project details</b></summary>
 
 ### [TrabyOS](https://github.com/TrabyOS) · A spoken request becomes a reviewed trade
 
