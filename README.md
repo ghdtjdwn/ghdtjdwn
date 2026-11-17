@@ -39,9 +39,9 @@ I contribute upstream where my own systems depend on it: observability, cancella
 
 ## Projects
 
-- **100 concurrent requests for one seat → 1 upstream write** · ssu Campus AI · [Load test](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
-- **WAPE 4.256% → 3.939%** on a time holdout of 4,959 region-days · HeungMap · [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
-- **361 ms → 172 ms** scored-search SQL on a synthetic 300k-place dataset, measured locally · Geuneul · [EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
+- **100 concurrent requests for one seat → 1 upstream write** · [ssu Campus AI](https://github.com/ghdtjdwn/ssuMCP) · [Load test](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
+- **WAPE 4.256% → 3.939%** on a time holdout of 4,959 region-days · [HeungMap](https://github.com/ghdtjdwn/heungmap) · [Model card](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
+- **361 ms → 172 ms** scored-search SQL on a synthetic 300k-place dataset, measured locally · [Geuneul](https://github.com/ghdtjdwn/geuneul) · [EXPLAIN comparison](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 
 <details>
 <summary><b>Explore all 7 projects</b></summary>

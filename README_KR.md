@@ -39,9 +39,9 @@
 
 ## 프로젝트
 
-- **같은 좌석 동시 예약 100건 → 학교 시스템 쓰기 1회** · ssu 캠퍼스 AI · [부하 시험](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
-- **WAPE 4.256% → 3.939%**, 4,959 지역·일 시간 홀드아웃 · 흥할지도 · [모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
-- **361ms → 172ms**, 점수 검색 SQL, 합성 장소 30만 건 로컬 측정 · 그늘 · [EXPLAIN 비교](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
+- **같은 좌석 동시 예약 100건 → 학교 시스템 쓰기 1회** · [ssu 캠퍼스 AI](https://github.com/ghdtjdwn/ssuMCP) · [부하 시험](https://github.com/ghdtjdwn/ssuMCP/blob/main/docs/performance/library-agent-load-test.md)
+- **WAPE 4.256% → 3.939%**, 4,959 지역·일 시간 홀드아웃 · [흥할지도](https://github.com/ghdtjdwn/heungmap) · [모델 카드](https://github.com/ghdtjdwn/heungmap/blob/main/docs/MODEL_CARD.md)
+- **361ms → 172ms**, 점수 검색 SQL, 합성 장소 30만 건 로컬 측정 · [그늘](https://github.com/ghdtjdwn/geuneul) · [EXPLAIN 비교](https://github.com/ghdtjdwn/geuneul/blob/main/perf/explain/RESULTS.md)
 
 <details>
 <summary><b>프로젝트 7개 펼쳐보기</b></summary>
