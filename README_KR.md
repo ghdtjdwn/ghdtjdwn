@@ -5,7 +5,7 @@
 ## 경력
 
 - [비자르큐브 AI](https://www.bzrr.ai/) Software Engineer Intern (2026.09 ~ ) · [조직](https://github.com/bizarrecube)
-- [젝트(JECT)](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [백엔드 저장소](https://github.com/JECT-Study/Billit-5th-Server) · [인프라 저장소](https://github.com/JECT-Study/Billit-5th-Infra)
+- [젝트(JECT)](https://ject.kr/) Backend & Infrastructure Engineer (2026.09 ~ ) · [백엔드 저장소](https://github.com/JECT-Study/Billit-5th-Server)([내 PR](https://github.com/JECT-Study/Billit-5th-Server/pulls?q=is%3Apr+author%3Aghdtjdwn)) · [인프라 저장소](https://github.com/JECT-Study/Billit-5th-Infra)
 - [TrabyOS](https://github.com/TrabyOS) Co-founder & CTO (2026.07 ~ 2026.10)
 - 숭실대학교 컴퓨터학부 (2022.03 ~ ) · [12개 과목의 전공 학습 기록](https://github.com/ghdtjdwn/cs-coursework)
 - 대한민국 육군 군 복무 (2023.05 ~ 2024.11)
